@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/constrs_1/new/c.xdc rfile:../../../CPU_1.srcs/constrs_1/new/c.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict {IOSTANDARD LVCMOS33 PACKAGE_PIN Y19} [get_ports rx]
+set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict {IOSTANDARD LVCMOS33 PACKAGE_PIN V18} [get_ports tx]

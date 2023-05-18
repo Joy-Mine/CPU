@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="prgrom_synth_1" LaunchDir="C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/prgrom_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="cpuclk_synth_1" LaunchDir="C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/cpuclk_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="uart_bmpg_0_synth_1" LaunchDir="C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/uart_bmpg_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_2" LaunchDir="C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_2" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="prgrom_synth_1"/>
+		<Parent Id="cpuclk_synth_1"/>
+		<Parent Id="uart_bmpg_0_synth_1"/>
+	</Run>
+</Runs>
+

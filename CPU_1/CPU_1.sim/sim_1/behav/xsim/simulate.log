@@ -1,0 +1,6 @@
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module dememory32_tb.uut.ram.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+$finish called at time : 50 ns : File "D:/ProProject/CS202/Project/OK/CS202_2023S/CPU_1.srcs/sim_1/new/dmemory32_tb.v" Line 57

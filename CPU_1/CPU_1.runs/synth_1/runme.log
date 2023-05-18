@@ -1,0 +1,821 @@
+
+*** Running vivado
+    with args -log Top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source Top.tcl -notrace
+Command: synth_design -top Top -part xc7a100tfgg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1548 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 344.203 ; gain = 102.578
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Top' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:3]
+	Parameter s0 bound to: 3'b000 
+	Parameter s1 bound to: 3'b001 
+	Parameter s2 bound to: 3'b010 
+	Parameter s3 bound to: 11 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (1#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-638] synthesizing module 'cpuclk' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_1/.Xil/Vivado-10000-S210-08/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'cpuclk' (2#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_1/.Xil/Vivado-10000-S210-08/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'uart_bmpg_0' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_1/.Xil/Vivado-10000-S210-08/realtime/uart_bmpg_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'uart_bmpg_0' (3#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_1/.Xil/Vivado-10000-S210-08/realtime/uart_bmpg_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'uart' of module 'uart_bmpg_0' requires 9 connections, but only 8 given [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:45]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:78]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:91]
+INFO: [Synth 8-226] default block is never used [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:153]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:192]
+INFO: [Synth 8-638] synthesizing module 'ioread' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/ioread.v:4]
+INFO: [Synth 8-256] done synthesizing module 'ioread' (4#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/ioread.v:4]
+WARNING: [Synth 8-689] width (16) of port connection 'switchctrl' does not match port width (1) of module 'ioread' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:192]
+WARNING: [Synth 8-350] instance 'ur' of module 'ioread' requires 5 connections, but only 4 given [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:192]
+INFO: [Synth 8-638] synthesizing module 'programrom' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/programrom.v:23]
+INFO: [Synth 8-638] synthesizing module 'prgrom' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_1/.Xil/Vivado-10000-S210-08/realtime/prgrom_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'prgrom' (5#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_1/.Xil/Vivado-10000-S210-08/realtime/prgrom_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'programrom' (6#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/programrom.v:23]
+WARNING: [Synth 8-689] width (15) of port connection 'upg_adr_i' does not match port width (14) of module 'programrom' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:199]
+INFO: [Synth 8-638] synthesizing module 'IFetc32' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/IFetc32.v:23]
+INFO: [Synth 8-256] done synthesizing module 'IFetc32' (7#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/IFetc32.v:23]
+INFO: [Synth 8-638] synthesizing module 'Controller' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Controller.v:23]
+WARNING: [Synth 8-3848] Net IORead in module/entity Controller does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Controller.v:42]
+WARNING: [Synth 8-3848] Net IOWrite in module/entity Controller does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Controller.v:43]
+INFO: [Synth 8-256] done synthesizing module 'Controller' (8#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Controller.v:23]
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/ALU.v:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/ALU.v:46]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (9#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/ALU.v:3]
+INFO: [Synth 8-638] synthesizing module 'MemOrIO' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/MemOrIO.v:23]
+WARNING: [Synth 8-3848] Net LEDCtrl in module/entity MemOrIO does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/MemOrIO.v:41]
+INFO: [Synth 8-256] done synthesizing module 'MemOrIO' (10#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/MemOrIO.v:23]
+INFO: [Synth 8-638] synthesizing module 'leds' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/leds.v:4]
+INFO: [Synth 8-256] done synthesizing module 'leds' (11#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/leds.v:4]
+INFO: [Synth 8-638] synthesizing module 'dmemory32' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/dmemory32.v:23]
+INFO: [Synth 8-638] synthesizing module 'RAM' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_1/.Xil/Vivado-10000-S210-08/realtime/RAM_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'RAM' (12#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_1/.Xil/Vivado-10000-S210-08/realtime/RAM_stub.v:6]
+WARNING: [Synth 8-689] width (32) of port connection 'addra' does not match port width (14) of module 'RAM' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/dmemory32.v:54]
+INFO: [Synth 8-256] done synthesizing module 'dmemory32' (13#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/dmemory32.v:23]
+WARNING: [Synth 8-689] width (15) of port connection 'upg_adr_i' does not match port width (14) of module 'dmemory32' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:231]
+INFO: [Synth 8-638] synthesizing module 'Decoder' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:22]
+INFO: [Synth 8-256] done synthesizing module 'Decoder' (14#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:22]
+WARNING: [Synth 8-6014] Unused sequential element count_2s_reg was removed.  [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:101]
+WARNING: [Synth 8-6014] Unused sequential element count_5s_reg was removed.  [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:112]
+WARNING: [Synth 8-6014] Unused sequential element count_500hz_reg was removed.  [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:122]
+WARNING: [Synth 8-6014] Unused sequential element pos_reg was removed.  [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:124]
+WARNING: [Synth 8-6014] Unused sequential element wz_reg was removed.  [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:141]
+WARNING: [Synth 8-6014] Unused sequential element sw_reg was removed.  [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:154]
+WARNING: [Synth 8-6014] Unused sequential element seg_out_reg was removed.  [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:168]
+WARNING: [Synth 8-3848] Net tx in module/entity Top does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:12]
+WARNING: [Synth 8-3848] Net ledwrite in module/entity Top does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:222]
+WARNING: [Synth 8-3848] Net ledaddr in module/entity Top does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:223]
+WARNING: [Synth 8-3848] Net ledwdata in module/entity Top does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:224]
+WARNING: [Synth 8-3848] Net ior_data in module/entity Top does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:185]
+WARNING: [Synth 8-3848] Net r_rdata in module/entity Top does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:184]
+WARNING: [Synth 8-3848] Net Shamt in module/entity Top does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:186]
+WARNING: [Synth 8-3848] Net switchctrl in module/entity Top does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:15]
+WARNING: [Synth 8-3848] Net in in module/entity Top does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:17]
+WARNING: [Synth 8-3848] Net case_yes in module/entity Top does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:18]
+WARNING: [Synth 8-3848] Net input1_yes in module/entity Top does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:19]
+WARNING: [Synth 8-3848] Net input2_yes in module/entity Top does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:20]
+INFO: [Synth 8-256] done synthesizing module 'Top' (15#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:3]
+WARNING: [Synth 8-3331] design MemOrIO has unconnected port LEDCtrl
+WARNING: [Synth 8-3331] design MemOrIO has unconnected port ioRead
+WARNING: [Synth 8-3331] design ALU has unconnected port Function_opcode[5]
+WARNING: [Synth 8-3331] design ALU has unconnected port Function_opcode[4]
+WARNING: [Synth 8-3331] design ALU has unconnected port Jr
+WARNING: [Synth 8-3331] design Controller has unconnected port IOWrite
+WARNING: [Synth 8-3331] design Top has unconnected port tx
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[23]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[22]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[21]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[20]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[19]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[18]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[17]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[16]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[15]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[14]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[13]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[12]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[11]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[10]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[9]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[8]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[7]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[6]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[5]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[4]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[3]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[2]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[1]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 396.723 ; gain = 155.098
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin ur:ior to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin ur:ioread_data_switch[15] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin ur:ioread_data_switch[14] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin ur:ioread_data_switch[13] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin ur:ioread_data_switch[12] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin ur:ioread_data_switch[11] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin ur:ioread_data_switch[10] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin ur:ioread_data_switch[9] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin ur:ioread_data_switch[8] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin ur:ioread_data_switch[7] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin ur:ioread_data_switch[6] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin ur:ioread_data_switch[5] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin ur:ioread_data_switch[4] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin ur:ioread_data_switch[3] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin ur:ioread_data_switch[2] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin ur:ioread_data_switch[1] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin ur:ioread_data_switch[0] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin alu:Shamt[4] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:206]
+WARNING: [Synth 8-3295] tying undriven pin alu:Shamt[3] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:206]
+WARNING: [Synth 8-3295] tying undriven pin alu:Shamt[2] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:206]
+WARNING: [Synth 8-3295] tying undriven pin alu:Shamt[1] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:206]
+WARNING: [Synth 8-3295] tying undriven pin alu:Shamt[0] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:206]
+WARNING: [Synth 8-3295] tying undriven pin mio:io_rdata[15] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:io_rdata[14] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:io_rdata[13] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:io_rdata[12] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:io_rdata[11] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:io_rdata[10] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:io_rdata[9] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:io_rdata[8] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:io_rdata[7] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:io_rdata[6] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:io_rdata[5] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:io_rdata[4] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:io_rdata[3] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:io_rdata[2] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:io_rdata[1] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:io_rdata[0] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[31] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[30] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[29] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[28] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[27] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[26] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[25] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[24] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[23] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[22] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[21] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[20] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[19] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[18] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[17] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[16] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[15] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[14] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[13] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[12] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[11] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[10] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[9] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[8] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[7] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[6] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[5] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[4] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[3] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[2] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[1] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin mio:r_rdata[0] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
+WARNING: [Synth 8-3295] tying undriven pin l:ledwrite to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:225]
+WARNING: [Synth 8-3295] tying undriven pin l:ledaddr[1] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:225]
+WARNING: [Synth 8-3295] tying undriven pin l:ledaddr[0] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:225]
+WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[15] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:225]
+WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[14] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:225]
+WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[13] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:225]
+WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[12] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:225]
+WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[11] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:225]
+WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[10] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:225]
+WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[9] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:225]
+WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[8] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:225]
+WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[7] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:225]
+WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[6] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:225]
+WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[5] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:225]
+WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[4] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:225]
+WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[3] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:225]
+WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[2] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:225]
+WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[1] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:225]
+WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[0] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:225]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 396.723 ; gain = 155.098
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tfgg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_1/.Xil/Vivado-10000-S210-08/dcp4/RAM_in_context.xdc] for cell 'dm/ram'
+Finished Parsing XDC File [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_1/.Xil/Vivado-10000-S210-08/dcp4/RAM_in_context.xdc] for cell 'dm/ram'
+Parsing XDC File [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_1/.Xil/Vivado-10000-S210-08/dcp5/prgrom_in_context.xdc] for cell 'pgr/instmem'
+Finished Parsing XDC File [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_1/.Xil/Vivado-10000-S210-08/dcp5/prgrom_in_context.xdc] for cell 'pgr/instmem'
+Parsing XDC File [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_1/.Xil/Vivado-10000-S210-08/dcp6/cpuclk_in_context.xdc] for cell 'cclk'
+Finished Parsing XDC File [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_1/.Xil/Vivado-10000-S210-08/dcp6/cpuclk_in_context.xdc] for cell 'cclk'
+Parsing XDC File [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_1/.Xil/Vivado-10000-S210-08/dcp7/uart_bmpg_0_in_context.xdc] for cell 'uart'
+Finished Parsing XDC File [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_1/.Xil/Vivado-10000-S210-08/dcp7/uart_bmpg_0_in_context.xdc] for cell 'uart'
+Parsing XDC File [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/constrs_1/new/c.xdc]
+Finished Parsing XDC File [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/constrs_1/new/c.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/constrs_1/new/c.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 756.551 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 756.551 ; gain = 514.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 756.551 ; gain = 514.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for fpga_clk. (constraint file  C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_1/.Xil/Vivado-10000-S210-08/dcp6/cpuclk_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for fpga_clk. (constraint file  C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_1/.Xil/Vivado-10000-S210-08/dcp6/cpuclk_in_context.xdc, line 5).
+Applied set_property DONT_TOUCH = true for cclk. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for dm/ram. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pgr/instmem. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for uart. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 756.551 ; gain = 514.926
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "R_format" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MemRead" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Jal" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "I_format" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "Sw" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Branch" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nBranch" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Jmp" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/ALU.v:46]
+INFO: [Synth 8-5545] ROM "Zero" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "register_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'ioread_data_reg' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/ioread.v:14]
+WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:79]
+WARNING: [Synth 8-327] inferring latch for variable 'input1_reg' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:81]
+WARNING: [Synth 8-327] inferring latch for variable 'input2_reg' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:83]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 756.551 ; gain = 514.926
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 17    
+	   3 Input     32 Bit        Muxes := 1     
+	   8 Input     32 Bit        Muxes := 2     
+	   4 Input     24 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 46    
+	   5 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Top 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 3     
+Module programrom 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module IFetc32 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 5     
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module Controller 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 10    
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   8 Input     32 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module MemOrIO 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module leds 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     24 Bit        Muxes := 1     
+Module dmemory32 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module Decoder 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 32    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "Zero" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design ALU has unconnected port Function_opcode[5]
+WARNING: [Synth 8-3331] design ALU has unconnected port Function_opcode[4]
+WARNING: [Synth 8-3331] design ALU has unconnected port Jr
+WARNING: [Synth 8-3331] design Top has unconnected port tx
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[23]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[22]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[21]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[20]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[19]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[18]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[17]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[16]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[15]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[14]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[13]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[12]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[11]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[10]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[9]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[8]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[7]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[6]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[5]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[4]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[3]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[2]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[1]
+WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[0]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[23] )
+WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[15]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[14]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[13]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[12]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[11]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[10]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[9]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[8]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[7]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[6]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[5]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[4]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[3]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[2]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[1]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[0]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (next_state_reg[3]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (next_state_reg[2]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (next_state_reg[1]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (next_state_reg[0]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (input1_reg[7]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (input1_reg[6]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (input1_reg[5]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (input1_reg[4]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (input1_reg[3]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (input1_reg[2]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (input1_reg[1]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (input1_reg[0]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (input2_reg[7]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (input2_reg[6]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (input2_reg[5]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (input2_reg[4]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (input2_reg[3]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (input2_reg[2]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (input2_reg[1]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (input2_reg[0]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[23]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[22]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[21]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[20]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[19]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[18]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[17]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[16]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[15]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[14]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[13]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[12]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[11]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[10]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[9]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[8]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[7]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[6]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[5]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[4]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[3]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[2]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[1]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[0]) is unused and will be removed from module Top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 756.551 ; gain = 514.926
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'cclk/clk_out1' to pin 'cclk/bbstub_clk_out1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'cclk/clk_out2' to pin 'cclk/bbstub_clk_out2/O'
+INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 781.809 ; gain = 540.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1012.953 ; gain = 771.328
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][31]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][31] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][30]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][30] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][29]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][29] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][28]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][28] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][27]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][27] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][26]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][26] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][25]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][25] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][24]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][24] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][23]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][23] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][22]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][22] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][21]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][21] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][20]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][20] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][19]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][19] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][18]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][18] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][17]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][17] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][16]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][16] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][15]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][15] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][14]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][14] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][13]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][13] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][12]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][12] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][11]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][11] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][10]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][10] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][9]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][9] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][8]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][8] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][7]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][7] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][6]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][6] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][5]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][5] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][4]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][4] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][3]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][3] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][2]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][2] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][1]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][1] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[0][0]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[0][0] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][31]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][31] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][30]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][30] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][29]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][29] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][28]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][28] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][27]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][27] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][26]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][26] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][25]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][25] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][24]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][24] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][23]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][23] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][22]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][22] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][21]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][21] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][20]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][20] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][19]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][19] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][18]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][18] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][17]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][17] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][16]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][16] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][15]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][15] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][14]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][14] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][13]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][13] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][12]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][12] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][11]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][11] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][10]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][10] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][9]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][9] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][8]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][8] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][7]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][7] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][6]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][6] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][5]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][5] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][4]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][4] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][3]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][3] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][2]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][2] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][1]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][1] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[1][0]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[1][0] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][31]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][31] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][30]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][30] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][29]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][29] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][28]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][28] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][27]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][27] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][26]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][26] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][25]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][25] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][24]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][24] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][23]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][23] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][22]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][22] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][21]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][21] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][20]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][20] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][19]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][19] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][18]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][18] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][17]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][17] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][16]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][16] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][15]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][15] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][14]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][14] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][13]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][13] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][12]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][12] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][11]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][11] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][10]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][10] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][9]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][9] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][8]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][8] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][7]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][7] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][6]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][6] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][5]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][5] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][4]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][4] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][3]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][3] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][2]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][2] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][1]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][1] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[2][0]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[2][0] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[3][31]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[3][31] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[3][30]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[3][30] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[3][29]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[3][29] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Synth 8-5966] Removing register instance (\ude/register_reg[3][28]__0 ) from module (Top) as it has self-loop and (\ude/register_reg[3][28] ) is actual driver [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:76]
+INFO: [Common 17-14] Message 'Synth 8-5966' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1019.645 ; gain = 778.020
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1019.645 ; gain = 778.020
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1019.645 ; gain = 778.020
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1019.645 ; gain = 778.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1019.645 ; gain = 778.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1019.645 ; gain = 778.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1019.645 ; gain = 778.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |cpuclk        |         1|
+|2     |uart_bmpg_0   |         1|
+|3     |RAM           |         1|
+|4     |prgrom        |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |RAM         |     1|
+|2     |cpuclk      |     1|
+|3     |prgrom      |     1|
+|4     |uart_bmpg_0 |     1|
+|5     |BUFG        |     1|
+|6     |CARRY4      |    24|
+|7     |LUT1        |     1|
+|8     |LUT2        |    34|
+|9     |LUT3        |   194|
+|10    |LUT4        |   149|
+|11    |LUT5        |   185|
+|12    |LUT6        |   989|
+|13    |MUXF7       |   261|
+|14    |MUXF8       |    52|
+|15    |FDRE        |  1121|
+|16    |FDSE        |     5|
+|17    |IBUF        |     3|
+|18    |OBUF        |    24|
+|19    |OBUFT       |     1|
++------+------------+------+
+
+Report Instance Areas: 
++------+---------+-----------+------+
+|      |Instance |Module     |Cells |
++------+---------+-----------+------+
+|1     |top      |           |  3161|
+|2     |  dm     |dmemory32  |    48|
+|3     |  iff    |IFetc32    |   144|
+|4     |  pgr    |programrom |   676|
+|5     |  ude    |Decoder    |  2209|
++------+---------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1019.645 ; gain = 778.020
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 92 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1019.645 ; gain = 418.191
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 1019.645 ; gain = 778.020
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 340 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+219 Infos, 241 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1019.645 ; gain = 789.543
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_1/Top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1019.645 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed May 17 00:26:20 2023...
