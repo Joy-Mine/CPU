@@ -45,14 +45,14 @@ module MemOrIO(
 
     assign addr_out= addr_in;
     // The data wirte to register file may be from memory or io.
-    // While the data is from io, it should be the lower 8bit of r_wdata.
+    // While the data is from io, it should be the lower 16bit of r_wdata.
     assign r_wdata = (mRead==1'b1) ? m_rdata : {24'h000000, io_rdata};
     
     // Chip select signal of Led and Switch are all active high;
-    assign LEDCtrl= (ioRead==1'b1&&addr_in==32'hFFFF_FC60) ? 1'b1:1'b0;
-    assign switchctrl=(ioRead==1'b1&&addr_in==32'hFFFF_FC70)? 1'b1:1'b0;
-    assign segctrl=(ioRead==1'b1&&addr_in[1:0]==2'b00)? 1'b1:1'b0;
-    assign btnctrl=(ioRead==1'b1&&addr_in[1:0]==2'b00)? 1'b1:1'b0;
+    assign LEDCtrl= (ioWrite==1'b1/*&&addr_in==32'hFFFF_FC60*/) ? 1'b1:1'b0;
+    assign switchctrl=(ioRead==1'b1/*&&addr_in==32'hFFFF_FC70*/)? 1'b1:1'b0;
+    assign segctrl=(ioWrite==1'b1/*&&addr_in[1:0]==2'b00*/)? 1'b1:1'b0;
+    assign btnctrl=(ioWrite==1'b1/*&&addr_in[1:0]==2'b00*/)? 1'b1:1'b0;
     //这部分需要看mips 70/72？
     
     always @* begin
