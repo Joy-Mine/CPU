@@ -33,11 +33,11 @@ module MemOrIO(
     output[31:0] addr_out; // address to Data-Memory
 
     input [31:0] m_rdata; //data read from Data-Memory
-    input[15:0] io_rdata; //read from IO,16 bits
+    input[7:0] io_rdata; //read from IO,8 bits
     output[31:0] r_wdata; // data to Decoder(register file)
     
     input[31:0] r_rdata; // data read from Decoder(register file)
-    output reg[31:0] write_data; //data to memory or I/O£¨m_wdata,io_wdata)
+    output reg[31:0] write_data; //data to memory or I/Oï¼ˆm_wdata,io_wdata)
     output LEDCtrl; //LED Chip Select
     output switchctrl; //Switch Chip Select 
     output segctrl;
@@ -45,15 +45,15 @@ module MemOrIO(
 
     assign addr_out= addr_in;
     // The data wirte to register file may be from memory or io.
-    // While the data is from io, it should be the lower 16bit of r_wdata.
-    assign r_wdata = (mRead==1'b1) ? m_rdata : {16'h0000, io_rdata};
+    // While the data is from io, it should be the lower 8bit of r_wdata.
+    assign r_wdata = (mRead==1'b1) ? m_rdata : {24'h000000, io_rdata};
     
     // Chip select signal of Led and Switch are all active high;
     assign LEDCtrl= (ioRead==1'b1&&addr_in==32'hFFFF_FC60) ? 1'b1:1'b0;
     assign switchctrl=(ioRead==1'b1&&addr_in==32'hFFFF_FC70)? 1'b1:1'b0;
     assign segctrl=(ioRead==1'b1&&addr_in[1:0]==2'b00)? 1'b1:1'b0;
     assign btnctrl=(ioRead==1'b1&&addr_in[1:0]==2'b00)? 1'b1:1'b0;
-    //Õâ²¿·ÖĞèÒª¿´mips 70/72£¿
+    //è¿™éƒ¨åˆ†éœ€è¦çœ‹mips 70/72ï¼Ÿ
     
     always @* begin
     if((mWrite==1)||(ioWrite==1))
