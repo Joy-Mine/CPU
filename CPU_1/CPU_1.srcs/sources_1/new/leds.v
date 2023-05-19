@@ -2,29 +2,23 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module leds (
-    input			ledrst,		// reset, active high (¸´Î»ĞÅºÅ,¸ßµçÆ½ÓĞĞ§)
-    input			led_clk,	// clk for led (Ê±ÖÓĞÅºÅ)
-    input			ledwrite,	// led write enable, active high (Ğ´ĞÅºÅ,¸ßµçÆ½ÓĞĞ§)
-    input			ledcs,		// 1 means the leds are selected as output (´ÓmemorioÀ´µÄ£¬ÓÉµÍÖÁ¸ßÎ»ĞÎ³ÉµÄLEDÆ¬Ñ¡ĞÅºÅ)
-    //cs±íÊ¾ÊÇ·ñ±»Ñ¡ÖĞ£¬writeÊÇĞ´ĞÅºÅ
-    //csÀ´×Ômemorio(ÔÚ²Î¿¼Éè¼ÆÀïÕâ¸öÄ£¿é¶Ô½ÓËùÓĞio£¬²»Í¬µÄÉè±¸ÓĞ×Ô¼ºµ¥¶ÀµÄÆ¬Ñ¡)
-    //write À´×Ôcontroller(Ö»¼òµ¥Çø·ÖÊÇ¶ÔmemĞ´»¹ÊÇ¶ÔioĞ´)
+    input			ledrst,		// reset, active high (å¤ä½ä¿¡å·,é«˜ç”µå¹³æœ‰æ•ˆ)
+    input			led_clk,	// clk for led (æ—¶é’Ÿä¿¡å·)
+    input			ledwrite,	// led write enable, active high (å†™ä¿¡å·,é«˜ç”µå¹³æœ‰æ•ˆ)
+    input			ledcs,		// 1 means the leds are selected as output (ä»memorioæ¥çš„ï¼Œç”±ä½è‡³é«˜ä½å½¢æˆçš„LEDç‰‡é€‰ä¿¡å·)
+    //csè¡¨ç¤ºæ˜¯å¦è¢«é€‰ä¸­ï¼Œwriteæ˜¯å†™ä¿¡å·
+    //csæ¥è‡ªmemorio(åœ¨å‚è€ƒè®¾è®¡é‡Œè¿™ä¸ªæ¨¡å—å¯¹æ¥æ‰€æœ‰ioï¼Œä¸åŒçš„è®¾å¤‡æœ‰è‡ªå·±å•ç‹¬çš„ç‰‡é€‰)
+    //write æ¥è‡ªcontroller(åªç®€å•åŒºåˆ†æ˜¯å¯¹memå†™è¿˜æ˜¯å¯¹ioå†™)
     
-    input	[1:0]	ledaddr,	// 2'b00 means updata the low 16bits of ledout, 2'b10 means updata the high 8 bits of ledout
     input	[7:0]	ledwdata,	// the data (from register/memorio)  waiting for to be writen to the leds of the board
     output reg	[7:0]	ledout		// the data writen to the leds  of the board
 );
     
     always @ (posedge led_clk or posedge ledrst) begin
         if (ledrst)
-            ledout <= 24'h000000;
+            ledout <= 8'h00;
 		else if (ledcs && ledwrite) begin
-			if (ledaddr == 2'b00)
-				ledout[7:0] <= { ledout[7:4],ledwdata[3:0] };
-			else if (ledaddr == 2'b10 )
-				ledout[7:0] <= { ledwdata[7:4], ledout[3:0] };
-			else
-				ledout <= ledout;
+			ledout[7:0] <= ledwdata;
         end else begin
             ledout <= ledout;
         end
