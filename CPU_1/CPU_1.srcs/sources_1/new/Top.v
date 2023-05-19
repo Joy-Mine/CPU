@@ -17,11 +17,11 @@ module Top(
     output tx
     );
     
-    wire [2:0] num;//ÓÃÀı±àºÅ
-    wire [7:0] in;//8¸ö²¦Âë¿ª¹Ø
+    wire [2:0] num;//ç”¨ä¾‹ç¼–å·
+    wire [7:0] in;//8ä¸ªæ‹¨ç å¼€å…³
     wire case_yes;
-    wire input1_yes;//È·ÈÏµÚÒ»¸öÊäÈë
-    wire input2_yes;//È·ÈÏµÚ¶ş¸öÊäÈë
+    wire input1_yes;//ç¡®è®¤ç¬¬ä¸€ä¸ªè¾“å…¥
+    wire input2_yes;//ç¡®è®¤ç¬¬äºŒä¸ªè¾“å…¥
     wire switch_case;
     
     assign case_yes=btn[0];
@@ -57,11 +57,11 @@ module Top(
     
     
     
-    //input²¿·Ö
+    //inputéƒ¨åˆ†
     reg [3:0] state,next_state;
-    parameter s0=3'b000, s1=3'b001, s2=3'b010, s3=011; //s0µÈ´ıÊäÈëcase //s1ÊäÈëcaseÍê³É //s2ÊäÈëinput1 s3 ÊäÈëinput2
+    parameter s0=3'b000, s1=3'b001, s2=3'b010, s3=011; //s0ç­‰å¾…è¾“å…¥case //s1è¾“å…¥caseå®Œæˆ //s2è¾“å…¥input1 s3 è¾“å…¥input2
     reg [2:0] cases;
-    reg [7:0] input1,input2;
+    reg [7:0] ioread_data_switch;
 
     
     always @* begin //fsms
@@ -73,13 +73,13 @@ module Top(
     
     always @* begin //fsm-detail
         case(state)
-            s0:if(case_yes) begin next_state = s1; cases=num; end //ÊäÈë²âÊÔÑùÀı
+            s0:if(case_yes) begin next_state = s1; cases=num; end //è¾“å…¥æµ‹è¯•æ ·ä¾‹
                 else next_state=s0;
-            s1:if(input1_yes) begin next_state=s2; input1=in; end // ÊäÈë²ÎÊı1
-                else begin next_state=s1; input1=input1; end
-            s2:if(input2_yes) begin next_state=s3; input2=in; end // ÊäÈë²ÎÊı2
-                else begin next_state=s2; input2=input2; end
-            s3:if(switch_case) next_state=s0;   //²âÊÔ³¡¾°½áÊø ÇĞ»» 
+            s1:if(input1_yes) begin next_state=s2; ioread_data_switch=in; end // è¾“å…¥å‚æ•°1
+                else begin next_state=s1; ioread_data_switch=ioread_data_switch; end
+            s2:if(input2_yes) begin next_state=s3; ioread_data_switch=in; end // è¾“å…¥å‚æ•°2
+                else begin next_state=s2; ioread_data_switch=ioread_data_switch; end
+            s3:if(switch_case) next_state=s0;   //æµ‹è¯•åœºæ™¯ç»“æŸ åˆ‡æ¢ 
                 else next_state=s3;
             default: next_state=next_state;
         endcase
@@ -89,14 +89,14 @@ module Top(
    
    wire [31:0] ALU_Result,Read_data_1,Read_data_2,Sign_extend,Addr_Result,branch_base_addr,link_addr,write_data;
    wire [31:0] addr_out,m_rdata,r_wdata,r_rdata;
-   wire [15:0] ioread_data_switch,ior_data;
+   wire [7:0] ior_data;
    wire [1:0] ALUOp;
    wire ALUSrc,I_format,Sftmd,Zero,Branch,nBranch,Jmp,Jal,Jr,RegDST,MemorIOtoReg,RegWrite,MemWrite,MemRead,IORead,IOWrite;
    wire LEDCtrl,switchctrl,segctrl,btnctrl;
 
     assign ioread_data_switch={input1,input2};
     
-    wire[31:0] Instruction_i,Instruction_o;//Òª×¢ÒârstµÄÊ²Ã´µçÆ½ÓĞĞ§ miniºÃÏñÊÇµÍµçÆ½effective ?  in code-high
+    wire[31:0] Instruction_i,Instruction_o;//è¦æ³¨æ„rstçš„ä»€ä¹ˆç”µå¹³æœ‰æ•ˆ miniå¥½åƒæ˜¯ä½ç”µå¹³effective ?  in code-high
     wire[13:0] rom_adr_o;
     programrom pgr(cpu_clk,rom_adr_o,Instruction_i,upg_rst,upg_clk_o,upg_wen_o,upg_adr_o[13:0],upg_dat_o,upg_done_o);
     IFetc32 iff(Instruction_o, branch_base_addr,  Addr_Result, Read_data_1, Branch, nBranch, Jmp, Jal, Jr, Zero,cpu_clk, fpga_rst,link_addr,rom_adr_o,Instruction_i);
@@ -112,40 +112,40 @@ module Top(
 
     MemOrIO mio(MemorIOtoReg,MemWrite,IORead,IOWrite,Addr_Result,
         addr_out,m_rdata,ior_data,r_wdata,Read_data_1,write_data,LEDCtrl,switchctrl,segctrl,btnctrl);
-//            input[31:0] r_rdata; // data read from Decoder(register file)//¶ÔÓ¦readdata1 
-//            output reg[31:0] write_data; //data to memory or I/O£¨m_wdata,io_wdata)
+//            input[31:0] r_rdata; // data read from Decoder(register file)//å¯¹åº”readdata1 
+//            output reg[31:0] write_data; //data to memory or I/Oï¼ˆm_wdata,io_wdata)
 
     // input	[7:0]	ledwdata,	// the data (from register/memorio)  waiting for to be writen to the leds of the board
-    //wire ledwrite; //led write enable, active high (Ğ´ĞÅºÅ,¸ßµçÆ½ÓĞĞ§)
+    //wire ledwrite; //led write enable, active high (å†™ä¿¡å·,é«˜ç”µå¹³æœ‰æ•ˆ)
     reg [31:0] segwrite;
     
-    //ÕâÀïÓĞ¸öÎÊÌâ¾ÍÊÇµ½µ×writeÄÄ7¸öbit½øÈ¥ÄØ£¿£¿£¿°´µÀÀíÀ´Ëµ ¿ÉÒÔ¸ù¾İÌâÄ¿ÍíÉÏÒ»ÏÂ´ó¸Å£¡£¡£¡
-    //ÕâÀïÎÒÊÇÓÃÁËºóÆßÎ» ±È½Ï¹ØÏµµÄ»° ¿ÉÒÔ¸øÒ»¸ö¶«Î÷¸³ÖµÎª1 ¾Í¿ÉÒÔÌåÏÖÔÚledÉÏ ¸ÕºÃÊÇ×îµÍµÄbit
-    //2µÄÃİºÍÆæÊıÒ²¿ÉÒÔÏàËÆµÄÈ¥×ö ÆæÊıÓÃÒ»¸örem ¼Ä´æÆ÷µÄÖµ¾ÍÖ±½Ó»áµÃµ½1
+    //è¿™é‡Œæœ‰ä¸ªé—®é¢˜å°±æ˜¯åˆ°åº•writeå“ª7ä¸ªbitè¿›å»å‘¢ï¼Ÿï¼Ÿï¼ŸæŒ‰é“ç†æ¥è¯´ å¯ä»¥æ ¹æ®é¢˜ç›®æ™šä¸Šä¸€ä¸‹å¤§æ¦‚ï¼ï¼ï¼
+    //è¿™é‡Œæˆ‘æ˜¯ç”¨äº†åä¸ƒä½ æ¯”è¾ƒå…³ç³»çš„è¯ å¯ä»¥ç»™ä¸€ä¸ªä¸œè¥¿èµ‹å€¼ä¸º1 å°±å¯ä»¥ä½“ç°åœ¨ledä¸Š åˆšå¥½æ˜¯æœ€ä½çš„bit
+    //2çš„å¹‚å’Œå¥‡æ•°ä¹Ÿå¯ä»¥ç›¸ä¼¼çš„å»åš å¥‡æ•°ç”¨ä¸€ä¸ªrem å¯„å­˜å™¨çš„å€¼å°±ç›´æ¥ä¼šå¾—åˆ°1
     
-    //»ù±¾²âÊÔ³¡¾°2ÖĞ Òç³ö¼ì²âÒ²ÊÇ ±È½Ï×î¸ßÒ»¸öbit ´æÔÚ1ÔÚÒ»¸ö¼Ä´æÆ÷ÖĞ ÌåÏÖÔÚLEDÖĞ£¡£¡
-    //×¢Òâ£ºÖ»ÄÜ´æ1£¡£¡£¡±È½Ï·½±ã
+    //åŸºæœ¬æµ‹è¯•åœºæ™¯2ä¸­ æº¢å‡ºæ£€æµ‹ä¹Ÿæ˜¯ æ¯”è¾ƒæœ€é«˜ä¸€ä¸ªbit å­˜åœ¨1åœ¨ä¸€ä¸ªå¯„å­˜å™¨ä¸­ ä½“ç°åœ¨LEDä¸­ï¼ï¼
+    //æ³¨æ„ï¼šåªèƒ½å­˜1ï¼ï¼ï¼æ¯”è¾ƒæ–¹ä¾¿
     leds l(fpga_rst,fpga_clk,IOWrite,LEDCtrl,Addr_Result[1:0],write_data[7:0],ledout);
     ioread ur(fpga_rst,IORead,switchctrl,ioread_data_switch,ior_data);
     segtube st(fpga_clk,fpga_rst,segctrl,segwrite,seg_en,seg_out1,seg_out2);
     
-    //addr_outĞèÒªÊÇ14Î»³¤¶È 
+    //addr_outéœ€è¦æ˜¯14ä½é•¿åº¦ 
     dmemory32 dm(cpu_clk,MemWrite,addr_out[15:2],write_data,m_rdata,upg_rst,upg_clk_o,upg_wen_o,upg_adr_o[13:0],upg_dat_o,upg_done_o);
     Decoder ude(Read_data_1,Read_data_2,Instruction_o,r_wdata/*mem_data*/,ALU_Result,
                  Jal,RegWrite,MemorIOtoReg,RegDST,Sign_extend,cpu_clk,fpga_rst,link_addr);
-    //mem_data  ´ÓDATA RAM or I/O portÈ¡³öµÄÊı¾İ
+    //mem_data  ä»DATA RAM or I/O portå–å‡ºçš„æ•°æ®
     //        input[31:0] r_rdata; // data read from Decoder(register file)from MEMorIO
     //  m_rdata ->  output [31:0] ram_dat_o, // the data read from data-ram
     
     
-    //ÅĞ¶ÏºÎÊ±¸Ä±äsegµÄseg write=write_data£»
+    //åˆ¤æ–­ä½•æ—¶æ”¹å˜segçš„seg write=write_dataï¼›
     reg [27:0] count_2s;
     reg [28:0] count_5s;
     wire temp_2s;
     wire temp_5s;
     assign temp_2s = ((segctrl&&num==3'b010)||(segctrl&&num==3'b011));
     assign temp_5s = (segctrl&&num==3'b111);
-    always@(posedge fpga_clk) begin //count 2s   ÓÃÓÚÊµÏÖÃ¿2-3s Ò»±ä 
+    always@(posedge fpga_clk) begin //count 2s   ç”¨äºå®ç°æ¯2-3s ä¸€å˜ 
         if(temp_2s) begin
             if(count_2s == 28'd200000000)
             count_2s <= 0;
@@ -156,7 +156,7 @@ module Top(
             count_2s <= 0;
     end   
    
-    always@(posedge fpga_clk) begin //count 5s   ÓÃÓÚÊµÏÖÃ¿5s Ò»±ä 
+    always@(posedge fpga_clk) begin //count 5s   ç”¨äºå®ç°æ¯5s ä¸€å˜ 
         if(temp_5s) begin
             if(count_5s == 29'd500000000)
             count_5s <= 0;
@@ -167,7 +167,7 @@ module Top(
             count_5s <= 0;
     end   
     
-    always@(posedge fpga_clk) begin//Ê¹ÓÃcaseºÍ¼ÆÊ±Æ÷À´¿ØÖÆÃ¿´ÎÊä³ö²ÎÊıÍ£Áô2s»ò5s
+    always@(posedge fpga_clk) begin//ä½¿ç”¨caseå’Œè®¡æ—¶å™¨æ¥æ§åˆ¶æ¯æ¬¡è¾“å‡ºå‚æ•°åœç•™2sæˆ–5s
         casex(num)
             3'b01x: begin if(count_2s == 28'd200000000) segwrite=write_data; end
             3'b111: begin if(count_5s == 29'd500000000) segwrite=write_data; end
