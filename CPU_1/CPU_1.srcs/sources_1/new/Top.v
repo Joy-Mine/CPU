@@ -7,7 +7,6 @@ module Top(
     input[4:0] btn,
     // UART Programmer Pinouts
     // start Uart communicate at high level
-    input start_pg,
     input rx,
     
     output [7:0] seg_out1,
@@ -40,6 +39,24 @@ module Top(
     wire [31:0] upg_dat_o; 
     
     wire spg_bufg;
+    wire start_pg;
+    parameter son=3'b100, soff=3'b101;
+    reg[2:0] state_uart,nxt_uart;
+
+    always @* begin //fsms
+        if(fpga_rst)
+            state_uart <= soff;
+        else
+            state_uart <= nxt_uart;
+    end
+
+    always @* begin //fsm-uart
+        case(state_uart)
+            soff: if(btn[5]) nxt_uart=son;
+            son: if(btn[5]) nxt_uart=soff;
+            default: nxt_uart=state_uart;
+        endcase
+    end
     BUFG U1(.I(start_pg), .O(spg_bufg)); // de-twitter
     // Generate UART Programmer reset signal
     reg upg_rst;
