@@ -2,10 +2,10 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Fri May 19 22:33:59 2023
-# Process ID: 43868
+# Start of session at: Fri May 19 16:18:22 2023
+# Process ID: 45340
 # Current directory: D:/ProProject/CS202/CPU/CPU_1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13904 D:\ProProject\CS202\CPU\CPU_1\CPU_1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent45124 D:\ProProject\CS202\CPU\CPU_1\CPU_1.xpr
 # Log file: D:/ProProject/CS202/CPU/CPU_1/vivado.log
 # Journal file: D:/ProProject/CS202/CPU/CPU_1\vivado.jou
 #-----------------------------------------------------------
@@ -19,4 +19,4 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/ProProject/CS202/CPU/CPU_1
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/ProTools/Xilinx/Vivado/2017.4/data/ip'.
 update_compile_order -fileset sources_1
 exit
-INFO: [Common 17-206] Exiting Vivado at Sat May 20 00:13:33 2023...
+INFO: [Common 17-206] Exiting Vivado at Fri May 19 20:12:36 2023...
