@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file C:\Users\gmcc\Desktop\cpu1\CPU_1\CPU_1.runs\synth_2/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: 没有权限

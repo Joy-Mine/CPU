@@ -9,20 +9,15 @@ module Top(
     // UART Programmer Pinouts
     // start Uart communicate at high level
     input rx,
-    
+    output [3:0] ledsmall,
     output [7:0] seg_out1,
     output [7:0] seg_out2,
     output [7:0] seg_en,
     output [7:0] ledout,// from leds
     output tx
     );
-    
-    wire case_yes;
-    wire input_yes;//确认输入
-    wire start;//确认开始
-    wire switch_case;
-    
-
+   
+   assign ledsmall={start_pg,smallsw};
     
     wire cpu_clk;
    // UART Programmer Pinouts

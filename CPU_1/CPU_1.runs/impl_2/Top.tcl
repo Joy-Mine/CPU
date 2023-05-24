@@ -60,13 +60,59 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
+
+start_step init_design
+set ACTIVE_STEP init_design
+set rc [catch {
+  create_msg_db init_design.pb
+  create_project -in_memory -part xc7a35tcsg324-1
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
+  set_property webtalk.parent_dir C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.cache/wt [current_project]
+  set_property parent.project_path C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.xpr [current_project]
+  set_property ip_repo_paths C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/SEU_CSE_507_user_uart_bmpg_1.3 [current_project]
+  set_property ip_output_repo C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.cache/ip [current_project]
+  set_property ip_cache_permissions {read write} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  add_files -quiet C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/synth_2/Top.dcp
+  read_ip -quiet C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/uart_bmpg_0_1/uart_bmpg_0.xci
+  read_ip -quiet C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/RAM_1/RAM.xci
+  read_ip -quiet C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/prgrom_1/prgrom.xci
+  read_ip -quiet C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/cpuclk_2/cpuclk.xci
+  read_xdc C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/constrs_1/new/c.xdc
+  link_design -top Top -part xc7a35tcsg324-1
+  close_msg_db -file init_design.pb
+} RESULT]
+if {$rc} {
+  step_failed init_design
+  return -code error $RESULT
+} else {
+  end_step init_design
+  unset ACTIVE_STEP 
+}
+
+start_step opt_design
+set ACTIVE_STEP opt_design
+set rc [catch {
+  create_msg_db opt_design.pb
+  opt_design 
+  write_checkpoint -force Top_opt.dcp
+  create_report "impl_2_opt_report_drc_0" "report_drc -file Top_drc_opted.rpt -pb Top_drc_opted.pb -rpx Top_drc_opted.rpx"
+  close_msg_db -file opt_design.pb
+} RESULT]
+if {$rc} {
+  step_failed opt_design
+  return -code error $RESULT
+} else {
+  end_step opt_design
+  unset ACTIVE_STEP 
+}
 
 start_step place_design
 set ACTIVE_STEP place_design
 set rc [catch {
   create_msg_db place_design.pb
-  open_checkpoint Top_opt.dcp
-  set_property webtalk.parent_dir C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.cache/wt [current_project]
   implement_debug_core 
   place_design 
   write_checkpoint -force Top_placed.dcp
