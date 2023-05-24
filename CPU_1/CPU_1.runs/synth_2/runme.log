@@ -14,94 +14,66 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 9368 
+INFO: Helper process launched with PID 17844 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 344.742 ; gain = 102.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 343.988 ; gain = 102.563
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Top' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:3]
-	Parameter s0 bound to: 3'b000 
-	Parameter s1 bound to: 3'b001 
-	Parameter s2 bound to: 3'b010 
-	Parameter s3 bound to: 11 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:607]
-INFO: [Synth 8-256] done synthesizing module 'BUFG' (1#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:607]
-INFO: [Synth 8-638] synthesizing module 'cpuclk' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-11420-S210-08/realtime/cpuclk_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'cpuclk' (2#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-11420-S210-08/realtime/cpuclk_stub.v:5]
-INFO: [Synth 8-638] synthesizing module 'uart_bmpg_0' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-11420-S210-08/realtime/uart_bmpg_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'uart_bmpg_0' (3#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-11420-S210-08/realtime/uart_bmpg_0_stub.v:6]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:91]
-INFO: [Synth 8-226] default block is never used [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:153]
-INFO: [Synth 8-638] synthesizing module 'ioread' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/ioread.v:4]
-INFO: [Synth 8-256] done synthesizing module 'ioread' (4#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/ioread.v:4]
-INFO: [Synth 8-638] synthesizing module 'programrom' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/programrom.v:23]
-INFO: [Synth 8-638] synthesizing module 'prgrom' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-11420-S210-08/realtime/prgrom_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'prgrom' (5#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-11420-S210-08/realtime/prgrom_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'programrom' (6#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/programrom.v:23]
-INFO: [Synth 8-638] synthesizing module 'IFetc32' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/IFetc32.v:23]
-INFO: [Synth 8-256] done synthesizing module 'IFetc32' (7#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/IFetc32.v:23]
-INFO: [Synth 8-638] synthesizing module 'Controller' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Controller.v:23]
-INFO: [Synth 8-256] done synthesizing module 'Controller' (8#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Controller.v:23]
-INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/ALU.v:3]
-INFO: [Synth 8-226] default block is never used [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/ALU.v:46]
-INFO: [Synth 8-256] done synthesizing module 'ALU' (9#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/ALU.v:3]
-INFO: [Synth 8-638] synthesizing module 'MemOrIO' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/MemOrIO.v:23]
-INFO: [Synth 8-256] done synthesizing module 'MemOrIO' (10#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/MemOrIO.v:23]
-INFO: [Synth 8-638] synthesizing module 'leds' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/leds.v:4]
-INFO: [Synth 8-256] done synthesizing module 'leds' (11#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/leds.v:4]
-INFO: [Synth 8-638] synthesizing module 'dmemory32' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/dmemory32.v:23]
-INFO: [Synth 8-638] synthesizing module 'RAM' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-11420-S210-08/realtime/RAM_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'RAM' (12#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-11420-S210-08/realtime/RAM_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'dmemory32' (13#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/dmemory32.v:23]
-WARNING: [Synth 8-689] width (32) of port connection 'ram_adr_i' does not match port width (14) of module 'dmemory32' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:221]
-INFO: [Synth 8-638] synthesizing module 'Decoder' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:22]
-INFO: [Synth 8-256] done synthesizing module 'Decoder' (14#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:22]
-WARNING: [Synth 8-6014] Unused sequential element count_2s_reg was removed.  [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:101]
-WARNING: [Synth 8-6014] Unused sequential element count_5s_reg was removed.  [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:112]
-WARNING: [Synth 8-6014] Unused sequential element count_500hz_reg was removed.  [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:122]
-WARNING: [Synth 8-6014] Unused sequential element pos_reg was removed.  [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:124]
-WARNING: [Synth 8-6014] Unused sequential element wz_reg was removed.  [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:141]
-WARNING: [Synth 8-6014] Unused sequential element sw_reg was removed.  [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:154]
-WARNING: [Synth 8-6014] Unused sequential element seg_out_reg was removed.  [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:168]
-WARNING: [Synth 8-3848] Net tx in module/entity Top does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:12]
-WARNING: [Synth 8-3848] Net ledwrite in module/entity Top does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:212]
-WARNING: [Synth 8-3848] Net ledaddr in module/entity Top does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:213]
-WARNING: [Synth 8-3848] Net ledwdata in module/entity Top does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:214]
-WARNING: [Synth 8-3848] Net in in module/entity Top does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:16]
-WARNING: [Synth 8-3848] Net input2_yes in module/entity Top does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:19]
-WARNING: [Synth 8-3848] Net case_yes in module/entity Top does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:17]
-WARNING: [Synth 8-3848] Net input1_yes in module/entity Top does not have driver. [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:18]
-INFO: [Synth 8-256] done synthesizing module 'Top' (15#1) [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:3]
-WARNING: [Synth 8-3331] design MemOrIO has unconnected port ioRead
+INFO: [Synth 8-638] synthesizing module 'Top' [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:3]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [D:/Vivado/2017.4/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (1#1) [D:/Vivado/2017.4/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-638] synthesizing module 'cpuclk' [C:/Users/gmcc/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-14420-LAPTOP-7GOEKSIJ/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'cpuclk' (2#1) [C:/Users/gmcc/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-14420-LAPTOP-7GOEKSIJ/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'uart_bmpg_0' [C:/Users/gmcc/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-14420-LAPTOP-7GOEKSIJ/realtime/uart_bmpg_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'uart_bmpg_0' (3#1) [C:/Users/gmcc/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-14420-LAPTOP-7GOEKSIJ/realtime/uart_bmpg_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'programrom' [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/programrom.v:23]
+INFO: [Synth 8-638] synthesizing module 'prgrom' [C:/Users/gmcc/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-14420-LAPTOP-7GOEKSIJ/realtime/prgrom_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'prgrom' (4#1) [C:/Users/gmcc/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-14420-LAPTOP-7GOEKSIJ/realtime/prgrom_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'programrom' (5#1) [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/programrom.v:23]
+INFO: [Synth 8-638] synthesizing module 'IFetc32' [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/IFetc32.v:23]
+INFO: [Synth 8-256] done synthesizing module 'IFetc32' (6#1) [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/IFetc32.v:23]
+INFO: [Synth 8-638] synthesizing module 'Controller' [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Controller.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Controller' (7#1) [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Controller.v:23]
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/ALU.v:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/ALU.v:46]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (8#1) [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/ALU.v:3]
+INFO: [Synth 8-638] synthesizing module 'MemOrIO' [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/MemOrIO.v:23]
+INFO: [Synth 8-256] done synthesizing module 'MemOrIO' (9#1) [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/MemOrIO.v:23]
+INFO: [Synth 8-638] synthesizing module 'leds' [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/leds.v:4]
+INFO: [Synth 8-256] done synthesizing module 'leds' (10#1) [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/leds.v:4]
+INFO: [Synth 8-638] synthesizing module 'ioread' [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/ioread.v:4]
+INFO: [Synth 8-256] done synthesizing module 'ioread' (11#1) [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/ioread.v:4]
+INFO: [Synth 8-638] synthesizing module 'dmemory32' [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/dmemory32.v:23]
+INFO: [Synth 8-638] synthesizing module 'RAM' [C:/Users/gmcc/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-14420-LAPTOP-7GOEKSIJ/realtime/RAM_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'RAM' (12#1) [C:/Users/gmcc/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-14420-LAPTOP-7GOEKSIJ/realtime/RAM_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'dmemory32' (13#1) [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/dmemory32.v:23]
+INFO: [Synth 8-638] synthesizing module 'Decoder' [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:22]
+INFO: [Synth 8-256] done synthesizing module 'Decoder' (14#1) [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:22]
+INFO: [Synth 8-638] synthesizing module 'segtube' [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/segtube.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/segtube.v:82]
+INFO: [Synth 8-226] default block is never used [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/segtube.v:99]
+WARNING: [Synth 8-6014] Unused sequential element wz_reg was removed.  [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/segtube.v:59]
+WARNING: [Synth 8-3848] Net seg_en in module/entity segtube does not have driver. [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/segtube.v:29]
+INFO: [Synth 8-256] done synthesizing module 'segtube' (15#1) [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/segtube.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Top' (16#1) [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:3]
+WARNING: [Synth 8-3331] design segtube has unconnected port seg_en[7]
+WARNING: [Synth 8-3331] design segtube has unconnected port seg_en[6]
+WARNING: [Synth 8-3331] design segtube has unconnected port seg_en[5]
+WARNING: [Synth 8-3331] design segtube has unconnected port seg_en[4]
+WARNING: [Synth 8-3331] design segtube has unconnected port seg_en[3]
+WARNING: [Synth 8-3331] design segtube has unconnected port seg_en[2]
+WARNING: [Synth 8-3331] design segtube has unconnected port seg_en[1]
+WARNING: [Synth 8-3331] design segtube has unconnected port seg_en[0]
 WARNING: [Synth 8-3331] design ALU has unconnected port Function_opcode[5]
 WARNING: [Synth 8-3331] design ALU has unconnected port Function_opcode[4]
 WARNING: [Synth 8-3331] design ALU has unconnected port Jr
-WARNING: [Synth 8-3331] design Top has unconnected port tx
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[23]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[22]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[21]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[20]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[19]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[18]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[17]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[16]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[15]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[14]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[13]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[12]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[11]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[10]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[9]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[8]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[7]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[6]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[5]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[4]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[3]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[2]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[1]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[0]
+WARNING: [Synth 8-3331] design IFetc32 has unconnected port Insturction_i[31]
+WARNING: [Synth 8-3331] design IFetc32 has unconnected port Insturction_i[30]
+WARNING: [Synth 8-3331] design IFetc32 has unconnected port Insturction_i[29]
+WARNING: [Synth 8-3331] design IFetc32 has unconnected port Insturction_i[28]
+WARNING: [Synth 8-3331] design IFetc32 has unconnected port Insturction_i[27]
+WARNING: [Synth 8-3331] design IFetc32 has unconnected port Insturction_i[26]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 397.500 ; gain = 154.758
+Finished RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 396.813 ; gain = 155.387
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -110,72 +82,53 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin l:ledwrite to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:215]
-WARNING: [Synth 8-3295] tying undriven pin l:ledaddr[1] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:215]
-WARNING: [Synth 8-3295] tying undriven pin l:ledaddr[0] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:215]
-WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[15] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:215]
-WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[14] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:215]
-WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[13] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:215]
-WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[12] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:215]
-WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[11] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:215]
-WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[10] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:215]
-WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[9] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:215]
-WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[8] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:215]
-WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[7] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:215]
-WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[6] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:215]
-WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[5] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:215]
-WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[4] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:215]
-WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[3] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:215]
-WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[2] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:215]
-WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[1] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:215]
-WARNING: [Synth 8-3295] tying undriven pin l:ledwdata[0] to constant 0 [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:215]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 397.500 ; gain = 154.758
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 396.813 ; gain = 155.387
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-11420-S210-08/dcp4/cpuclk_in_context.xdc] for cell 'cclk'
-Finished Parsing XDC File [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-11420-S210-08/dcp4/cpuclk_in_context.xdc] for cell 'cclk'
-Parsing XDC File [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-11420-S210-08/dcp5/uart_bmpg_0_in_context.xdc] for cell 'uart'
-Finished Parsing XDC File [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-11420-S210-08/dcp5/uart_bmpg_0_in_context.xdc] for cell 'uart'
-Parsing XDC File [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-11420-S210-08/dcp6/RAM_in_context.xdc] for cell 'dm/ram'
-Finished Parsing XDC File [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-11420-S210-08/dcp6/RAM_in_context.xdc] for cell 'dm/ram'
-Parsing XDC File [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-11420-S210-08/dcp7/prgrom_in_context.xdc] for cell 'pgr/instmem'
-Finished Parsing XDC File [C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-11420-S210-08/dcp7/prgrom_in_context.xdc] for cell 'pgr/instmem'
-Parsing XDC File [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/constrs_1/new/c.xdc]
-Finished Parsing XDC File [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/constrs_1/new/c.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/constrs_1/new/c.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
+Parsing XDC File [C:/Users/gmcc/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-14420-LAPTOP-7GOEKSIJ/dcp4/uart_bmpg_0_in_context.xdc] for cell 'uart'
+Finished Parsing XDC File [C:/Users/gmcc/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-14420-LAPTOP-7GOEKSIJ/dcp4/uart_bmpg_0_in_context.xdc] for cell 'uart'
+Parsing XDC File [C:/Users/gmcc/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-14420-LAPTOP-7GOEKSIJ/dcp5/RAM_in_context.xdc] for cell 'dm/ram'
+Finished Parsing XDC File [C:/Users/gmcc/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-14420-LAPTOP-7GOEKSIJ/dcp5/RAM_in_context.xdc] for cell 'dm/ram'
+Parsing XDC File [C:/Users/gmcc/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-14420-LAPTOP-7GOEKSIJ/dcp6/prgrom_in_context.xdc] for cell 'pgr/instmem'
+Finished Parsing XDC File [C:/Users/gmcc/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-14420-LAPTOP-7GOEKSIJ/dcp6/prgrom_in_context.xdc] for cell 'pgr/instmem'
+Parsing XDC File [C:/Users/gmcc/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-14420-LAPTOP-7GOEKSIJ/dcp7/cpuclk_in_context.xdc] for cell 'cclk'
+Finished Parsing XDC File [C:/Users/gmcc/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-14420-LAPTOP-7GOEKSIJ/dcp7/cpuclk_in_context.xdc] for cell 'cclk'
+Parsing XDC File [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/constrs_1/new/c.xdc]
+Finished Parsing XDC File [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/constrs_1/new/c.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/constrs_1/new/c.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 737.898 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 738.832 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 737.898 ; gain = 495.156
+Finished Constraint Validation : Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 738.832 ; gain = 497.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 737.898 ; gain = 495.156
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 738.832 ; gain = 497.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for fpga_clk. (constraint file  C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-11420-S210-08/dcp4/cpuclk_in_context.xdc, line 4).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for fpga_clk. (constraint file  C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-11420-S210-08/dcp4/cpuclk_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for fpga_clk. (constraint file  C:/Users/gmcc/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-14420-LAPTOP-7GOEKSIJ/dcp7/cpuclk_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for fpga_clk. (constraint file  C:/Users/gmcc/Desktop/CPU_1/CPU_1.runs/synth_2/.Xil/Vivado-14420-LAPTOP-7GOEKSIJ/dcp7/cpuclk_in_context.xdc, line 5).
 Applied set_property DONT_TOUCH = true for cclk. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for dm/ram. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for pgr/instmem. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for uart. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 737.898 ; gain = 495.156
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:01:04 . Memory (MB): peak = 738.832 ; gain = 497.406
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "R_format" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "Sw" won't be mapped to RAM because it is too sparse
@@ -185,10 +138,8 @@ INFO: [Synth 8-5544] ROM "I_format" won't be mapped to Block RAM because address
 INFO: [Synth 8-5546] ROM "Branch" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "nBranch" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "Jmp" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/ALU.v:46]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/ALU.v:46]
 INFO: [Synth 8-5545] ROM "Zero" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "LEDCtrl" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "switchctrl" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "register_reg[0]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "register_reg[1]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "register_reg[2]" won't be mapped to RAM because it is too sparse
@@ -221,13 +172,10 @@ INFO: [Synth 8-5546] ROM "register_reg[28]" won't be mapped to RAM because it is
 INFO: [Synth 8-5546] ROM "register_reg[29]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "register_reg[30]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "register_reg[31]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-WARNING: [Synth 8-327] inferring latch for variable 'ioread_data_reg' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/ioread.v:14]
-WARNING: [Synth 8-327] inferring latch for variable 'input2_reg' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'input1_reg' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:80]
-WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [C:/Users/Administrator/Desktop/CPU_1/CPU_1.srcs/sources_1/new/Top.v:78]
+INFO: [Synth 8-5546] ROM "pos" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-327] inferring latch for variable 'ioread_data_reg' [C:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/new/ioread.v:16]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 737.898 ; gain = 495.156
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:56 ; elapsed = 00:01:05 . Memory (MB): peak = 738.832 ; gain = 497.406
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -242,24 +190,30 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     32 Bit       Adders := 2     
 	   3 Input     32 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
 +---Registers : 
-	               32 Bit    Registers := 33    
-	               24 Bit    Registers := 1     
+	               32 Bit    Registers := 34    
+	               17 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
 	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 16    
+	   2 Input     32 Bit        Muxes := 17    
 	   3 Input     32 Bit        Muxes := 1     
 	   8 Input     32 Bit        Muxes := 2     
-	   4 Input     24 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
 	   2 Input     14 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 48    
-	   5 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -271,10 +225,6 @@ Module Top
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 3     
 Module programrom 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -309,14 +259,16 @@ Detailed RTL Component Info :
 Module MemOrIO 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
 Module leds 
 Detailed RTL Component Info : 
 +---Registers : 
-	               24 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+Module ioread 
+Detailed RTL Component Info : 
 +---Muxes : 
-	   4 Input     24 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
 Module dmemory32 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -332,6 +284,22 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit        Muxes := 4     
 	   2 Input      5 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 32    
+Module segtube 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -348,139 +316,20 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "Zero" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "mio/LEDCtrl" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "mio/switchctrl" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "st/pos" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3331] design ALU has unconnected port Function_opcode[5]
 WARNING: [Synth 8-3331] design ALU has unconnected port Function_opcode[4]
 WARNING: [Synth 8-3331] design ALU has unconnected port Jr
-WARNING: [Synth 8-3331] design Top has unconnected port tx
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[23]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[22]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[21]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[20]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[19]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[18]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[17]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[16]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[15]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[14]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[13]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[12]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[11]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[10]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[9]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[8]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[7]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[6]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[5]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[4]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[3]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[2]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[1]
-WARNING: [Synth 8-3331] design Top has unconnected port switch2N4[0]
-WARNING: [Synth 8-264] enable of latch \input1_reg[7]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input1_reg[7]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input1_reg[6]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input1_reg[6]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input1_reg[5]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input1_reg[5]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input1_reg[4]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input1_reg[4]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input1_reg[3]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input1_reg[3]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input1_reg[2]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input1_reg[2]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input1_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input1_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input1_reg[0]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input1_reg[0]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input2_reg[7]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input2_reg[7]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input2_reg[6]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input2_reg[6]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input2_reg[5]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input2_reg[5]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input2_reg[4]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input2_reg[4]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input2_reg[3]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input2_reg[3]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input2_reg[2]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input2_reg[2]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input2_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input2_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input2_reg[0]  is always disabled
-WARNING: [Synth 8-264] enable of latch \input2_reg[0]  is always disabled
-INFO: [Synth 8-3886] merging instance 'next_state_reg[2]' (LD) to 'next_state_reg[3]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\next_state_reg[3] )
-INFO: [Synth 8-3886] merging instance 'input1_reg[7]' (LD) to 'input2_reg[7]'
-INFO: [Synth 8-3886] merging instance 'input1_reg[6]' (LD) to 'input2_reg[6]'
-INFO: [Synth 8-3886] merging instance 'input1_reg[5]' (LD) to 'input2_reg[5]'
-INFO: [Synth 8-3886] merging instance 'input1_reg[4]' (LD) to 'input2_reg[4]'
-INFO: [Synth 8-3886] merging instance 'input1_reg[3]' (LD) to 'input2_reg[3]'
-INFO: [Synth 8-3886] merging instance 'input1_reg[2]' (LD) to 'input2_reg[2]'
-INFO: [Synth 8-3886] merging instance 'input1_reg[1]' (LD) to 'input2_reg[1]'
-INFO: [Synth 8-3886] merging instance 'input1_reg[0]' (LD) to 'input2_reg[0]'
-INFO: [Synth 8-3886] merging instance 'ur/ioread_data_reg[15]' (LDC) to 'ur/ioread_data_reg[7]'
-INFO: [Synth 8-3886] merging instance 'ur/ioread_data_reg[14]' (LDC) to 'ur/ioread_data_reg[6]'
-INFO: [Synth 8-3886] merging instance 'ur/ioread_data_reg[13]' (LDC) to 'ur/ioread_data_reg[5]'
-INFO: [Synth 8-3886] merging instance 'ur/ioread_data_reg[12]' (LDC) to 'ur/ioread_data_reg[4]'
-INFO: [Synth 8-3886] merging instance 'ur/ioread_data_reg[11]' (LDC) to 'ur/ioread_data_reg[3]'
-INFO: [Synth 8-3886] merging instance 'ur/ioread_data_reg[10]' (LDC) to 'ur/ioread_data_reg[2]'
-INFO: [Synth 8-3886] merging instance 'ur/ioread_data_reg[9]' (LDC) to 'ur/ioread_data_reg[1]'
-INFO: [Synth 8-3886] merging instance 'ur/ioread_data_reg[8]' (LDC) to 'ur/ioread_data_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\l/ledout_reg[23] )
-WARNING: [Synth 8-3332] Sequential element (next_state_reg[3]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (next_state_reg[1]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (next_state_reg[0]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[23]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[22]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[21]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[20]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[19]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[18]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[17]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[16]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[15]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[14]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[13]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[12]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[11]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[10]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[9]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[8]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[7]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[6]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[5]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[4]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[3]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[2]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[1]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (l/ledout_reg[0]) is unused and will be removed from module Top.
+WARNING: [Synth 8-3331] design Top has unconnected port seg_en[7]
+WARNING: [Synth 8-3331] design Top has unconnected port seg_en[6]
+WARNING: [Synth 8-3331] design Top has unconnected port seg_en[5]
+WARNING: [Synth 8-3331] design Top has unconnected port seg_en[4]
+WARNING: [Synth 8-3331] design Top has unconnected port seg_en[3]
+WARNING: [Synth 8-3331] design Top has unconnected port seg_en[2]
+WARNING: [Synth 8-3331] design Top has unconnected port seg_en[1]
+WARNING: [Synth 8-3331] design Top has unconnected port seg_en[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 737.898 ; gain = 495.156
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:38 ; elapsed = 00:01:48 . Memory (MB): peak = 738.832 ; gain = 497.406
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -495,13 +344,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'cclk/clk_out1' to pin 'cc
 INFO: [Synth 8-5578] Moved timing constraint from pin 'cclk/clk_out2' to pin 'cclk/bbstub_clk_out2/O'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 763.324 ; gain = 520.582
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:57 ; elapsed = 00:02:07 . Memory (MB): peak = 771.805 ; gain = 530.379
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 903.480 ; gain = 660.738
+Finished Timing Optimization : Time (s): cpu = 00:02:23 ; elapsed = 00:02:33 . Memory (MB): peak = 915.551 ; gain = 674.125
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -512,24 +361,8 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[7]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[6]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[5]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[4]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[3]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[2]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[1]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (ur/ioread_data_reg[0]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (input2_reg[7]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (input2_reg[6]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (input2_reg[5]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (input2_reg[4]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (input2_reg[3]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (input2_reg[2]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (input2_reg[1]) is unused and will be removed from module Top.
-WARNING: [Synth 8-3332] Sequential element (input2_reg[0]) is unused and will be removed from module Top.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 920.812 ; gain = 678.070
+Finished Technology Mapping : Time (s): cpu = 00:02:27 ; elapsed = 00:02:38 . Memory (MB): peak = 939.395 ; gain = 697.969
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -553,7 +386,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 920.812 ; gain = 678.070
+Finished IO Insertion : Time (s): cpu = 00:02:30 ; elapsed = 00:02:40 . Memory (MB): peak = 939.395 ; gain = 697.969
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -566,7 +399,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 920.812 ; gain = 678.070
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:30 ; elapsed = 00:02:40 . Memory (MB): peak = 939.395 ; gain = 697.969
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -578,25 +411,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 920.812 ; gain = 678.070
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:31 ; elapsed = 00:02:41 . Memory (MB): peak = 939.395 ; gain = 697.969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 920.812 ; gain = 678.070
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:31 ; elapsed = 00:02:41 . Memory (MB): peak = 939.395 ; gain = 697.969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 920.812 ; gain = 678.070
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:31 ; elapsed = 00:02:41 . Memory (MB): peak = 939.395 ; gain = 697.969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 920.812 ; gain = 678.070
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:31 ; elapsed = 00:02:41 . Memory (MB): peak = 939.395 ; gain = 697.969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -621,52 +454,58 @@ Report Cell Usage:
 |3     |prgrom      |     1|
 |4     |uart_bmpg_0 |     1|
 |5     |BUFG        |     1|
-|6     |CARRY4      |    24|
-|7     |LUT1        |     1|
-|8     |LUT2        |    91|
-|9     |LUT3        |   225|
-|10    |LUT4        |   157|
-|11    |LUT5        |   324|
-|12    |LUT6        |  1077|
-|13    |MUXF7       |   264|
-|14    |MUXF8       |    88|
-|15    |FDRE        |  1121|
-|16    |FDSE        |     5|
-|17    |IBUF        |     3|
-|18    |OBUF        |    24|
-|19    |OBUFT       |     1|
+|6     |CARRY4      |    28|
+|7     |LUT1        |     2|
+|8     |LUT2        |   133|
+|9     |LUT3        |   240|
+|10    |LUT4        |   199|
+|11    |LUT5        |   307|
+|12    |LUT6        |  1105|
+|13    |MUXF7       |   260|
+|14    |MUXF8       |   104|
+|15    |FDCE        |    40|
+|16    |FDRE        |  1153|
+|17    |FDSE        |     6|
+|18    |LDC         |     8|
+|19    |IBUF        |    14|
+|20    |OBUF        |    25|
+|21    |OBUFT       |     8|
 +------+------------+------+
 
 Report Instance Areas: 
 +------+---------+-----------+------+
 |      |Instance |Module     |Cells |
 +------+---------+-----------+------+
-|1     |top      |           |  3523|
-|2     |  dm     |dmemory32  |    46|
-|3     |  iff    |IFetc32    |   156|
-|4     |  pgr    |programrom |   983|
-|5     |  ude    |Decoder    |  2254|
+|1     |top      |           |  3750|
+|2     |  dm     |dmemory32  |    47|
+|3     |  iff    |IFetc32    |   172|
+|4     |  l      |leds       |     8|
+|5     |  pgr    |programrom |   957|
+|6     |  st     |segtube    |   101|
+|7     |  ude    |Decoder    |  2320|
+|8     |  ur     |ioread     |    42|
 +------+---------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 920.812 ; gain = 678.070
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:31 ; elapsed = 00:02:41 . Memory (MB): peak = 939.395 ; gain = 697.969
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 107 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 920.812 ; gain = 337.672
-Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 920.812 ; gain = 678.070
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:54 ; elapsed = 00:02:20 . Memory (MB): peak = 939.395 ; gain = 355.949
+Synthesis Optimization Complete : Time (s): cpu = 00:02:31 ; elapsed = 00:02:42 . Memory (MB): peak = 939.395 ; gain = 697.969
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 379 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 414 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 8 instances were transformed.
+  LDC => LDCE: 8 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-139 Infos, 171 Warnings, 0 Critical Warnings and 0 Errors encountered.
+96 Infos, 31 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 920.812 ; gain = 689.559
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Administrator/Desktop/CPU_1/CPU_1.runs/synth_2/Top.dcp' has been generated.
+synth_design: Time (s): cpu = 00:02:38 ; elapsed = 00:02:53 . Memory (MB): peak = 939.395 ; gain = 709.441
+INFO: [Common 17-1381] The checkpoint 'C:/Users/gmcc/Desktop/CPU_1/CPU_1.runs/synth_2/Top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 920.812 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed May 17 15:51:06 2023...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.091 . Memory (MB): peak = 939.395 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed May 24 15:46:07 2023...

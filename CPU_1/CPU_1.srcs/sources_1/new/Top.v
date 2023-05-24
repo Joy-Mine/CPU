@@ -4,7 +4,8 @@ module Top(
     input fpga_rst, //Active High
     input fpga_clk,
     input[7:0] switch,
-    input[4:0] btn,
+    input[2:0] smallsw,
+    input start_pg,
     // UART Programmer Pinouts
     // start Uart communicate at high level
     input rx,
@@ -17,14 +18,11 @@ module Top(
     );
     
     wire case_yes;
-    wire input_yes;//ç¡®è®¤è¾“å…¥
-    wire start;//ç¡®è®¤å¼€å§‹
+    wire input_yes;//È·ÈÏÊäÈë
+    wire start;//È·ÈÏ¿ªÊ¼
     wire switch_case;
     
-    assign case_yes=btn[0];
-    assign input_yes=btn[1];
-    assign start=btn[2];
-    assign switch_case=btn[3];
+
     
     wire cpu_clk;
    // UART Programmer Pinouts
@@ -36,86 +34,44 @@ module Top(
     //data to program_rom or dmemory32
     wire [31:0] upg_dat_o; 
     
-    wire start_pg;
+    //reg start_pg;
     wire spg_bufg;
-    parameter son=3'b100, soff=3'b101;
-    reg[2:0] state_uart,nxt_uart;
-    
-    always @* begin //fsms
-    if(fpga_rst)
-        state_uart <= soff;
-    else
-        state_uart <= nxt_uart;
-    end
-    
-    always @* begin //fsm-uart
-    case(state_uart)
-        soff: if(btn[5]) nxt_uart=son;
-        son: if(btn[5]) nxt_uart=soff;
-        default: nxt_uart=state_uart;
-    endcase
-    end
     BUFG U1(.I(start_pg), .O(spg_bufg)); // de-twitter
     // Generate UART Programmer reset signal
     reg upg_rst;
     always @ (posedge fpga_clk) begin
-        if (spg_bufg) upg_rst = 0;
-        if (fpga_rst) upg_rst = 1;
+        if (spg_bufg) upg_rst = 0;  
+        if (fpga_rst & start_pg == 1'b0) upg_rst = 1;
     end
     //used for other modules which don't relate to UART
     wire rst;
-    assign rst = fpga_rst | !upg_rst;
+    assign rst = ~fpga_rst | !upg_rst;
     cpuclk cclk(.clk_in1(fpga_clk),.clk_out1(cpu_clk),.clk_out2(upg_clk));
-    wire upg_tx_o;//useless
+//    wire upg_tx_o;//useless
     uart_bmpg_0 uart(.upg_clk_i(upg_clk),.upg_rst_i(upg_rst),.upg_rx_i(rx),.upg_clk_o(upg_clk_o),
-     .upg_wen_o(upg_wen_o),.upg_adr_o(upg_adr_o),.upg_dat_o(upg_dat_o),.upg_done_o(upg_done_o),.upg_tx_o(upg_tx_o));
+     .upg_wen_o(upg_wen_o),.upg_adr_o(upg_adr_o),.upg_dat_o(upg_dat_o),.upg_done_o(upg_done_o),.upg_tx_o(tx));
     
     
     
-    //inputéƒ¨åˆ†
-    reg [2:0] state,next_state;
-    parameter s0=3'b000, s1=3'b001, s2=3'b010, s3=3'b011 ,s4=3'b100; //s0ç­‰å¾…è¾“å…¥case //s1è¾“å…¥caseå®Œæˆ //s2è¾“å…¥input1 s3 è¾“å…¥input2å®Œæˆ å±•ç¤ºä¸­  //s4å¼€å§‹æ‰§è¡Œ
-    reg [2:0] cases;
-    reg [7:0] ioread_data_switch;
-
+    //input²¿·Ö
+    wire [7:0] ioread_data_switch;
     
-    always @* begin //fsms
-        if(fpga_rst)
-            state <= s1;
-        else
-            state <= next_state;
-    end
-    
-    always @* begin //fsm-detail
-        case(state)
-            s0:if(case_yes) begin next_state = s1; cases={switch[2:0]}; end //è¾“å…¥æµ‹è¯•æ ·ä¾‹
-                else next_state=s0;
-            s1:if(input_yes) begin next_state=s2; ioread_data_switch=switch; end // è¾“å…¥å‚æ•°1
-                else begin next_state=s1; ioread_data_switch=ioread_data_switch; end
-            s2:if(input_yes) begin next_state=s3; ioread_data_switch=switch; end // è¾“å…¥å‚æ•°2--æœ‰äº›æµ‹è¯•åœºæ™¯è¦è€ƒè™‘ä¸€ä¸‹æ¯”å¦‚åªæœ‰ä¸€ä¸ªè¾“å…¥ ç¬¬äºŒä¸ªè¾“å…¥ä¼šç›´æ¥æŒ‰æŒ‰é’®å•¥çš„ è¿™ä¸ªæ—¶å€™å°±åˆ«æè¾£ä¹ˆå¤šå•¥çš„
-                else begin next_state=s2; ioread_data_switch=ioread_data_switch; end
-            s3:if(start) next_state=s4;   //å±•ç¤ºä¸€ä¸‹è¾“å…¥çš„æ•°ï¼ˆæœ‰å¿…è¦çš„è¯ï¼‰ 
-               else next_state=s3;
-            s4:if(switch_case) next_state=s0;   //æµ‹è¯•åœºæ™¯ç»“æŸ åˆ‡æ¢ 
-               else next_state=s4;
-            default: next_state=next_state;
-        endcase
-    end
-    
-   
+    assign ioread_data_switch=switch;
    
    wire [31:0] ALU_Result,Read_data_1,Read_data_2,Sign_extend,Addr_Result,branch_base_addr,link_addr,write_data;
    wire [31:0] addr_out,m_rdata,r_wdata,r_rdata;
    wire [7:0] ior_data;
    wire [1:0] ALUOp;
    wire ALUSrc,I_format,Sftmd,Zero,Branch,nBranch,Jmp,Jal,Jr,RegDST,MemorIOtoReg,RegWrite,MemWrite,MemRead,IORead,IOWrite;
-   wire LEDCtrl,switchctrl,segctrl,btnctrl;
+   wire ledctrl,switchctrl,segctrl,swsmall;//¿ØÖÆ¶ÁÈ¡µØÖ·
     
-    wire[31:0] Instruction_i,Instruction_o;//è¦æ³¨æ„rstçš„ä»€ä¹ˆç”µå¹³æœ‰æ•ˆ é«˜ç”µå¹³high-effective
-    wire[13:0] rom_adr_o;
+    wire[31:0] Instruction_o;//Òª×¢ÒârstµÄÊ²Ã´µçÆ½ÓĞĞ§ ¸ßµçÆ½high-effective
+    wire[31:0] rom_adr_o;
     
-    programrom pgr(cpu_clk,rom_adr_o,Instruction_i,upg_rst,upg_clk_o,upg_wen_o,upg_adr_o[13:0],upg_dat_o,upg_done_o);
-    IFetc32 iff(Instruction_o, branch_base_addr,  Addr_Result, Read_data_1, Branch, nBranch, Jmp, Jal, Jr, Zero,cpu_clk, fpga_rst,link_addr,rom_adr_o,Instruction_i);
+    programrom pgr(cpu_clk,rom_adr_o[15:2]
+    ,Instruction_o,upg_rst,upg_clk_o,upg_wen_o&(!upg_adr_o[14]),upg_adr_o[13:0],upg_dat_o,upg_done_o);
+    IFetc32 iff(branch_base_addr,  Addr_Result, Read_data_1, Branch, nBranch
+    , Jmp, Jal, Jr, Zero,cpu_clk, fpga_rst,link_addr,rom_adr_o,Instruction_o);
 
     Controller ucc(Instruction_o[31:26],(Instruction_o[5:0]) ,ALU_Result[31:10],Jr,RegDST,ALUSrc,MemorIOtoReg,RegWrite,MemWrite,MemRead,Branch,
                     nBranch,Jmp,Jal,I_format,Sftmd,ALUOp,IORead,IOWrite);
@@ -127,72 +83,39 @@ module Top(
         
 
     MemOrIO mio(MemorIOtoReg,MemWrite,IORead,IOWrite,Addr_Result,
-        addr_out,m_rdata,ior_data,r_wdata,Read_data_1,write_data,LEDCtrl,switchctrl,segctrl,btnctrl);
-//            input[31:0] r_rdata; // data read from Decoder(register file)//å¯¹åº”readdata1 
-//            output reg[31:0] write_data; //data to memory or I/Oï¼ˆm_wdata,io_wdata)
+        addr_out,m_rdata,ior_data,r_wdata,Read_data_1,write_data,ledctrl
+        ,switchctrl,swsmall, segctrl);
+//            input[31:0] r_rdata; // data read from Decoder(register file)//¶ÔÓ¦readdata1 
+//            output reg[31:0] write_data; //data to memory or I/O£¨m_wdata,io_wdata)
 
     // input	[7:0]	ledwdata,	// the data (from register/memorio)  waiting for to be writen to the leds of the board
-    //wire ledwrite; //led write enable, active high (å†™ä¿¡å·,é«˜ç”µå¹³æœ‰æ•ˆ)
-    reg [31:0] segwrite;
+    //wire ledwrite; //led write enable, active high (Ğ´ĞÅºÅ,¸ßµçÆ½ÓĞĞ§)
     
-    //è¿™é‡Œæœ‰ä¸ªé—®é¢˜å°±æ˜¯åˆ°åº•writeå“ª7ä¸ªbitè¿›å»å‘¢ï¼Ÿï¼Ÿï¼ŸæŒ‰é“ç†æ¥è¯´ å¯ä»¥æ ¹æ®é¢˜ç›®æ™šä¸Šä¸€ä¸‹å¤§æ¦‚ï¼ï¼ï¼
-    //è¿™é‡Œæˆ‘æ˜¯ç”¨äº†åä¸ƒä½ æ¯”è¾ƒå…³ç³»çš„è¯ å¯ä»¥ç»™ä¸€ä¸ªä¸œè¥¿èµ‹å€¼ä¸º1 å°±å¯ä»¥ä½“ç°åœ¨ledä¸Š åˆšå¥½æ˜¯æœ€ä½çš„bit
-    //2çš„å¹‚å’Œå¥‡æ•°ä¹Ÿå¯ä»¥ç›¸ä¼¼çš„å»åš å¥‡æ•°ç”¨ä¸€ä¸ªrem å¯„å­˜å™¨çš„å€¼å°±ç›´æ¥ä¼šå¾—åˆ°1
+    //ÕâÀïÓĞ¸öÎÊÌâ¾ÍÊÇµ½µ×writeÄÄ7¸öbit½øÈ¥ÄØ£¿£¿£¿°´µÀÀíÀ´Ëµ ¿ÉÒÔ¸ù¾İÌâÄ¿ÍíÉÏÒ»ÏÂ´ó¸Å£¡£¡£¡
+    //ÕâÀïÎÒÊÇÓÃÁËºóÆßÎ» ±È½Ï¹ØÏµµÄ»° ¿ÉÒÔ¸øÒ»¸ö¶«Î÷¸³ÖµÎª1 ¾Í¿ÉÒÔÌåÏÖÔÚledÉÏ ¸ÕºÃÊÇ×îµÍµÄbit
+    //2µÄÃİºÍÆæÊıÒ²¿ÉÒÔÏàËÆµÄÈ¥×ö ÆæÊıÓÃÒ»¸örem ¼Ä´æÆ÷µÄÖµ¾ÍÖ±½Ó»áµÃµ½1
     
-    //åŸºæœ¬æµ‹è¯•åœºæ™¯2ä¸­ æº¢å‡ºæ£€æµ‹ä¹Ÿæ˜¯ æ¯”è¾ƒæœ€é«˜ä¸€ä¸ªbit å­˜åœ¨1åœ¨ä¸€ä¸ªå¯„å­˜å™¨ä¸­ ä½“ç°åœ¨LEDä¸­ï¼ï¼
-    //æ³¨æ„ï¼šåªèƒ½å­˜1ï¼ï¼ï¼æ¯”è¾ƒæ–¹ä¾¿
-    leds l(fpga_rst,fpga_clk,IOWrite,LEDCtrl,write_data[7:0],ledout);
-    ioread ur(fpga_rst,IORead,switchctrl,ioread_data_switch,ior_data);
-    segtube st(fpga_clk,fpga_rst,segctrl,segwrite,seg_en,seg_out1,seg_out2);
+    //»ù±¾²âÊÔ³¡¾°2ÖĞ Òç³ö¼ì²âÒ²ÊÇ ±È½Ï×î¸ßÒ»¸öbit ´æÔÚ1ÔÚÒ»¸ö¼Ä´æÆ÷ÖĞ ÌåÏÖÔÚLEDÖĞ£¡£¡
+    //×¢Òâ£ºÖ»ÄÜ´æ1£¡£¡£¡±È½Ï·½±ã
+    leds l(rst,cpu_clk,IOWrite,ledctrl,write_data[7:0],ledout);
+    ioread ur(.reset(rst), .ior(IORead), .switchctrl(switchctrl), .swsmall(swsmall) ,
+    . ioread_data_switch(switch),.ioread_small_switch(smallsw),.ioread_data(ior_data));
+   
     
-    //addr_outéœ€è¦æ˜¯14ä½é•¿åº¦ 
-    dmemory32 dm(cpu_clk,MemWrite,addr_out[15:2],write_data,m_rdata,upg_rst,upg_clk_o,upg_wen_o,upg_adr_o[13:0],upg_dat_o,upg_done_o);
+    //addr_outĞèÒªÊÇ14Î»³¤¶È 
+    dmemory32 dm(cpu_clk,MemWrite,addr_out[15:2],write_data,m_rdata,upg_rst,upg_clk_o,upg_wen_o&upg_adr_o[14],upg_adr_o[13:0],upg_dat_o,upg_done_o);
     Decoder ude(Read_data_1,Read_data_2,Instruction_o,r_wdata/*mem_data*/,ALU_Result,
                  Jal,RegWrite,MemorIOtoReg,RegDST,Sign_extend,cpu_clk,fpga_rst,link_addr);
-    //mem_data  ä»DATA RAM or I/O portå–å‡ºçš„æ•°æ®
+    //mem_data  ´ÓDATA RAM or I/O portÈ¡³öµÄÊı¾İ
     //        input[31:0] r_rdata; // data read from Decoder(register file)from MEMorIO
     //  m_rdata ->  output [31:0] ram_dat_o, // the data read from data-ram
     
     
-    //åˆ¤æ–­ä½•æ—¶æ”¹å˜segçš„seg write=write_dataï¼›
-    reg [27:0] count_2s;
-    reg [28:0] count_5s;
-    wire temp_2s;
-    wire temp_5s;
-    assign temp_2s = ((segctrl&&cases==3'b010)||(segctrl&&cases==3'b011));
-    assign temp_5s = (segctrl&&cases==3'b111);
-    always@(posedge fpga_clk) begin //count 2s   ç”¨äºå®ç°æ¯2-3s ä¸€å˜ 
-        if(temp_2s) begin
-            if(count_2s == 28'd200000000)
-            count_2s <= 0;
-        else
-            count_2s <= count_2s + 1;
-        end
-        else 
-            count_2s <= 0;
-    end   
+    reg[31:0] segwrite;
+    wire[7:0] seg_out;
+    segtube st(fpga_clk,rst,segctrl,write_data,seg_en,seg_out);
+    assign seg_out1=seg_out;
+    assign seg_out2=seg_out;
    
-    always@(posedge fpga_clk) begin //count 5s   ç”¨äºå®ç°æ¯5s ä¸€å˜ 
-        if(temp_5s) begin
-            if(count_5s == 29'd500000000)
-            count_5s <= 0;
-            else
-                count_5s <= count_5s + 1;
-        end
-        else 
-            count_5s <= 0;
-    end   
-    
-    always@(posedge fpga_clk) begin//ä½¿ç”¨caseå’Œè®¡æ—¶å™¨æ¥æ§åˆ¶æ¯æ¬¡è¾“å‡ºå‚æ•°åœç•™2sæˆ–5s
-        casex({state,cases})
-            6'b000_xxx: segwrite={32'h0000_0001}; 
-            6'b001_xxx: segwrite={28'h0000_000,1'b0,cases};//åˆšè¾“å…¥å®Œæµ‹è¯•æ ·ä¾‹-cases3bit
-            6'b010_xxx: segwrite={24'h000000,ioread_data_switch}; //ioread_data_switch 8bit ç¬¬ä¸€æ¬¡è¾“å…¥
-            6'b011_xxx: segwrite={24'h000000,ioread_data_switch};//ioread_data_switch 8bit ç¬¬äºŒæ¬¡è¾“å…¥
-            6'b100_01x: begin if(count_2s == 28'd200000000) segwrite=write_data; end
-            6'b100_111: begin if(count_5s == 29'd500000000) segwrite=write_data; end
-            default: segwrite=write_data;
-        endcase
-    end   
 
 endmodule

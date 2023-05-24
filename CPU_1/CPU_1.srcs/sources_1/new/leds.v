@@ -2,13 +2,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module leds (
-    input			ledrst,		// reset, active high (å¤ä½ä¿¡å·,é«˜ç”µå¹³æœ‰æ•ˆ)
-    input			led_clk,	// clk for led (æ—¶é’Ÿä¿¡å·)
-    input			ledwrite,	// led write enable, active high (å†™ä¿¡å·,é«˜ç”µå¹³æœ‰æ•ˆ)
-    input			ledcs,		// 1 means the leds are selected as output (ä»memorioæ¥çš„ï¼Œç”±ä½è‡³é«˜ä½å½¢æˆçš„LEDç‰‡é€‰ä¿¡å·)
-    //csè¡¨ç¤ºæ˜¯å¦è¢«é€‰ä¸­ï¼Œwriteæ˜¯å†™ä¿¡å·
-    //csæ¥è‡ªmemorio(åœ¨å‚è€ƒè®¾è®¡é‡Œè¿™ä¸ªæ¨¡å—å¯¹æ¥æ‰€æœ‰ioï¼Œä¸åŒçš„è®¾å¤‡æœ‰è‡ªå·±å•ç‹¬çš„ç‰‡é€‰)
-    //write æ¥è‡ªcontroller(åªç®€å•åŒºåˆ†æ˜¯å¯¹memå†™è¿˜æ˜¯å¯¹ioå†™)
+    input			ledrst,		// reset, active high (¸´Î»ĞÅºÅ,¸ßµçÆ½ÓĞĞ§)
+    input			led_clk,	// clk for led (Ê±ÖÓĞÅºÅ)
+    input			ledwrite,	// led write enable, active high (Ğ´ĞÅºÅ,¸ßµçÆ½ÓĞĞ§)
+    input			ledcs,		// 1 means the leds are selected as output (´ÓmemorioÀ´µÄ£¬ÓÉµÍÖÁ¸ßÎ»ĞÎ³ÉµÄLEDÆ¬Ñ¡ĞÅºÅ)
+    //cs±íÊ¾ÊÇ·ñ±»Ñ¡ÖĞ£¬writeÊÇĞ´ĞÅºÅ
+    //csÀ´×Ômemorio(ÔÚ²Î¿¼Éè¼ÆÀïÕâ¸öÄ£¿é¶Ô½ÓËùÓĞio£¬²»Í¬µÄÉè±¸ÓĞ×Ô¼ºµ¥¶ÀµÄÆ¬Ñ¡)
+    //write À´×Ôcontroller(Ö»¼òµ¥Çø·ÖÊÇ¶ÔmemĞ´»¹ÊÇ¶ÔioĞ´)
     
     input	[7:0]	ledwdata,	// the data (from register/memorio)  waiting for to be writen to the leds of the board
     output reg	[7:0]	ledout		// the data writen to the leds  of the board

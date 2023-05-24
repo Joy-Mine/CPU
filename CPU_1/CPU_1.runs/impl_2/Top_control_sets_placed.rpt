@@ -1,0 +1,143 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed May 24 15:50:35 2023
+| Host         : LAPTOP-7GOEKSIJ running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
+| Design       : Top
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    72 |
+| Unused register locations in slices containing registers |   124 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              43 |           17 |
+| No           | No                    | Yes                    |              13 |            6 |
+| No           | Yes                   | No                     |              93 |           37 |
+| Yes          | No                    | No                     |              77 |           37 |
+| Yes          | No                    | Yes                    |             287 |           71 |
+| Yes          | Yes                   | No                     |            1027 |          622 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------------+--------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|               Clock Signal              |                                                    Enable Signal                                                   |                                                       Set/Reset Signal                                                      | Slice Load Count | Bel Load Count |
++-----------------------------------------+--------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  fpga_clk_IBUF_BUFG                     |                                                                                                                    | st/sw[3]                                                                                                                    |                1 |              1 |
+|  uart/inst/upg_inst/upg_clk_i_IBUF_BUFG | uart/inst/upg_inst/upg_done_o_i_1_n_0                                                                              | upg_rst                                                                                                                     |                1 |              1 |
+|  uart/inst/upg_inst/rdStat_BUFG         | uart/inst/upg_inst/upg_wen_o2_out                                                                                  | upg_rst                                                                                                                     |                1 |              1 |
+| ~cclk/inst/clk_out1                     |                                                                                                                    |                                                                                                                             |                1 |              2 |
+|  dm/ram_i_1_n_0                         |                                                                                                                    |                                                                                                                             |                1 |              2 |
+|  pgr/instmem_i_1_n_0                    |                                                                                                                    |                                                                                                                             |                1 |              2 |
+|  uart/inst/upg_inst/rdStat_BUFG         |                                                                                                                    | upg_rst                                                                                                                     |                2 |              2 |
+|  st/pos                                 |                                                                                                                    |                                                                                                                             |                1 |              3 |
+|  uart/inst/upg_inst/upg_clk_i_IBUF_BUFG | uart/inst/upg_inst/s_axi_wdata                                                                                     |                                                                                                                             |                1 |              3 |
+|  uart/inst/upg_inst/upg_clk_i_IBUF_BUFG | uart/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/BAUD_RATE_I/en_16x_Baud                                        |                                                                                                                             |                2 |              4 |
+|  uart/inst/upg_inst/upg_clk_i_IBUF_BUFG | uart/inst/upg_inst/axi_uart_inst/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/start2                                      | uart/inst/upg_inst/axi_uart_inst/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_ce_clr                                  |                1 |              4 |
+| ~cclk/inst/clk_out1                     | pgr/PC[0]                                                                                                          | fpga_rst_IBUF                                                                                                               |                1 |              4 |
+|  uart/inst/upg_inst/upg_clk_i_IBUF_BUFG | uart/inst/upg_inst/s_axi_wdata                                                                                     | uart/inst/upg_inst/s_axi_wdata[6]_i_1_n_0                                                                                   |                3 |              4 |
+|  cclk/inst/clk_out1                     | pgr/RegWrite                                                                                                       | pgr/SS[0]                                                                                                                   |                1 |              5 |
+|  uart/inst/upg_inst/upg_clk_i_IBUF_BUFG |                                                                                                                    | uart/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/CNTR_INCR_DECR_ADDN_F_I/SS[0] |                2 |              6 |
+|  uart/inst/upg_inst/upg_clk_i_IBUF_BUFG |                                                                                                                    | uart/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/CNTR_INCR_DECR_ADDN_F_I/SS[0] |                2 |              6 |
+|  uart/inst/upg_inst/upg_clk_i_IBUF_BUFG | uart/inst/upg_inst/axi_uart_inst/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/fifo_wr                           |                                                                                                                             |                1 |              7 |
+|  cclk/inst/clk_out1                     | iff/E[0]                                                                                                           | st/AR[0]                                                                                                                    |                1 |              8 |
+|  uart/inst/upg_inst/upg_clk_i_IBUF_BUFG | uart/inst/upg_inst/axi_uart_inst/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i                               | uart/inst/upg_inst/axi_uart_inst/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst                                                  |                2 |              8 |
+|  uart/inst/upg_inst/upg_clk_i_IBUF_BUFG |                                                                                                                    | uart/inst/upg_inst/axi_uart_inst/U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst                                                  |                3 |              8 |
+|  uart/inst/upg_inst/upg_clk_i_IBUF_BUFG | uart/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/fifo_wr |                                                                                                                             |                1 |              8 |
+|  uart/inst/upg_inst/upg_clk_i_IBUF_BUFG | uart/inst/upg_inst/msg_indx[7]_i_1_n_0                                                                             | upg_rst                                                                                                                     |                3 |              8 |
+|  uart/inst/upg_inst/rdStat_BUFG         | uart/inst/upg_inst/s_axi_aresetn0                                                                                  | upg_rst                                                                                                                     |                5 |              8 |
+|  uart/inst/upg_inst/upg_clk_i_IBUF_BUFG | uart/inst/upg_inst/uart_rdat                                                                                       |                                                                                                                             |                2 |              8 |
+|  iff/segwrite_reg[7]_0[0]               |                                                                                                                    | st/AR[0]                                                                                                                    |                2 |              8 |
+|  uart/inst/upg_inst/rdStat_BUFG         | uart/inst/upg_inst/byte_len[7]_i_1_n_0                                                                             | upg_rst                                                                                                                     |                3 |              9 |
+|  uart/inst/upg_inst/upg_clk_i_IBUF_BUFG | uart/inst/upg_inst/axi_uart_inst/U0/UARTLITE_CORE_I/BAUD_RATE_I/en_16x_Baud                                        | upg_rst                                                                                                                     |                2 |             10 |
+|  fpga_clk_IBUF_BUFG                     |                                                                                                                    |                                                                                                                             |                5 |             14 |
+|  uart/inst/upg_inst/upg_clk_i_IBUF_BUFG | uart/inst/upg_inst/rwait_cnt[15]_i_1_n_0                                                                           | upg_rst                                                                                                                     |                4 |             16 |
+|  uart/inst/upg_inst/upg_clk_i_IBUF_BUFG | uart/inst/upg_inst/wwait_cnt[15]_i_1_n_0                                                                           | upg_rst                                                                                                                     |                3 |             16 |
+|  fpga_clk_IBUF_BUFG                     |                                                                                                                    | st/count_250hz[16]_i_1_n_0                                                                                                  |                4 |             16 |
+|  uart/inst/upg_inst/upg_clk_i_IBUF_BUFG |                                                                                                                    |                                                                                                                             |                8 |             20 |
+| ~cclk/inst/clk_out1                     |                                                                                                                    | fpga_rst_IBUF                                                                                                               |               16 |             26 |
+|  cclk/inst/clk_out1                     | ude/register[7][31]_i_1_n_0                                                                                        | fpga_rst_IBUF                                                                                                               |               20 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[31][31]_i_1_n_0                                                                                       | fpga_rst_IBUF                                                                                                               |               25 |             32 |
+|  cclk/inst/clk_out1                     | pgr/RegWrite                                                                                                       |                                                                                                                             |               18 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[17][31]_i_1_n_0                                                                                       | fpga_rst_IBUF                                                                                                               |               15 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[10][31]_i_1_n_0                                                                                       | fpga_rst_IBUF                                                                                                               |               19 |             32 |
+| ~cclk/inst/clk_out1                     | pgr/link_addr_reg[31][0]                                                                                           |                                                                                                                             |               15 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[12][31]_i_1_n_0                                                                                       | fpga_rst_IBUF                                                                                                               |               18 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[14][31]_i_1_n_0                                                                                       | fpga_rst_IBUF                                                                                                               |               24 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[11][31]_i_1_n_0                                                                                       | fpga_rst_IBUF                                                                                                               |               20 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[15][31]_i_1_n_0                                                                                       | fpga_rst_IBUF                                                                                                               |               21 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[16][31]_i_1_n_0                                                                                       | fpga_rst_IBUF                                                                                                               |               18 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[23][31]_i_1_n_0                                                                                       | fpga_rst_IBUF                                                                                                               |               22 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[13][31]_i_1_n_0                                                                                       | fpga_rst_IBUF                                                                                                               |               16 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[24][31]_i_1_n_0                                                                                       | fpga_rst_IBUF                                                                                                               |               17 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[21][31]_i_1_n_0                                                                                       | fpga_rst_IBUF                                                                                                               |               22 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[1][31]_i_1_n_0                                                                                        | fpga_rst_IBUF                                                                                                               |               18 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[25][31]_i_1_n_0                                                                                       | fpga_rst_IBUF                                                                                                               |               19 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[26][31]_i_1_n_0                                                                                       | fpga_rst_IBUF                                                                                                               |               18 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[27][31]_i_1_n_0                                                                                       | fpga_rst_IBUF                                                                                                               |               21 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[20][31]_i_1_n_0                                                                                       | fpga_rst_IBUF                                                                                                               |               15 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[18][31]_i_1_n_0                                                                                       | fpga_rst_IBUF                                                                                                               |               19 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[19][31]_i_1_n_0                                                                                       | fpga_rst_IBUF                                                                                                               |               20 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[22][31]_i_1_n_0                                                                                       | fpga_rst_IBUF                                                                                                               |               17 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[2][31]_i_1_n_0                                                                                        | fpga_rst_IBUF                                                                                                               |               17 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[28][31]_i_1_n_0                                                                                       | fpga_rst_IBUF                                                                                                               |               20 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[30][31]_i_1_n_0                                                                                       | fpga_rst_IBUF                                                                                                               |               22 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[5][31]_i_1_n_0                                                                                        | fpga_rst_IBUF                                                                                                               |               19 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[4][31]_i_1_n_0                                                                                        | fpga_rst_IBUF                                                                                                               |               14 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[9][31]_i_1_n_0                                                                                        | fpga_rst_IBUF                                                                                                               |               26 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[8][31]_i_1_n_0                                                                                        | fpga_rst_IBUF                                                                                                               |               25 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[3][31]_i_1_n_0                                                                                        | fpga_rst_IBUF                                                                                                               |               21 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[6][31]_i_1_n_0                                                                                        | fpga_rst_IBUF                                                                                                               |               24 |             32 |
+|  cclk/inst/clk_out1                     | ude/register[29][31]_i_1_n_0                                                                                       | fpga_rst_IBUF                                                                                                               |               20 |             32 |
+|  fpga_clk_IBUF_BUFG                     | iff/segwrite_reg[31][0]                                                                                            | st/AR[0]                                                                                                                    |                7 |             32 |
+|  uart/inst/upg_inst/upg_clk_i_IBUF_BUFG |                                                                                                                    | upg_rst                                                                                                                     |               11 |             33 |
+|  uart/inst/upg_inst/rdStat_BUFG         | uart/inst/upg_inst/byte_num                                                                                        | upg_rst                                                                                                                     |                7 |             36 |
+|  uart/inst/upg_inst/rdStat_BUFG         | uart/inst/upg_inst/upg_adr_o[14]_i_1_n_0                                                                           | upg_rst                                                                                                                     |               10 |             47 |
+|  uart/inst/upg_inst/rdStat_BUFG         | uart/inst/upg_inst/wr_byte_num_done                                                                                | upg_rst                                                                                                                     |               13 |             49 |
+|  uart/inst/upg_inst/rdStat_BUFG         | uart/inst/upg_inst/byte_cnt                                                                                        | upg_rst                                                                                                                     |               13 |             56 |
++-----------------------------------------+--------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     3 |
+| 2      |                     4 |
+| 3      |                     2 |
+| 4      |                     4 |
+| 5      |                     1 |
+| 6      |                     2 |
+| 7      |                     1 |
+| 8      |                     8 |
+| 9      |                     1 |
+| 10     |                     1 |
+| 14     |                     1 |
+| 16+    |                    44 |
++--------+-----------------------+
+
+

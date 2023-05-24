@@ -20,15 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module IFetc32(Instruction, branch_base_addr, Addr_result, Read_data_1,
+module IFetc32(branch_base_addr, Addr_result, Read_data_1,
      Branch, nBranch, Jmp, Jal, Jr, Zero, clock, reset, link_addr,rom_adr_o,Insturction_i);
 
-    output [31:0] Instruction; //the instruction fetched from this module∏–æı√ª”√
+    input [31:0] Insturction_i;
     output [31:0] branch_base_addr; // (pc+4) to ALU which is used by branch type instruction
     output reg [31:0] link_addr; // (pc+4) to Decoder which is used by jal instruction
-    output [13:0] rom_adr_o;
+    output [31:0] rom_adr_o;
     
-    input [31:0] Insturction_i;
     input clock, reset; // Clock and reset
     
     // from ALU
@@ -42,7 +41,7 @@ module IFetc32(Instruction, branch_base_addr, Addr_result, Read_data_1,
     input Branch; //while Branch is 1,it means current instruction is beq
     input nBranch; // while nBranch is 1,it means current instruction is bnq
     input Jmp; // while Jmp 1, it means current instruction is jump
-    input Jal; //while Jal is 1, it means current instruction is jal
+    input Jal; //while Jal is 1, it means current instruction is`      jal
     input Jr; // while Jr is 1, it means current instruction is jr
     
     reg[31:0] PC, Next_PC;
@@ -52,8 +51,7 @@ module IFetc32(Instruction, branch_base_addr, Addr_result, Read_data_1,
 //    .addra(PC[15:2]),
 //    .douta(Instruction)
 //    );
-    assign Instruction=Insturction_i;
-    assign rom_adr_o=PC[15:2];
+    assign rom_adr_o=PC;
     
     always @* 
     begin
@@ -69,11 +67,11 @@ module IFetc32(Instruction, branch_base_addr, Addr_result, Read_data_1,
         PC <= 32'h0000_0000;
     else begin
         if(Jmp == 1) begin
-            PC <= {PC[31:28], Instruction[25:0], 2'b0};
+            PC <= {PC[31:28], Insturction_i[25:0], 2'b0};
         end
         else if(Jal == 1)begin
             link_addr <= Next_PC;
-            PC <= {PC[31:28], Instruction[25:0], 2'b0};
+            PC <= {PC[31:28], Insturction_i[25:0], 2'b0};
         end
         else PC <= Next_PC;
         end

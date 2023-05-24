@@ -24,17 +24,17 @@ module segtube(
     input fpga_clk,
     input fpga_rst,
     input segctrl,
-    input[31:0] segwrite,
+    input[31:0] write_data,
+    
     output[7:0] seg_en,
-    output [7:0] seg_out1,
-    output [7:0] seg_out2
+    output reg[7:0] seg_out
     );
     //数码管输出相关
     reg[3:0] sw;
     reg [16:0] count_250hz;
     reg pos=1'b0;     //500hz 
     reg [2:0] wz_out;   //decide which seg should light up
-    reg [7:0] wz,seg_out;     //the boolean of which should light
+    reg [7:0] wz;     //the boolean of which should light
 
     always@(posedge fpga_clk) begin //250z 产生一个pos来变化seg亮灯状态
         if(count_250hz == 17'd100000) begin
@@ -53,7 +53,7 @@ module segtube(
         else
             wz_out <= wz_out + 1;  //use out to represent 8 kinds of flashing
     end
-
+        
     always@(posedge fpga_clk) begin //亮灯的状态（具体的)
         case(wz_out)
             3'd7: wz<=8'b10000000;
@@ -66,7 +66,18 @@ module segtube(
             3'd0: wz<=8'b00000001;
         endcase
     end
-
+    
+    reg[31:0] segwrite;
+    always @ (posedge fpga_clk or posedge fpga_rst) begin
+        if (fpga_rst)
+            segwrite <= 32'h0000_0000;
+        else if (segctrl) begin
+            segwrite <= write_data;
+        end else begin
+             segwrite <= segwrite;
+             end
+        end
+        
     always@(posedge fpga_clk) begin //表达到每一位上 有一位用来表达状态 每一位 用了ans来代表暂时的答案
         case(wz_out)
             3'd0: sw <= segwrite[3:0];
@@ -77,9 +88,12 @@ module segtube(
             3'd5: sw <= segwrite[23:20];
             3'd6: sw <= segwrite[27:24];
             3'd7: sw <= segwrite[31:28];
-            default: sw<=3'b000;
+            default: sw<=4'b0000;
         endcase
     end
+   
+    
+    
 
     always@(posedge fpga_clk) begin//数码管表现数字
         case(sw)
@@ -101,5 +115,9 @@ module segtube(
             4'hF:seg_out<= 8'b1000_1110; // F
             default:seg_out<=8'b0001_0000;//-
         endcase
-    end    
+    end   
+//    always@(posedge fpga_clk) begin//数码管表现数字
+//           seg_out1=seg_out;
+//           seg_out2=seg_out;
+//        end 
 endmodule

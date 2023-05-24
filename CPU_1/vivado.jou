@@ -2,13 +2,24 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Fri May 19 22:33:59 2023
-# Process ID: 43868
-# Current directory: D:/ProProject/CS202/CPU/CPU_1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13904 D:\ProProject\CS202\CPU\CPU_1\CPU_1.xpr
-# Log file: D:/ProProject/CS202/CPU/CPU_1/vivado.log
-# Journal file: D:/ProProject/CS202/CPU/CPU_1\vivado.jou
+# Start of session at: Wed May 24 14:37:13 2023
+# Process ID: 4424
+# Current directory: C:/Users/gmcc/Desktop/CPU_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14776 C:\Users\gmcc\Desktop\CPU_1\CPU_1.xpr
+# Log file: C:/Users/gmcc/Desktop/CPU_1/vivado.log
+# Journal file: C:/Users/gmcc/Desktop/CPU_1\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project D:/ProProject/CS202/CPU/CPU_1/CPU_1.xpr
+open_project C:/Users/gmcc/Desktop/CPU_1/CPU_1.xpr
+dupdate_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 4
+wait_on_run impl_2
+reset_run impl_2 -prev_step 
+launch_runs impl_2 -to_step write_bitstream -jobs 4
+wait_on_run impl_2

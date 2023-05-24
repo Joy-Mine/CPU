@@ -22,7 +22,7 @@
 
 module MemOrIO(
     mRead, mWrite, ioRead, ioWrite,addr_in, addr_out,
-    m_rdata, io_rdata, r_wdata, r_rdata, write_data, LEDCtrl , switchctrl,segctrl,btnctrl
+    m_rdata, io_rdata, r_wdata, r_rdata, write_data, ledctrl , switchctrl,swsmall,segctrl
     );
     input mRead; //read memory, from Controller
     input mWrite; //write memory, from Controller
@@ -37,11 +37,11 @@ module MemOrIO(
     output[31:0] r_wdata; // data to Decoder(register file)
     
     input[31:0] r_rdata; // data read from Decoder(register file)
-    output reg[31:0] write_data; //data to memory or I/Oï¼ˆm_wdata,io_wdata)
-    output LEDCtrl; //LED Chip Select
+    output reg[31:0] write_data; //data to memory or I/O£¨m_wdata,io_wdata)
+    output ledctrl; //LED Chip Select
     output switchctrl; //Switch Chip Select 
+    output swsmall;
     output segctrl;
-    output btnctrl;
 
     assign addr_out= addr_in;
     // The data wirte to register file may be from memory or io.
@@ -49,16 +49,17 @@ module MemOrIO(
     assign r_wdata = (mRead==1'b1) ? m_rdata : {24'h000000, io_rdata};
     
     // Chip select signal of Led and Switch are all active high;
-    assign LEDCtrl= (ioWrite==1'b1/*&&addr_in==32'hFFFF_FC60*/) ? 1'b1:1'b0;
-    assign switchctrl=(ioRead==1'b1/*&&addr_in==32'hFFFF_FC70*/)? 1'b1:1'b0;
-    assign segctrl=(ioWrite==1'b1/*&&addr_in[1:0]==2'b00*/)? 1'b1:1'b0;
-    assign btnctrl=(ioWrite==1'b1/*&&addr_in[1:0]==2'b00*/)? 1'b1:1'b0;
-    //è¿™éƒ¨åˆ†éœ€è¦çœ‹mips 70/72ï¼Ÿ
+    assign swsmall= (ioRead==1'b1&&addr_in==32'hFFFF_FC40) ? 1'b1:1'b0;//Èı¸öĞ¡¿ª¹Ø ÓÃbeq 421
+    assign switchctrl=(ioRead==1'b1&&addr_in==32'hFFFF_FC60)? 1'b1:1'b0;//´ó¿ª¹Ø
+    assign ledctrl=(ioWrite==1'b1&&addr_in==32'hFFFF_FC64)? 1'b1:1'b0;//Êä³öµÄµÆ
+    assign segctrl=(ioWrite==1'b1&&addr_in==32'hFFFF_FC80)? 1'b1:1'b0;
+    //ÊıÂë¹Ü ÎÒÊÇÓÃ sw writedata ÊıÂë¹ÜÀ´¿ØÖÆ ¾ÍwritedataÄãÃÇ¿ÉÒÔ·Ö±ğ¸øÖµ
+
     
     always @* begin
     if((mWrite==1)||(ioWrite==1))
     //wirte_data could go to either memory or IO. where is it from?
-        write_data = r_rdata;
+        write_data = ioRead == 1'b1 ? io_rdata : r_rdata;
     else
         write_data = 32'hZZZZZZZZ;
         //high impedence

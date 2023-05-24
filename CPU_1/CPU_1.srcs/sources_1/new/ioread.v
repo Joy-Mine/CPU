@@ -2,11 +2,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module ioread (
-    input			reset,				// reset, active high å¤ä½ä¿¡å· (é«˜ç”µå¹³æœ‰æ•ˆ)
-	input			ior,				// from Controller, 1 means read from input device(ä»æ§åˆ¶å™¨æ¥çš„I/Oè¯»)
-    input			switchctrl,			// ä»inputå¾—åˆ°
-    input	[7:0]	ioread_data_switch,	// the data from switch(ä»å¤–è®¾æ¥çš„è¯»æ•°æ®ï¼Œæ­¤å¤„æ¥è‡ªæ‹¨ç å¼€å…³)
-    output reg	[7:0]	ioread_data 		// the data to memorio (å°†å¤–è®¾æ¥çš„æ•°æ®é€ç»™memorio)
+    input			reset,				// reset, active high ¸´Î»ĞÅºÅ (¸ßµçÆ½ÓĞĞ§)
+	input			ior,				// from Controller, 1 means read from input device(´Ó¿ØÖÆÆ÷À´µÄI/O¶Á)
+    input			switchctrl,			// ´ÓinputµÃµ½
+    input          swsmall,
+    input	[7:0]	ioread_data_switch,	// the data from switch(´ÓÍâÉèÀ´µÄ¶ÁÊı¾İ£¬´Ë´¦À´×Ô²¦Âë¿ª¹Ø)
+    input [2:0]    ioread_small_switch,
+    output reg	[7:0]	ioread_data 		// the data to memorio (½«ÍâÉèÀ´µÄÊı¾İËÍ¸ømemorio)
 );
    
     always @* begin
@@ -15,10 +17,12 @@ module ioread (
         else if (ior == 1) begin
             if (switchctrl == 1)
                 ioread_data = ioread_data_switch;
+            else if(swsmall==1)
+                ioread_data={5'b00000,ioread_small_switch};
         end
         else ioread_data=ioread_data;
     end
-    //åˆ†ä¸åŒæƒ…å†µè€ƒè™‘åˆ°åº•æ˜¯æ€ä¹ˆè¾“å…¥çš„
+    //·Ö²»Í¬Çé¿ö¿¼ÂÇµ½µ×ÊÇÔõÃ´ÊäÈëµÄ
 	
 endmodule
 
@@ -32,14 +36,14 @@ endmodule
 
 
 
-//å¤‡ä»½
+//±¸·İ
 
 // module ioread (
-//     input			reset,				// reset, active high å¤ä½ä¿¡å· (é«˜ç”µå¹³æœ‰æ•ˆ)
-// 	input			ior,				// from Controller, 1 means read from input device(ä»æ§åˆ¶å™¨æ¥çš„I/Oè¯»)
-//     input			switchctrl,			// means the switch is selected as input device (ä»memorioç»è¿‡åœ°å€é«˜ç«¯çº¿è·å¾—çš„æ‹¨ç å¼€å…³æ¨¡å—ç‰‡é€‰)
-//     input	[15:0]	ioread_data_switch,	// the data from switch(ä»å¤–è®¾æ¥çš„è¯»æ•°æ®ï¼Œæ­¤å¤„æ¥è‡ªæ‹¨ç å¼€å…³)
-//     output	[15:0]	ioread_data 		// the data to memorio (å°†å¤–è®¾æ¥çš„æ•°æ®é€ç»™memorio)
+//     input			reset,				// reset, active high ¸´Î»ĞÅºÅ (¸ßµçÆ½ÓĞĞ§)
+// 	input			ior,				// from Controller, 1 means read from input device(´Ó¿ØÖÆÆ÷À´µÄI/O¶Á)
+//     input			switchctrl,			// means the switch is selected as input device (´Ómemorio¾­¹ıµØÖ·¸ß¶ËÏß»ñµÃµÄ²¦Âë¿ª¹ØÄ£¿éÆ¬Ñ¡)
+//     input	[15:0]	ioread_data_switch,	// the data from switch(´ÓÍâÉèÀ´µÄ¶ÁÊı¾İ£¬´Ë´¦À´×Ô²¦Âë¿ª¹Ø)
+//     output	[15:0]	ioread_data 		// the data to memorio (½«ÍâÉèÀ´µÄÊı¾İËÍ¸ømemorio)
 // );
     
 //     reg [15:0] ioread_data;
@@ -55,6 +59,6 @@ endmodule
 //         end
 //     end
     
-//     //åˆ†ä¸åŒæƒ…å†µè€ƒè™‘åˆ°åº•æ˜¯æ€ä¹ˆè¾“å…¥çš„
+//     //·Ö²»Í¬Çé¿ö¿¼ÂÇµ½µ×ÊÇÔõÃ´ÊäÈëµÄ
 	
 // endmodule

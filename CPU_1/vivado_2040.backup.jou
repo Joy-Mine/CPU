@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon May 22 17:03:02 2023
+# Process ID: 2040
+# Current directory: D:/360安全浏览器下载/CPU_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6968 D:\360安全浏览器下载\CPU_1\CPU_1.xpr
+# Log file: D:/360安全浏览器下载/CPU_1/vivado.log
+# Journal file: D:/360安全浏览器下载/CPU_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/360安全浏览器下载/CPU_1/CPU_1.xpr
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+open_hw_target
+disconnect_hw_server
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {D:/360安全浏览器下载/CPU_1/CPU_1.runs/impl_2/Top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run impl_2 -prev_step 
+launch_runs impl_2 -to_step write_bitstream -jobs 4
+wait_on_run impl_2
