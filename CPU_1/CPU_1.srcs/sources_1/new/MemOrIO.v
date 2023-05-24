@@ -59,7 +59,7 @@ module MemOrIO(
     always @* begin
     if((mWrite==1)||(ioWrite==1))
     //wirte_data could go to either memory or IO. where is it from?
-        write_data = ioRead == 1'b1 ? io_rdata : r_rdata;
+        write_data = /*ioRead == 1'b1 ? io_rdata :*/ r_rdata;
     else
         write_data = 32'hZZZZZZZZ;
         //high impedence

@@ -16,11 +16,11 @@ module leds (
     
     always @ (posedge led_clk or posedge ledrst) begin
         if (ledrst)
-            ledout <= 8'h00;
+            ledout = 8'h00;
 		else if (ledcs && ledwrite) begin
-			ledout[7:0] <= ledwdata;
+			ledout[7:0] = ledwdata;
         end else begin
-            ledout <= ledout;
+            ledout = ledout;
         end
     end
 	

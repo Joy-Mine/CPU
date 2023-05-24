@@ -1,8 +1,35 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ProProject/CS202/Project/OK/CS202_2023S/CPU_1.srcs/sources_1/ip/RAM/sim/RAM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module RAM
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ProProject/CS202/Project/OK/CS202_2023S/CPU_1.srcs/sources_1/new/dmemory32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dmemory32
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ProProject/CS202/Project/OK/CS202_2023S/CPU_1.srcs/sim_1/new/dmemory32_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dememory32_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/ProProject/CS202/Project/OK/CS202_2023S/CPU_1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/prgrom_1/sim/prgrom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prgrom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/uart_bmpg_0_1/uart_bmpg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_bmpg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/uart_bmpg_0_1/upg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module upg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/uart_bmpg_0_1/sim/uart_bmpg_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_bmpg_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/cpuclk_2/cpuclk_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/cpuclk_2/cpuclk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/Controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/IFetc32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFetc32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/MemOrIO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MemOrIO
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/ioread.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ioread
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/leds.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module leds
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/programrom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module programrom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/segtube.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module segtube
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/testTop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testTop
+WARNING: [VRFC 10-2096] empty statement in sequential block [C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/testTop.v:59]

@@ -1,0 +1,27 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../CPU_1.srcs/sources_1/ip/cpuclk_2" \
+"../../../../CPU_1.srcs/sources_1/ip/RAM_1/sim/RAM.v" \
+"../../../../CPU_1.srcs/sources_1/ip/prgrom_1/sim/prgrom.v" \
+"../../../../CPU_1.srcs/sources_1/ip/uart_bmpg_0_1/uart_bmpg.v" \
+"../../../../CPU_1.srcs/sources_1/ip/uart_bmpg_0_1/upg.v" \
+"../../../../CPU_1.srcs/sources_1/ip/uart_bmpg_0_1/sim/uart_bmpg_0.v" \
+"../../../../CPU_1.srcs/sources_1/ip/cpuclk_2/cpuclk_clk_wiz.v" \
+"../../../../CPU_1.srcs/sources_1/ip/cpuclk_2/cpuclk.v" \
+"../../../../CPU_1.srcs/sources_1/new/ALU.v" \
+"../../../../CPU_1.srcs/sources_1/new/Controller.v" \
+"../../../../CPU_1.srcs/sources_1/new/Decoder.v" \
+"../../../../CPU_1.srcs/sources_1/new/IFetc32.v" \
+"../../../../CPU_1.srcs/sources_1/new/MemOrIO.v" \
+"../../../../CPU_1.srcs/sources_1/new/Top.v" \
+"../../../../CPU_1.srcs/sources_1/new/dmemory32.v" \
+"../../../../CPU_1.srcs/sources_1/new/ioread.v" \
+"../../../../CPU_1.srcs/sources_1/new/leds.v" \
+"../../../../CPU_1.srcs/sources_1/new/programrom.v" \
+"../../../../CPU_1.srcs/sources_1/new/segtube.v" \
+"../../../../CPU_1.srcs/sim_1/new/testTop.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -35,7 +35,7 @@ module segtube(
     reg pos=1'b0;     //500hz 
     reg [2:0] wz_out;   //decide which seg should light up
     reg [7:0] wz;     //the boolean of which should light
-
+    assign seg_en=wz;
     always@(posedge fpga_clk) begin //250z 产生一个pos来变化seg亮灯状态
         if(count_250hz == 17'd100000) begin
             count_250hz <= 0;
@@ -67,16 +67,16 @@ module segtube(
         endcase
     end
     
-    reg[31:0] segwrite;
-    always @ (posedge fpga_clk or posedge fpga_rst) begin
+    reg[31:0] segwrite=32'h0000_0000;
+    always @ (*) begin
         if (fpga_rst)
-            segwrite <= 32'h0000_0000;
+            segwrite = 32'h0000_0000;
         else if (segctrl) begin
-            segwrite <= write_data;
+            segwrite = write_data;
         end else begin
-             segwrite <= segwrite;
-             end
-        end
+            segwrite = segwrite;
+         end
+    end
         
     always@(posedge fpga_clk) begin //表达到每一位上 有一位用来表达状态 每一位 用了ans来代表暂时的答案
         case(wz_out)
@@ -92,8 +92,6 @@ module segtube(
         endcase
     end
    
-    
-    
 
     always@(posedge fpga_clk) begin//数码管表现数字
         case(sw)
@@ -107,15 +105,15 @@ module segtube(
             4'h7:seg_out<=8'b1110_0000;
             4'h8:seg_out<=8'b1111_1110;
             4'h9:seg_out<=8'b1111_0110;
-            4'hA:seg_out<= 8'b1000_1000; // A
-            4'hB:seg_out<= 8'b1000_0011; // B
-            4'hC:seg_out<= 8'b1100_0110; // C
-            4'hD:seg_out<= 8'b1010_0001; // D
-            4'hE:seg_out<= 8'b1000_0110; // E
+            4'hA:seg_out<= 8'b1110_1110; // A
+            4'hB:seg_out<= 8'b0011_1110; // B
+            4'hC:seg_out<= 8'b1001_1100; // C
+            4'hD:seg_out<= 8'b0111_1010; // D
+            4'hE:seg_out<= 8'b1001_1110; // E
             4'hF:seg_out<= 8'b1000_1110; // F
             default:seg_out<=8'b0001_0000;//-
         endcase
-    end   
+    end 
 //    always@(posedge fpga_clk) begin//数码管表现数字
 //           seg_out1=seg_out;
 //           seg_out2=seg_out;

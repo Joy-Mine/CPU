@@ -2,104 +2,240 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Wed May 24 23:23:42 2023
-# Process ID: 8176
+# Start of session at: Thu May 25 01:45:53 2023
+# Process ID: 3832
 # Current directory: C:/Users/gmcc/Desktop/cpu1/CPU_1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6788 C:\Users\gmcc\Desktop\cpu1\CPU_1\CPU_1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4552 C:\Users\gmcc\Desktop\cpu1\CPU_1\CPU_1.xpr
 # Log file: C:/Users/gmcc/Desktop/cpu1/CPU_1/vivado.log
 # Journal file: C:/Users/gmcc/Desktop/cpu1/CPU_1\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.xpr
-INFO: [Project 1-313] Project file moved from 'C:/Users/gmcc/Desktop/CPU_1' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/SEU_CSE_507_user_uart_bmpg_1.3'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2017.4/data/ip'.
-open_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:15 . Memory (MB): peak = 781.063 ; gain = 44.469
+open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:11 . Memory (MB): peak = 786.668 ; gain = 67.039
 update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/testTop.v w ]
+add_files -fileset sim_1 C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/testTop.v
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'dememory32_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim/RAM.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim/dmem32.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim/prgrom.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim/prgmip32.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj dememory32_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/RAM_1/sim/RAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/dmemory32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dmemory32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/dmemory32_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dememory32_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 88ed1ee7fb4d40ec8810edab0fb988a6 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot dememory32_tb_behav xil_defaultlib.dememory32_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-426] cannot find port m_rdata on this module [C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/dmemory32_tb.v:16]
+ERROR: [VRFC 10-426] cannot find port writeData on this module [C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/dmemory32_tb.v:15]
+ERROR: [VRFC 10-426] cannot find port addr on this module [C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/dmemory32_tb.v:14]
+ERROR: [VRFC 10-426] cannot find port MemWrite on this module [C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/dmemory32_tb.v:13]
+ERROR: [VRFC 10-426] cannot find port clock on this module [C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/dmemory32_tb.v:12]
+ERROR: [VRFC 10-2063] Module <RAM> not found while processing module instance <ram> [C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/dmemory32.v:51]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 850.285 ; gain = 11.531
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+set_property top testTop [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testTop' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim/RAM.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim/dmem32.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim/prgrom.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim/prgmip32.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testTop_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/prgrom_1/sim/prgrom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prgrom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/uart_bmpg_0_1/uart_bmpg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_bmpg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/uart_bmpg_0_1/upg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module upg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/uart_bmpg_0_1/sim/uart_bmpg_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_bmpg_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/cpuclk_2/cpuclk_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/cpuclk_2/cpuclk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/Controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/IFetc32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFetc32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/MemOrIO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MemOrIO
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/ioread.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ioread
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/leds.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module leds
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/programrom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module programrom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/segtube.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module segtube
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/testTop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testTop
+WARNING: [VRFC 10-2096] empty statement in sequential block [C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/testTop.v:59]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 88ed1ee7fb4d40ec8810edab0fb988a6 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testTop_behav xil_defaultlib.testTop xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2420]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=41,CLKIN...
+Compiling module xil_defaultlib.cpuclk_clk_wiz
+Compiling module xil_defaultlib.cpuclk
+Compiling module xil_defaultlib.uart_bmpg
+Compiling module xil_defaultlib.upg
+Compiling module xil_defaultlib.uart_bmpg_0
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.prgrom
+Compiling module xil_defaultlib.programrom
+Compiling module xil_defaultlib.IFetc32
+Compiling module xil_defaultlib.Controller
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.MemOrIO
+Compiling module xil_defaultlib.leds
+Compiling module xil_defaultlib.ioread
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.RAM
+Compiling module xil_defaultlib.dmemory32
+Compiling module xil_defaultlib.Decoder
+Compiling module xil_defaultlib.segtube
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.testTop
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testTop_behav
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim/xsim.dir/testTop_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu May 25 02:10:45 2023...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 854.625 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '13' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testTop_behav -key {Behavioral:sim_1:Functional:testTop} -tclbatch {testTop.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source testTop.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module testTop.tt.pgr.instmem.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module testTop.tt.dm.ram.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testTop_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 869.426 ; gain = 14.801
 reset_run synth_2
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/synth_2
+
 launch_runs impl_2 -to_step write_bitstream -jobs 4
-[Wed May 24 23:32:26 2023] Launched synth_2...
+[Thu May 25 02:42:09 2023] Launched synth_2...
 Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/synth_2/runme.log
-[Wed May 24 23:32:26 2023] Launched impl_2...
-Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/impl_2/runme.log
-reset_run synth_2
-launch_runs impl_2 -to_step write_bitstream -jobs 4
-[Wed May 24 23:38:05 2023] Launched synth_2...
-Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/synth_2/runme.log
-[Wed May 24 23:38:05 2023] Launched impl_2...
+[Thu May 25 02:42:09 2023] Launched impl_2...
 Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/impl_2/runme.log
 reset_run impl_2 -prev_step 
 launch_runs impl_2 -to_step write_bitstream -jobs 4
-[Wed May 24 23:43:38 2023] Launched impl_2...
-Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/impl_2/runme.log
-set_property -dict [list CONFIG.PRIM_SOURCE {Global_buffer}] [get_ips cpuclk]
-generate_target all [get_files  C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/cpuclk_2/cpuclk.xci]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'cpuclk'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'cpuclk'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cpuclk'...
-INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'cpuclk'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'cpuclk'...
-catch { config_ip_cache -export [get_ips -all cpuclk] }
-export_ip_user_files -of_objects [get_files C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/cpuclk_2/cpuclk.xci] -no_script -sync -force -quiet
-reset_run cpuclk_synth_1
-launch_runs -jobs 4 cpuclk_synth_1
-[Wed May 24 23:55:55 2023] Launched cpuclk_synth_1...
-Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/cpuclk_synth_1/runme.log
-export_simulation -of_objects [get_files C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/cpuclk_2/cpuclk.xci] -directory C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.ip_user_files -ipstatic_source_dir C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.cache/compile_simlib/modelsim} {questa=C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.cache/compile_simlib/questa} {riviera=C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.cache/compile_simlib/riviera} {activehdl=C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-reset_run synth_2
-launch_runs impl_2 -to_step write_bitstream -jobs 4
-[Thu May 25 00:00:05 2023] Launched synth_2...
-Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/synth_2/runme.log
-[Thu May 25 00:00:05 2023] Launched impl_2...
-Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/impl_2/runme.log
-reset_run synth_2
-launch_runs impl_2 -to_step write_bitstream -jobs 4
-[Thu May 25 00:00:48 2023] Launched synth_2...
-Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/synth_2/runme.log
-[Thu May 25 00:00:48 2023] Launched impl_2...
-Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/impl_2/runme.log
-reset_run synth_2
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-INFO: [Common 17-344] 'reset_run' was cancelled
-launch_runs impl_2 -to_step write_bitstream -jobs 4
-[Thu May 25 00:04:16 2023] Launched synth_2...
-Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/synth_2/runme.log
-[Thu May 25 00:04:16 2023] Launched impl_2...
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Thu May 25 03:01:21 2023] Launched impl_2...
 Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/impl_2/runme.log
 reset_run synth_2
 WARNING: [Vivado 12-1017] Problems encountered:
-1. PID not specified
+1. Failed to delete one or more files in run directory C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/synth_2
 
 launch_runs impl_2 -to_step write_bitstream -jobs 4
-[Thu May 25 00:04:28 2023] Launched synth_2...
+[Thu May 25 03:06:40 2023] Launched synth_2...
 Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/synth_2/runme.log
-[Thu May 25 00:04:28 2023] Launched impl_2...
+[Thu May 25 03:06:40 2023] Launched impl_2...
 Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/impl_2/runme.log
-open_run impl_2
-INFO: [Netlist 29-17] Analyzing 448 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2017.4
-INFO: [Device 21-403] Loading part xc7a35tcsg324-1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [C:/Users/gmcc/Desktop/cpu1/CPU_1/.Xil/Vivado-8176-LAPTOP-7GOEKSIJ/dcp24/Top_board.xdc]
-Finished Parsing XDC File [C:/Users/gmcc/Desktop/cpu1/CPU_1/.Xil/Vivado-8176-LAPTOP-7GOEKSIJ/dcp24/Top_board.xdc]
-Parsing XDC File [C:/Users/gmcc/Desktop/cpu1/CPU_1/.Xil/Vivado-8176-LAPTOP-7GOEKSIJ/dcp24/Top_early.xdc]
-Finished Parsing XDC File [C:/Users/gmcc/Desktop/cpu1/CPU_1/.Xil/Vivado-8176-LAPTOP-7GOEKSIJ/dcp24/Top_early.xdc]
-Parsing XDC File [C:/Users/gmcc/Desktop/cpu1/CPU_1/.Xil/Vivado-8176-LAPTOP-7GOEKSIJ/dcp24/Top.xdc]
-Finished Parsing XDC File [C:/Users/gmcc/Desktop/cpu1/CPU_1/.Xil/Vivado-8176-LAPTOP-7GOEKSIJ/dcp24/Top.xdc]
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.442 . Memory (MB): peak = 1200.246 ; gain = 5.547
-Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.442 . Memory (MB): peak = 1200.246 ; gain = 5.547
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+reset_run impl_2 -prev_step 
+launch_runs impl_2 -to_step write_bitstream -jobs 4
+WARNING: [Vivado 12-872] Run step 'Design Initialization' is out-of-date.
+[Thu May 25 03:12:23 2023] Launched impl_2...
+Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/impl_2/runme.log
+reset_run synth_2
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/synth_2
 
-open_run: Time (s): cpu = 00:00:23 ; elapsed = 00:00:13 . Memory (MB): peak = 1295.895 ; gain = 281.676
-WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
-exit
-INFO: [Common 17-206] Exiting Vivado at Thu May 25 00:11:10 2023...
+launch_runs impl_2 -to_step write_bitstream -jobs 4
+[Thu May 25 03:22:16 2023] Launched synth_2...
+Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/synth_2/runme.log
+[Thu May 25 03:22:16 2023] Launched impl_2...
+Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/impl_2/runme.log

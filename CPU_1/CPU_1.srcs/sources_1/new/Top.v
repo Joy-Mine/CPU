@@ -208,8 +208,9 @@ module Top(
     //  m_rdata ->  output [31:0] ram_dat_o, // the data read from data-ram
     
     
-    reg[31:0] segwrite;
     wire[7:0] seg_out;
+    
+    
     segtube st(.fpga_clk(fpga_clk),
                .fpga_rst(rst),  //cpu_rst
                .segctrl(segctrl),  //input from memorio
