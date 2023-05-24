@@ -67,9 +67,9 @@ module Controller(Opcode, Function_opcode,Alu_resultHigh,  Jr, RegDST, ALUSrc, M
     //assign MemWrite = ((Sw==1)) ? 1'b1:1'b0;
     assign MemRead = ((Opcode==6'b100011)&& (Alu_resultHigh[21:0] != 22'h3FFFFF)) ?1'b1:1'b0;
     //assign MemtoReg = (Opcode==6'b100011) ?1'b1:1'b0;
-
-    assign IORead =((Sw==1) && (Alu_resultHigh[21:0] == 22'h3FFFFF)) ?1'b1:1'b0;
-    assign IOWrite = ((Opcode==6'b100011)&& (Alu_resultHigh[21:0] == 22'h3FFFFF)) ?1'b1:1'b0;
+    //memread lw 
+    assign IOWrite =((Sw==1) && (Alu_resultHigh[21:0] == 22'h3FFFFF)) ?1'b1:1'b0;
+    assign IORead = ((Opcode==6'b100011)&& (Alu_resultHigh[21:0] == 22'h3FFFFF)) ?1'b1:1'b0;
     // Read operations require reading data from memory or I/O to write to the register 
 
     assign MemorIOtoReg = IORead || MemRead;

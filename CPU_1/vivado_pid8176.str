@@ -1,0 +1,359 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 8176
+License: Customer
+
+Current time: 	Wed May 24 23:24:35 CST 2023
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1280x720
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 22 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	D:/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	gmcc
+User home directory: C:/Users/gmcc
+User working directory: C:/Users/gmcc/Desktop/cpu1/CPU_1
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: D:/Vivado
+HDI_APPROOT: D:/Vivado/2017.4
+RDI_DATADIR: D:/Vivado/2017.4/data
+RDI_BINDIR: D:/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/gmcc/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/gmcc/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/gmcc/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	D:/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/gmcc/Desktop/cpu1/CPU_1/vivado.log
+Vivado journal file location: 	C:/Users/gmcc/Desktop/cpu1/CPU_1/vivado.jou
+Engine tmp dir: 	C:/Users/gmcc/Desktop/cpu1/CPU_1/.Xil/Vivado-8176-LAPTOP-7GOEKSIJ
+
+GUI allocated memory:	202 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 498 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\gmcc\Desktop\cpu1\CPU_1\CPU_1.xpr. Version: Vivado v2017.4 
+// bs (cj):  Open Project : addNotify
+// [GUI Memory]: 58 MB (+57832kb) [00:00:25]
+// [Engine Memory]: 498 MB (+370739kb) [00:00:25]
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// HMemoryUtils.trashcanNow. Engine heap size: 498 MB. GUI used memory: 31 MB. Current time: 5/24/23 11:24:37 PM CST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 523 MB (+200kb) [00:00:34]
+// [Engine Memory]: 556 MB (+7407kb) [00:00:36]
+// [GUI Memory]: 63 MB (+2456kb) [00:00:37]
+// Tcl Message: open_project C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/gmcc/Desktop/CPU_1' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/SEU_CSE_507_user_uart_bmpg_1.3'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2017.4/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:15 . Memory (MB): peak = 781.063 ; gain = 44.469 
+// Project name: CPU_1; location: C:/Users/gmcc/Desktop/cpu1/CPU_1; part: xc7a35tcsg324-1
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 593 MB (+8850kb) [00:00:43]
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 68 MB (+1726kb) [00:00:45]
+// HMemoryUtils.trashcanNow. Engine heap size: 594 MB. GUI used memory: 41 MB. Current time: 5/24/23 11:24:58 PM CST
+// RDIResource.RDIViews_PROPERTIES: Properties: close view
+// Elapsed time: 10 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top (Top.v)]", 1); // B (D, cj)
+// PAPropertyPanels.initPanels (Top.v) elapsed time: 0.4s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top (Top.v)]", 1, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top (Top.v)]", 1, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top (Top.v)]", 1, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top (Top.v)]", 1, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top (Top.v), ude : Decoder (Decoder.v)]", 12, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top (Top.v), ucc : Controller (Controller.v)]", 6, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top (Top.v), ucc : Controller (Controller.v)]", 6, false, false, false, false, false, true); // B (D, cj) - Double Click
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// Elapsed time: 86 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top.v", 1); // k (j, cj)
+// [GUI Memory]: 75 MB (+4474kb) [00:02:33]
+selectCodeEditor("Top.v", 130, 33); // cd (w, cj)
+typeControlKey((HResource) null, "Top.v", 'v'); // cd (w, cj)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 624 MB (+1570kb) [00:02:39]
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking too long to process. Increasing delay to 3000 ms.
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// HMemoryUtils.trashcanNow. Engine heap size: 634 MB. GUI used memory: 45 MB. Current time: 5/24/23 11:26:48 PM CST
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Top.v", 182, 178); // cd (w, cj)
+// [GUI Memory]: 80 MB (+667kb) [00:02:44]
+selectCodeEditor("Top.v", 171, 179); // cd (w, cj)
+selectCodeEditor("Top.v", 171, 179, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey(null, null, 'z');
+selectCodeEditor("Top.v", 165, 262); // cd (w, cj)
+selectCodeEditor("Top.v", 165, 262, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "Top.v", 'c'); // cd (w, cj)
+// Elapsed time: 14 seconds
+selectCodeEditor("Top.v", 245, 307); // cd (w, cj)
+selectCodeEditor("Top.v", 186, 252); // cd (w, cj)
+selectCodeEditor("Top.v", 186, 252, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("Top.v", 186, 252); // cd (w, cj)
+selectCodeEditor("Top.v", 186, 252); // cd (w, cj)
+selectCodeEditor("Top.v", 207, 304); // cd (w, cj)
+selectCodeEditor("Top.v", 172, 252); // cd (w, cj)
+selectCodeEditor("Top.v", 172, 252, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("Top.v", 105, 166); // cd (w, cj)
+selectCodeEditor("Top.v", 179, 146); // cd (w, cj)
+selectCodeEditor("Top.v", 179, 146, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("Top.v", 165, 196); // cd (w, cj)
+// Elapsed time: 19 seconds
+selectCodeEditor("Top.v", 473, 136); // cd (w, cj)
+typeControlKey((HResource) null, "Top.v", 'v'); // cd (w, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // B (f, cj)
+// Elapsed time: 12 seconds
+selectCodeEditor("Top.v", 238, 276); // cd (w, cj)
+selectCodeEditor("Top.v", 241, 276); // cd (w, cj)
+typeControlKey((HResource) null, "Top.v", 'c'); // cd (w, cj)
+// Elapsed time: 23 seconds
+selectCodeEditor("Top.v", 516, 145); // cd (w, cj)
+typeControlKey((HResource) null, "Top.v", 'v'); // cd (w, cj)
+// Elapsed time: 16 seconds
+selectCodeEditor("Top.v", 237, 103); // cd (w, cj)
+selectCodeEditor("Top.v", 286, 142); // cd (w, cj)
+selectCodeEditor("Top.v", 382, 222); // cd (w, cj)
+// [GUI Memory]: 86 MB (+2168kb) [00:05:08]
+selectCodeEditor("Top.v", 500, 151); // cd (w, cj)
+// Elapsed time: 105 seconds
+selectCodeEditor("Top.v", 255, 61); // cd (w, cj)
+selectCodeEditor("Top.v", 283, 66); // cd (w, cj)
+selectCodeEditor("Top.v", 283, 66, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("Top.v", 234, 231); // cd (w, cj)
+selectCodeEditor("Top.v", 239, 235); // cd (w, cj)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 90 MB (+364kb) [00:07:08]
+selectCodeEditor("Top.v", 113, 22); // cd (w, cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Controller.v", 2); // k (j, cj)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Controller.v", 245, 283); // cd (w, cj)
+typeControlKey((HResource) null, "Controller.v", 'v'); // cd (w, cj)
+selectButton(RDIResourceCommand.RDICommands_UNDO, (String) null); // B (f, cj)
+// Elapsed time: 31 seconds
+selectCodeEditor("Controller.v", 188, 188); // cd (w, cj)
+typeControlKey((HResource) null, "Controller.v", 'v'); // cd (w, cj)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking too long to process. Increasing delay to 4000 ms.
+// TclEventType: DG_ANALYSIS_MSG_RESET
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// x (cj): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // x (cj)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_2 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 6 seconds
+dismissDialog("Launch Runs"); // f (cj)
+// bs (cj):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_2 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed May 24 23:32:26 2023] Launched synth_2... Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/synth_2/runme.log [Wed May 24 23:32:26 2023] Launched impl_2... Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/impl_2/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cj)
+// TclEventType: RUN_FAILED
+// [GUI Memory]: 98 MB (+3211kb) [00:09:22]
+// ah (cj): Synthesis Failed: addNotify
+// Elapsed time: 67 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_2, [Synth 8-344] instance 'dm' has duplicate port connection for port 'upg_dat_i' [C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/Top.v:180]. ]", 2, false); // ah (O, cj)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\gmcc\Desktop\cpu1\CPU_1\CPU_1.srcs\sources_1\new\Top.v;-;;-;16;-;line;-;180;-;;-;16;-;"); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_2, [Synth 8-285] failed synthesizing module 'Decoder' [C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v:22]. ]", 3, true); // ah (O, cj) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\gmcc\Desktop\cpu1\CPU_1\CPU_1.srcs\sources_1\new\Decoder.v;-;;-;16;-;line;-;22;-;;-;16;-;"); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_2, [Synth 8-344] instance 'dm' has duplicate port connection for port 'upg_dat_i' [C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/Top.v:180]. ]", 2, false); // ah (O, cj)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\gmcc\Desktop\cpu1\CPU_1\CPU_1.srcs\sources_1\new\Top.v;-;;-;16;-;line;-;180;-;;-;16;-;"); // ah (O, cj)
+// Elapsed time: 12 seconds
+selectCodeEditor("Top.v", 205, 148); // cd (w, cj)
+selectCodeEditor("Top.v", 205, 148, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("Top.v", 386, 140); // cd (w, cj)
+selectCodeEditor("Top.v", 454, 144); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Decoder.v", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top.v", 1); // k (j, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top (Top.v), dm : dmemory32 (dmemory32.v)]", 11, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top (Top.v), dm : dmemory32 (dmemory32.v), ram : RAM (RAM.xci)]", 12, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectCodeEditor("dmemory32.v", 127, 108); // cd (w, cj)
+selectCodeEditor("dmemory32.v", 127, 108, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "dmemory32.v", 'c'); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top.v", 1); // k (j, cj)
+selectCodeEditor("Top.v", 138, 126); // cd (w, cj)
+selectCodeEditor("Top.v", 138, 126, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "Top.v", 'v'); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "dmemory32.v", 3); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top.v", 1); // k (j, cj)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Top.v", 205, 92); // cd (w, cj)
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking too long to process. Increasing delay to 5000 ms.
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 37 seconds
+selectCodeEditor("Top.v", 208, 66); // cd (w, cj)
+selectCodeEditor("Top.v", 208, 66, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("Top.v", 224, 88); // cd (w, cj)
+selectCodeEditor("Top.v", 224, 88, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("Top.v", 170, 48); // cd (w, cj)
+selectCodeEditor("Top.v", 170, 48, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("Top.v", 200, 70); // cd (w, cj)
+selectCodeEditor("Top.v", 200, 70, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("Top.v", 280, 149); // cd (w, cj)
+selectCodeEditor("Top.v", 199, 173); // cd (w, cj)
+selectCodeEditor("Top.v", 199, 173, false, false, false, false, true); // cd (w, cj) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 652 MB. GUI used memory: 45 MB. Current time: 5/24/23 11:35:43 PM CST
+// Elapsed time: 14 seconds
+selectCodeEditor("Top.v", 228, 184); // cd (w, cj)
+selectCodeEditor("Top.v", 227, 143); // cd (w, cj)
+selectCodeEditor("Top.v", 226, 163); // cd (w, cj)
+selectCodeEditor("Top.v", 295, 179); // cd (w, cj)
+selectCodeEditor("Top.v", 268, 196); // cd (w, cj)
+selectCodeEditor("Top.v", 275, 199); // cd (w, cj)
+selectCodeEditor("Top.v", 95, 243); // cd (w, cj)
+selectCodeEditor("Top.v", 239, 237); // cd (w, cj)
+selectCodeEditor("Top.v", 168, 258); // cd (w, cj)
+selectCodeEditor("Top.v", 192, 274); // cd (w, cj)
+selectCodeEditor("Top.v", 141, 290); // cd (w, cj)
+selectCodeEditor("Top.v", 152, 320); // cd (w, cj)
+selectCodeEditor("Top.v", 213, 337); // cd (w, cj)
+selectCodeEditor("Top.v", 228, 350); // cd (w, cj)
+selectCodeEditor("Top.v", 99, 192); // cd (w, cj)
+selectCodeEditor("Top.v", 304, 345); // cd (w, cj)
+selectCodeEditor("Top.v", 297, 225); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Top.v", 208, 258); // cd (w, cj)
+selectCodeEditor("Top.v", 217, 286); // cd (w, cj)
+selectCodeEditor("Top.v", 177, 268); // cd (w, cj)
+selectCodeEditor("Top.v", 206, 72); // cd (w, cj)
+selectCodeEditor("Top.v", 206, 72, false, false, false, false, true); // cd (w, cj) - Double Click
+// Elapsed time: 15 seconds
+selectCodeEditor("Top.v", 220, 110); // cd (w, cj)
+selectCodeEditor("Top.v", 220, 110, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("Top.v", 254, 247); // cd (w, cj)
+selectCodeEditor("Top.v", 226, 95); // cd (w, cj)
+selectCodeEditor("Top.v", 226, 95, false, false, false, false, true); // cd (w, cj) - Double Click
+// Elapsed time: 19 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top (Top.v), alu : ALU (ALU.v)]", 7, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top (Top.v), alu : ALU (ALU.v)]", 7, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top (Top.v), alu : ALU (ALU.v)]", 7, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top (Top.v), alu : ALU (ALU.v)]", 7, false, false, false, false, false, true); // B (D, cj) - Double Click
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Decoder.v", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top.v", 1); // k (j, cj)
+selectCodeEditor("Top.v", 271, 214); // cd (w, cj)
+selectCodeEditor("Top.v", 319, 336); // cd (w, cj)
+selectCodeEditor("Top.v", 288, 208); // cd (w, cj)
+selectCodeEditor("Top.v", 276, 200); // cd (w, cj)
+// Elapsed time: 10 seconds
+selectCodeEditor("Top.v", 158, 229); // cd (w, cj)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 6); // u (O, cj)
+// TclEventType: DG_GRAPH_GENERATED
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// x (cj): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+dismissDialog("No Implementation Results Available"); // x (cj)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_2 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 6 seconds
+dismissDialog("Launch Runs"); // f (cj)
+// bs (cj):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_2 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed May 24 23:38:05 2023] Launched synth_2... Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/synth_2/runme.log [Wed May 24 23:38:05 2023] Launched impl_2... Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/impl_2/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cj)
+// TclEventType: RUN_COMPLETED
+// Elapsed time: 248 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cj)
+// TclEventType: RUN_STEP_COMPLETED
+// [Engine Memory]: 657 MB (+1706kb) [00:19:08]
+// TclEventType: RUN_FAILED
+// ah (cj): Implementation Failed: addNotify
+// Elapsed time: 77 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// [GUI Memory]: 103 MB (+487kb) [00:19:24]
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // ah (cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// x (cj): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (x)
+// bs (cj):  Reset to Previous Step : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // x (cj)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run impl_2 -prev_step  
+// f (cj): Launch Runs: addNotify
+dismissDialog("Reset to Previous Step"); // bs (cj)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: RUN_LAUNCH
+// bs (cj):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_2 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed May 24 23:43:38 2023] Launched impl_2... Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/impl_2/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cj)
+// TclEventType: RUN_COMPLETED
+// ah (cj): Bitstream Generation Completed: addNotify
+// Elapsed time: 162 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (N, ah)

@@ -2,40 +2,36 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Wed May 24 14:37:13 2023
-# Process ID: 4424
-# Current directory: C:/Users/gmcc/Desktop/CPU_1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14776 C:\Users\gmcc\Desktop\CPU_1\CPU_1.xpr
-# Log file: C:/Users/gmcc/Desktop/CPU_1/vivado.log
-# Journal file: C:/Users/gmcc/Desktop/CPU_1\vivado.jou
+# Start of session at: Wed May 24 23:23:42 2023
+# Process ID: 8176
+# Current directory: C:/Users/gmcc/Desktop/cpu1/CPU_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6788 C:\Users\gmcc\Desktop\cpu1\CPU_1\CPU_1.xpr
+# Log file: C:/Users/gmcc/Desktop/cpu1/CPU_1/vivado.log
+# Journal file: C:/Users/gmcc/Desktop/cpu1/CPU_1\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/gmcc/Desktop/CPU_1/CPU_1.xpr
-INFO: [Project 1-313] Project file moved from 'C:/Users/Administrator/Desktop/CPU_1' since last save.
+open_project C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/gmcc/Desktop/CPU_1' since last save.
 Scanning sources...
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-INFO: [Common 17-344] 'open_project' was cancelled
-exit
-INFO: [Common 17-206] Exiting Vivado at Wed May 24 14:38:32 2023...
-y 'c:/Users/gmcc/Desktop/CPU_1/CPU_1.srcs/sources_1/ip/SEU_CSE_507_user_uart_bmpg_1.3'.
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/SEU_CSE_507_user_uart_bmpg_1.3'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2017.4/data/ip'.
-1
-INFO: [Common 17-344] 'open_project' was cancelled
-exit
-INFO: [Common 17-206]exiupdate_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
+open_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:15 . Memory (MB): peak = 781.063 ; gain = 44.469
 update_compile_order -fileset sources_1
 reset_run synth_2
 launch_runs impl_2 -to_step write_bitstream -jobs 4
-[Wed May 24 15:42:34 2023] Launched synth_2...
-Run output will be captured here: C:/Users/gmcc/Desktop/CPU_1/CPU_1.runs/synth_2/runme.log
-[Wed May 24 15:42:34 2023] Launched impl_2...
-Run output will be captured here: C:/Users/gmcc/Desktop/CPU_1/CPU_1.runs/impl_2/runme.log
+[Wed May 24 23:32:26 2023] Launched synth_2...
+Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/synth_2/runme.log
+[Wed May 24 23:32:26 2023] Launched impl_2...
+Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/impl_2/runme.log
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 4
+[Wed May 24 23:38:05 2023] Launched synth_2...
+Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/synth_2/runme.log
+[Wed May 24 23:38:05 2023] Launched impl_2...
+Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/impl_2/runme.log
 reset_run impl_2 -prev_step 
 launch_runs impl_2 -to_step write_bitstream -jobs 4
-[Wed May 24 15:48:37 2023] Launched impl_2...
-Run output will be captured here: C:/Users/gmcc/Desktop/CPU_1/CPU_1.runs/impl_2/runme.log
-exit
-INFO: [Common 17-206] Exiting Vivado at Wed May 24 15:53:44 2023...
+[Wed May 24 23:43:38 2023] Launched impl_2...
+Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/impl_2/runme.log

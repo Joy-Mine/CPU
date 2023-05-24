@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Wed May 24 15:52:36 2023
+| Date             : Wed May 24 23:45:43 2023
 | Host             : LAPTOP-7GOEKSIJ running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_power_routed.rpt -pb Top_power_summary_routed.pb -rpx Top_power_routed.rpx
 | Design           : Top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.186        |
+| Total On-Chip Power (W)  | 0.183        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.113        |
+| Dynamic (W)              | 0.109        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 4.8          |
 | Max Ambient (C)          | 84.1         |
@@ -53,20 +53,20 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.002 |        6 |       --- |             --- |
-| Slice Logic             |     0.005 |     4490 |       --- |             --- |
-|   LUT as Logic          |     0.005 |     2046 |     20800 |            9.84 |
-|   F7/F8 Muxes           |    <0.001 |      364 |     32600 |            1.12 |
+| Slice Logic             |     0.004 |     4409 |       --- |             --- |
+|   LUT as Logic          |     0.003 |     1997 |     20800 |            9.60 |
 |   CARRY4                |    <0.001 |       48 |      8150 |            0.59 |
-|   Register              |    <0.001 |     1540 |     41600 |            3.70 |
+|   Register              |    <0.001 |     1516 |     41600 |            3.64 |
+|   F7/F8 Muxes           |    <0.001 |      365 |     32600 |            1.12 |
 |   BUFG                  |    <0.001 |        1 |        32 |            3.13 |
 |   LUT as Shift Register |    <0.001 |       10 |      9600 |            0.10 |
-|   Others                |     0.000 |      127 |       --- |             --- |
-| Signals                 |     0.007 |     3712 |       --- |             --- |
+|   Others                |     0.000 |      128 |       --- |             --- |
+| Signals                 |     0.005 |     3627 |       --- |             --- |
 | Block RAM               |     0.004 |       29 |        50 |           58.00 |
 | PLL                     |     0.095 |        1 |         5 |           20.00 |
 | I/O                     |    <0.001 |       48 |       210 |           22.86 |
 | Static Power            |     0.073 |          |           |                 |
-| Total                   |     0.186 |          |           |                 |
+| Total                   |     0.183 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.035 |       0.025 |      0.010 |
+| Vccint    |       1.000 |     0.032 |       0.021 |      0.010 |
 | Vccaux    |       1.800 |     0.061 |       0.049 |      0.013 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -148,7 +148,7 @@ Table of Contents
 +---------------------------------------------------------------------------------+-----------+
 | Name                                                                            | Power (W) |
 +---------------------------------------------------------------------------------+-----------+
-| Top                                                                             |     0.113 |
+| Top                                                                             |     0.109 |
 |   cclk                                                                          |     0.095 |
 |     inst                                                                        |     0.095 |
 |   dm                                                                            |     0.003 |
@@ -191,14 +191,14 @@ Table of Contents
 |                 prim_init.ram                                                   |    <0.001 |
 |   iff                                                                           |    <0.001 |
 |   l                                                                             |    <0.001 |
-|   pgr                                                                           |     0.009 |
-|     instmem                                                                     |     0.004 |
-|       U0                                                                        |     0.004 |
-|         inst_blk_mem_gen                                                        |     0.004 |
-|           gnbram.gnativebmg.native_blk_mem_gen                                  |     0.004 |
-|             valid.cstr                                                          |     0.004 |
+|   pgr                                                                           |     0.007 |
+|     instmem                                                                     |     0.003 |
+|       U0                                                                        |     0.003 |
+|         inst_blk_mem_gen                                                        |     0.003 |
+|           gnbram.gnativebmg.native_blk_mem_gen                                  |     0.003 |
+|             valid.cstr                                                          |     0.003 |
 |               bindec_a.bindec_inst_a                                            |    <0.001 |
-|               has_mux_a.A                                                       |     0.001 |
+|               has_mux_a.A                                                       |    <0.001 |
 |               ramloop[0].ram.r                                                  |    <0.001 |
 |                 prim_init.ram                                                   |    <0.001 |
 |               ramloop[10].ram.r                                                 |    <0.001 |
@@ -229,7 +229,7 @@ Table of Contents
 |                 prim_init.ram                                                   |    <0.001 |
 |               ramloop[9].ram.r                                                  |    <0.001 |
 |                 prim_init.ram                                                   |    <0.001 |
-|   st                                                                            |     0.001 |
+|   st                                                                            |    <0.001 |
 |   uart                                                                          |    <0.001 |
 |     inst                                                                        |    <0.001 |
 |       upg_inst                                                                  |    <0.001 |
@@ -255,7 +255,7 @@ Table of Contents
 |                   I_SRL_FIFO_RBU_F                                              |    <0.001 |
 |                     CNTR_INCR_DECR_ADDN_F_I                                     |    <0.001 |
 |                     DYNSHREG_F_I                                                |    <0.001 |
-|   ude                                                                           |     0.004 |
+|   ude                                                                           |     0.003 |
 |   ur                                                                            |    <0.001 |
 +---------------------------------------------------------------------------------+-----------+
 

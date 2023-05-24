@@ -66,7 +66,7 @@ set ACTIVE_STEP place_design
 set rc [catch {
   create_msg_db place_design.pb
   open_checkpoint Top_opt.dcp
-  set_property webtalk.parent_dir C:/Users/gmcc/Desktop/CPU_1/CPU_1.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.cache/wt [current_project]
   implement_debug_core 
   place_design 
   write_checkpoint -force Top_placed.dcp
