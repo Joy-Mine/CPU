@@ -49,10 +49,10 @@ module MemOrIO(
     assign r_wdata = (mRead==1'b1) ? m_rdata : {24'h000000, io_rdata};
     
     // Chip select signal of Led and Switch are all active high;
-    assign swsmall= (ioRead==1'b1&&addr_in==32'hFFFF_FC40) ? 1'b1:1'b0;//三个小开关 用beq 421
-    assign switchctrl=(ioRead==1'b1&&addr_in==32'hFFFF_FC60)? 1'b1:1'b0;//大开关
-    assign ledctrl=(ioWrite==1'b1&&addr_in==32'hFFFF_FC64)? 1'b1:1'b0;//输出的灯
-    assign segctrl=(ioWrite==1'b1&&addr_in==32'hFFFF_FC80)? 1'b1:1'b0;
+    assign swsmall= (ioRead==1'b1 && addr_in==32'hFFFF_FC40) ? 1'b1:1'b0;//三个小开关 用beq 421
+    assign switchctrl= (ioRead==1'b1 && addr_in==32'hFFFF_FC60)? 1'b1:1'b0;//大开关
+    assign ledctrl= (ioWrite==1'b1 && addr_in==32'hFFFF_FC64)? 1'b1:1'b0;//输出的灯
+    assign segctrl= (ioWrite==1'b1 && addr_in==32'hFFFF_FC80)? 1'b1:1'b0;
     //数码管 我是用 sw writedata 数码管来控制 就writedata你们可以分别给值
 
     
@@ -61,7 +61,7 @@ module MemOrIO(
     //wirte_data could go to either memory or IO. where is it from?
         write_data = /*ioRead == 1'b1 ? io_rdata :*/ r_rdata;
     else
-        write_data = 32'hZZZZZZZZ;
+        write_data = write_data;
         //high impedence
     end
 endmodule

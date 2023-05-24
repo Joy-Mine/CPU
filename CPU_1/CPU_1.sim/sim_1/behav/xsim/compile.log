@@ -1,3 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/RAM_1/sim/RAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/prgrom_1/sim/prgrom.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module prgrom
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/uart_bmpg_0_1/uart_bmpg.v" into library xil_defaultlib
@@ -22,6 +24,8 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CP
 INFO: [VRFC 10-311] analyzing module MemOrIO
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/Top.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/dmemory32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dmemory32
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/ioread.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ioread
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/leds.v" into library xil_defaultlib

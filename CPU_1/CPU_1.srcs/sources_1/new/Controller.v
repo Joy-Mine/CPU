@@ -38,9 +38,9 @@ module Controller(Opcode, Function_opcode,Alu_resultHigh,  Jr, RegDST, ALUSrc, M
     output       Jal;            //  1 if the current instruction is jal, 0 otherwise
     output       I_format;      //  1 if the instruction is I-type except for beq, bne, lw and sw; 0 otherwise
     output       Sftmd;         //  1 if the instruction is a shift instruction, 0 otherwise
-    output[1:0] ALUOp;        // if the instruction is R-type or I_format, ALUOp's higher bit is 1, 0 otherwise; if the instruction is ??¨²beq??? or ??¨²bne???, ALUOp's lower bit is 1, 0 otherwise
-    output IORead; // 1 indicates I/O read 
-    output IOWrite; //1 indicates I/O write
+    output[1:0]  ALUOp;        // if the instruction is R-type or I_format, ALUOp's higher bit is 1, 0 otherwise; if the instruction is ??¨²beq??? or ??¨²bne???, ALUOp's lower bit is 1, 0 otherwise
+    output       IORead; // 1 indicates I/O read 
+    output       IOWrite; //1 indicates I/O write
 
 
     wire R_format,Lw,Sw;
