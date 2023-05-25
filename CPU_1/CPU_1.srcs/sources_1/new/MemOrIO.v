@@ -43,7 +43,7 @@ module MemOrIO(
     output swsmall;
     output segctrl;
 
-    assign addr_out= addr_in;
+    assign addr_out = addr_in;
     // The data wirte to register file may be from memory or io.
     // While the data is from io, it should be the lower 16bit of r_wdata.
     assign r_wdata = (mRead==1'b1) ? m_rdata : {24'h000000, io_rdata};

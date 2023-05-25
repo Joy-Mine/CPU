@@ -44,7 +44,7 @@ module IFetc32(branch_base_addr, Addr_result, Read_data_1,
     input Jal; //while Jal is 1, it means current instruction is`      jal
     input Jr; // while Jr is 1, it means current instruction is jr
     
-    reg[31:0] PC, Next_PC;
+    reg[31:0] PC=32'b0, Next_PC=32'b0;
     
 //    prgrom instmem(
 //    .clka(clock),
@@ -64,16 +64,16 @@ module IFetc32(branch_base_addr, Addr_result, Read_data_1,
 
     always @(negedge clock) begin
     if(reset ==1'b1)
-        PC <= 32'h0000_0000;
+        PC = 32'h0000_0000;
     else begin
         if(Jmp == 1) begin
-            PC <= {PC[31:28], Insturction_i[25:0], 2'b0};
+            PC = {PC[31:28], Insturction_i[25:0], 2'b0};
         end
         else if(Jal == 1)begin
-            link_addr <= Next_PC;
-            PC <= {PC[31:28], Insturction_i[25:0], 2'b0};
+            link_addr = Next_PC;
+            PC = {PC[31:28], Insturction_i[25:0], 2'b0};
         end
-        else PC <= Next_PC;
+        else PC = Next_PC;
         end
     end
 

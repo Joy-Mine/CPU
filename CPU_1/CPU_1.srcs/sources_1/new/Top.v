@@ -15,6 +15,7 @@ module Top(
     output [7:0] seg_en,
     output [7:0] ledout,// from leds
     output tx
+    ,output[31:0] instruction
     );
    
    assign ledsmall={start_pg,smallsw};
@@ -60,7 +61,7 @@ module Top(
     
     //input部分
    wire [31:0] ALU_Result,Read_data_1,Read_data_2,Sign_extend,Addr_Result,branch_base_addr,link_addr,write_data;
-   wire [31:0] addr_out,m_rdata,r_wdata,r_rdata;
+   wire [31:0] addr_out,m_rdata,r_wdata;
    wire [7:0] ior_data;
    wire [1:0] ALUOp;
    wire ALUSrc,I_format,Sftmd,Zero,Branch,nBranch,Jmp,Jal,Jr,RegDST,MemorIOtoReg,RegWrite,MemWrite,MemRead,IORead,IOWrite;
@@ -68,6 +69,7 @@ module Top(
     
     wire[31:0] Instruction_o;//要注意rst的什么电平有效 高电平high-effective
     wire[31:0] rom_adr_o;
+    assign instruction=Instruction_o;
     
     programrom pgr(.rom_clk_i(cpu_clk), // ROM clock
                    .rom_adr_i(rom_adr_o[15:2]), // From IFetch
@@ -141,7 +143,7 @@ module Top(
                 .addr_in(Addr_Result),   //from ALU
                 .m_rdata(m_rdata),      //data read from Data-Memory
                 .io_rdata(ior_data),    //read from IO,8 bits
-                .r_rdata(r_rdata),      // data read from Decoder(register file)
+                .r_rdata(Read_data_2),      // data read from Decoder(register file)
                 .r_wdata(r_wdata),      //output data to Decoder(register file)
                 .addr_out(addr_out),    //output address to Data-Memory
                 .write_data(write_data),//output data to memory or I/O（m_wdata,io_wdata)

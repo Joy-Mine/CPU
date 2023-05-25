@@ -47,7 +47,8 @@ module testTop(
   //  );
     wire[3:0] ledsmall;
     reg [7:0] sw=8'b0;
-    Top tt(rst,clk,sw,choose,start_pg,rx,ledsmall, seg,seg1,an,lights,tx);
+    wire[31:0] instruction=32'h0000_0000;
+    Top tt(rst,clk,sw,choose,start_pg,rx,ledsmall, seg,seg1,an,lights,tx,instruction);
     
     
     initial begin
@@ -57,24 +58,24 @@ module testTop(
 //        forever #10 upg_clk = ~upg_clk;
 //    end
     initial begin
-        #100
+        #10
         rst = 1'b0;
-        #100
+        #10
         rst = 1'b1;
-        #3000
+        #10
         sw = 8'b0000_0001;
         but = 1'b1;
-        #1000
+        #20
         but = 1'b0;
-        #1000
+        #30
         sw =  8'b0000_0011;
         but = 1'b1;
         #1000
         but = 1'b0;
-        #1000
+        #50
         sw = 8'b0000_0100;
         but = 1'b1;
-        #1000
+        #100
         but = 1'b0;
         #1000
         sw =  8'b0000_1011;
