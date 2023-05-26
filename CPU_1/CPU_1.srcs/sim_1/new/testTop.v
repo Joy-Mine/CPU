@@ -25,7 +25,8 @@ module testTop(
     );
     
     reg clk = 1'b0, rst = 1'b1,but = 1'b0,rx = 1'b0,start_pg = 1'b0;
-    wire tx,IORead;
+    wire tx;
+    //IORead;
    //reg [2:0] sw = 3'b0;
 //    wire[3:0]state;
     wire[7:0]
@@ -47,8 +48,8 @@ module testTop(
   //  );
     wire[3:0] ledsmall;
     reg [7:0] sw=8'b0;
-    wire[31:0] instruction=32'h0000_0000;
-    Top tt(rst,clk,sw,choose,start_pg,rx,ledsmall, seg,seg1,an,lights,tx,instruction);
+    //wire[31:0] instruction;
+    Top tt(rst,clk,sw,choose,start_pg,rx,ledsmall, seg,seg1,an,lights,tx/*,instruction*/);
     
     
     initial begin
@@ -60,19 +61,19 @@ module testTop(
     initial begin
         #10
         rst = 1'b0;
-        #10
+        #100
         rst = 1'b1;
-        #10
+        #1000
         sw = 8'b0000_0001;
         but = 1'b1;
-        #20
+        #1000
         but = 1'b0;
-        #30
+        #1000
         sw =  8'b0000_0011;
         but = 1'b1;
         #1000
         but = 1'b0;
-        #50
+        #5000
         sw = 8'b0000_0100;
         but = 1'b1;
         #100

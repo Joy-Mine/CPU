@@ -20,15 +20,18 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module IFetc32(branch_base_addr, Addr_result, Read_data_1,
+module IFetc32(branch_base_addr, Addr_result, Read_data_1,// Insturction_o,
      Branch, nBranch, Jmp, Jal, Jr, Zero, clock, reset, link_addr,rom_adr_o,Insturction_i);
 
     input [31:0] Insturction_i;
+   // output [31:0] Insturction_o;
     output [31:0] branch_base_addr; // (pc+4) to ALU which is used by branch type instruction
     output reg [31:0] link_addr; // (pc+4) to Decoder which is used by jal instruction
     output [31:0] rom_adr_o;
     
     input clock, reset; // Clock and reset
+    
+    //assign Insturction_o=Insturction_i;
     
     // from ALU
     input [31:0] Addr_result; // the calculated address from input Zero; // while Zero is 1, it means the ALUresult is zero
@@ -51,7 +54,6 @@ module IFetc32(branch_base_addr, Addr_result, Read_data_1,
 //    .addra(PC[15:2]),
 //    .douta(Instruction)
 //    );
-    assign rom_adr_o=PC;
     
     always @* 
     begin
@@ -63,20 +65,30 @@ module IFetc32(branch_base_addr, Addr_result, Read_data_1,
     end
 
     always @(negedge clock) begin
-    if(reset ==1'b1)
-        PC = 32'h0000_0000;
+    if(reset ==1'b1) begin
+        PC <= 32'h0000_0000;
+        link_addr<=32'h0000_0000;
+    end
     else begin
         if(Jmp == 1) begin
-            PC = {PC[31:28], Insturction_i[25:0], 2'b0};
+            PC <= {PC[31:28], Insturction_i[25:0], 2'b0};
         end
         else if(Jal == 1)begin
-            link_addr = Next_PC;
-            PC = {PC[31:28], Insturction_i[25:0], 2'b0};
+            link_addr <= PC+4;
+            PC <= {PC[31:28], Insturction_i[25:0], 2'b0};
         end
-        else PC = Next_PC;
+        else PC <= Next_PC;
         end
     end
-
+    always @(posedge clock) begin
+        if(reset ==1'b1)
+            link_addr=32'h0000_0000;
+        else if(Jal == 1)
+            link_addr = PC+4;
+        else link_addr=link_addr;
+    end
+     
+    assign rom_adr_o=PC;
     assign branch_base_addr=PC+4;
 
 endmodule

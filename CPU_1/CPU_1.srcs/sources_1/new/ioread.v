@@ -11,7 +11,7 @@ module ioread (
     output reg	[7:0]	ioread_data 		// the data to memorio (将外设来的数据送给memorio)
 );
    
-    always @* begin
+    always @(*)  begin
         if (reset)
             ioread_data = 8'h00;
         else if (ior == 1) begin

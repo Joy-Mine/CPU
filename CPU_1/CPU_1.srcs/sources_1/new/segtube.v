@@ -35,7 +35,9 @@ module segtube(
     reg pos=1'b0;     //500hz 
     reg [2:0] wz_out;   //decide which seg should light up
     reg [7:0] wz;     //the boolean of which should light
+    //assign seg_en=( write_data==32'h00000000)? 8'b00000000: wz;
     assign seg_en=wz;
+    //assign seg_en=( write_data==32'h00000000)? 8'b00000000: wz;
     always@(posedge fpga_clk) begin //250z 产生一个pos来变化seg亮灯状态
         if(count_250hz == 17'd100000) begin
             count_250hz <= 0;
@@ -68,7 +70,7 @@ module segtube(
     end
     
     reg[31:0] segwrite=32'h0000_0000;
-    always @ (*) begin
+    always @ (posedge fpga_clk) begin
         if (fpga_rst)
             segwrite = 32'h0000_0000;
         else if (segctrl) begin

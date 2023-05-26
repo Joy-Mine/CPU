@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module Top(
+module Top( 
     input fpga_rst, //Active High
     input fpga_clk,
     input[7:0] switch,
@@ -15,7 +15,7 @@ module Top(
     output [7:0] seg_en,
     output [7:0] ledout,// from leds
     output tx
-    ,output[31:0] instruction
+    //,output[31:0] instruction
     );
    
    assign ledsmall={start_pg,smallsw};
@@ -69,7 +69,7 @@ module Top(
     
     wire[31:0] Instruction_o;//要注意rst的什么电平有效 高电平high-effective
     wire[31:0] rom_adr_o;
-    assign instruction=Instruction_o;
+    //assign instruction=Instruction_o;
     
     programrom pgr(.rom_clk_i(cpu_clk), // ROM clock
                    .rom_adr_i(rom_adr_o[15:2]), // From IFetch
@@ -217,6 +217,8 @@ module Top(
                .fpga_rst(rst),  //cpu_rst
                .segctrl(segctrl),  //input from memorio
                .write_data(write_data), //input from memorio
+//               .segctrl(1'b1),  //input from memorio
+//                              .write_data(Instruction_o), //input from memorio
                .seg_en(seg_en),  //Top output
                .seg_out(seg_out)); //Top output
 

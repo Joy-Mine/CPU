@@ -36,4 +36,4 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CP
 INFO: [VRFC 10-311] analyzing module segtube
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/testTop.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module testTop
-WARNING: [VRFC 10-2096] empty statement in sequential block [C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/testTop.v:59]
+WARNING: [VRFC 10-2096] empty statement in sequential block [C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/testTop.v:61]

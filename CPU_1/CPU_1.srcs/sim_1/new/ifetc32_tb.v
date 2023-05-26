@@ -22,12 +22,17 @@
 
 module ifetc32_tb();
     reg clk, rst,Branch,nBranch,Jmp,Jal,Jr,Zero;
-    reg[31:0] Addr_result,Read_data_1;
-    wire [31:0] Instruction,branch_base_addr,link_addr;
-    Ifetc32 if3(.Instruction(Instruction),.branch_base_addr(branch_base_addr),.Addr_result(Addr_result),.Read_data_1(Read_data_1),.Branch(Branch),.nBranch(nBranch),.Jmp(Jmp),.Jal(Jal),.Jr(Jr),.Zero(Zero),.clock(clk),.reset(rst),.link_addr(link_addr));
+    reg[31:0] Addr_result,Read_data_1,Instruction;
+    wire [31:0] branch_base_addr,link_addr,PC;
+    IFetc32 if33(.Insturction_i(Instruction),.branch_base_addr(branch_base_addr),.Addr_result(Addr_result),.rom_adr_o(PC),
+    .Read_data_1(Read_data_1),.Branch(Branch),.nBranch(nBranch),.Jmp(Jmp),.Jal(Jal),.Jr(Jr),.Zero(Zero),.clock(clk),.reset(rst),.link_addr(link_addr));
+    
+   
+    
     
     initial #130 $finish;
     initial begin
+        Instruction=32'h0000_0000;
         clk = 1'b0;
         rst=1'b1;
         Branch = 1'b0;
@@ -50,6 +55,7 @@ module ifetc32_tb();
 
 		/*beq $t1,$t0,L1*/
         #30 begin Branch=1'b1;
+        Instruction=32'h3c02ffff;
         Zero = 1'b1;
         Addr_result = (32'd5)<<2;  // 20 in decimal, which is the address of instruction: bne $t1,$t2,L3
         // (Branch == 1) && (Zero == 1) instruction need to be taken out according to Addr_result
@@ -60,6 +66,7 @@ module ifetc32_tb();
 
 		/*bne $t1,$t2,L3*/
         #10 begin 
+        Instruction=32'h3c02ffff;
         Branch = 1'b0;
         Zero = 1'b0;
         nBranch = 1'b1;

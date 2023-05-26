@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu May 25 13:14:44 2023
+# Process ID: 3548
+# Current directory: C:/Users/gmcc/Desktop/cpu1/CPU_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14496 C:\Users\gmcc\Desktop\cpu1\CPU_1\CPU_1.xpr
+# Log file: C:/Users/gmcc/Desktop/cpu1/CPU_1/vivado.log
+# Journal file: C:/Users/gmcc/Desktop/cpu1/CPU_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/SEU_CSE_507_user_uart_bmpg_1.3'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:17 . Memory (MB): peak = 727.652 ; gain = 89.000
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/prgrom_tb.v w ]
+add_files -fileset sim_1 C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/prgrom_tb.v
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/ifetc32_tb.v w ]
+add_files -fileset sim_1 C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/ifetc32_tb.v
+update_compile_order -fileset sim_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu May 25 13:21:41 2023...

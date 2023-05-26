@@ -41,7 +41,7 @@ module ALU(Read_data_1,Read_data_2,Sign_extend,Function_opcode,Exe_opcode,ALUOp,
     assign ALU_ctl[1] = ((!Exe_code[2]) | (!ALUOp[1]));
     assign ALU_ctl[2] = (Exe_code[1] & ALUOp[1]) | ALUOp[0];
     
-    always @(ALU_ctl,Ainput,Binput)
+    always @*
     begin
     case(ALU_ctl)
         3'b000:ALU_output_mux = Ainput & Binput;//and andi
@@ -66,13 +66,9 @@ module ALU(Read_data_1,Read_data_2,Sign_extend,Function_opcode,Exe_opcode,ALUOp,
             3'b110:Shift_Result = Binput >> Ainput; //srl srlv
             3'b011:begin
                     Shift_Result = $signed(Binput) >>> Shamt;
-                    // if(Shamt!=0) Shift_Result={B31[Shamt-1:0],Binput[31:Shamt]}; //sra 8
-                    // else Shift_Result=Binput;
             end
             3'b111:begin
                     Shift_Result = $signed(Binput) >>> Ainput;
-                    // if(Ainput!=5'b00000) Shift_Result={B31[Ainput[4:0]-1:0],Binput[31:Ainput[4:0]]}; //srav
-                    // else Shift_Result=Binput;
             end
             default:Shift_Result = Binput;
         endcase
@@ -86,7 +82,7 @@ module ALU(Read_data_1,Read_data_2,Sign_extend,Function_opcode,Exe_opcode,ALUOp,
         ALU_Result =(ALU_output_mux[31] == 1) ? 1:0;
         //lui operation 
     else if((ALU_ctl==3'b101) && (I_format==1))
-        ALU_Result = {Binput[15:0],16'b00000000_00000000};
+        ALU_Result = {Sign_extend[15:0],16'b00000000_00000000};
     else if(Sftmd==1'b1)
         ALU_Result = Shift_Result;
     else

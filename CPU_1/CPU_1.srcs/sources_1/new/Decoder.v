@@ -54,7 +54,7 @@ module Decoder(read_data_1,read_data_2,Instruction,mem_data,ALU_result,
 
     assign zero_immediate={16'b00000000_00000000,immediate};
 
-    always @* begin
+    always @(posedge clock ) begin
         if(immediate[15]==1'b1) begin
             sign_immediate={16'b11111111_11111111,immediate};
             branch_immediate={14'b11111111_111111,immediate,2'b0};
