@@ -14,7 +14,7 @@ add $a0 $zero $t2
 li $v0 1
 syscall
 
-sltu	$t3, $t0, $t2		# $t0 < $t2 $t3 = 1 ? 0
+sltu	$t3, $t0, $t2		# $t0 < $t2 $t3 = 1 ? 0 # not sure whether has this method.
 li $v0 1
 move $a0 $t3
 syscall
