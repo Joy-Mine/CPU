@@ -2,11 +2,11 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Sun May 21 01:40:31 2023
-# Process ID: 95360
-# Current directory: C:/Users/26227/Desktop/CPU_1/CPU_1/CPU_1/CPU_1.runs/prgrom_synth_1
+# Start of session at: Fri May 26 12:54:29 2023
+# Process ID: 11504
+# Current directory: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/prgrom_synth_1
 # Command line: vivado.exe -log prgrom.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source prgrom.tcl
-# Log file: C:/Users/26227/Desktop/CPU_1/CPU_1/CPU_1/CPU_1.runs/prgrom_synth_1/prgrom.vds
-# Journal file: C:/Users/26227/Desktop/CPU_1/CPU_1/CPU_1/CPU_1.runs/prgrom_synth_1\vivado.jou
+# Log file: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/prgrom_synth_1/prgrom.vds
+# Journal file: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/prgrom_synth_1\vivado.jou
 #-----------------------------------------------------------
 source prgrom.tcl -notrace

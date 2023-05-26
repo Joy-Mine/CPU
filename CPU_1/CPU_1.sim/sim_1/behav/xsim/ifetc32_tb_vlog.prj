@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../CPU_1.srcs/sources_1/ip/cpuclk_2" \
+"../../../../CPU_1.srcs/sources_1/new/IFetc32.v" \
+"../../../../CPU_1.srcs/sim_1/new/ifetc32_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

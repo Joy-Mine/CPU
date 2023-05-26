@@ -20,10 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module MemOrIO(
+module MemOrIO(rst,
     mRead, mWrite, ioRead, ioWrite,addr_in, addr_out,
     m_rdata, io_rdata, r_wdata, r_rdata, write_data, ledctrl , switchctrl,swsmall,segctrl
     );
+    input rst;
     input mRead; //read memory, from Controller
     input mWrite; //write memory, from Controller
     input ioRead; //read IO, from Controller
@@ -57,7 +58,9 @@ module MemOrIO(
 
     
     always @* begin
-    if((mWrite==1)||(ioWrite==1))
+    if(rst)
+        write_data=32'h0000_0000;
+    else if((mWrite==1)||(ioWrite==1))
     //wirte_data could go to either memory or IO. where is it from?
         write_data = /*ioRead == 1'b1 ? io_rdata :*/ r_rdata;
     else

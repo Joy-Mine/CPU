@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu May 25 13:14:44 2023
+# Process ID: 3548
+# Current directory: C:/Users/gmcc/Desktop/cpu1/CPU_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14496 C:\Users\gmcc\Desktop\cpu1\CPU_1\CPU_1.xpr
+# Log file: C:/Users/gmcc/Desktop/cpu1/CPU_1/vivado.log
+# Journal file: C:/Users/gmcc/Desktop/cpu1/CPU_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.xpr
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/prgrom_tb.v w ]
+add_files -fileset sim_1 C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/prgrom_tb.v
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/ifetc32_tb.v w ]
+add_files -fileset sim_1 C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/ifetc32_tb.v
+update_compile_order -fileset sim_1
