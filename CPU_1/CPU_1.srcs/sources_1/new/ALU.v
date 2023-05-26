@@ -91,7 +91,7 @@ module ALU(Read_data_1,Read_data_2,Sign_extend,Function_opcode,Exe_opcode,ALUOp,
 
 
     // Ìø×ªµØÖ·
-    assign Addr_Result  = PC_plus_4 + (Sign_extend << 2);
+    assign Addr_Result  =( PC_plus_4[31:2] + $signed(Sign_extend))<< 2;
     
     assign Zero = (ALU_output_mux == 32'h0000_000) ? 1'b1 : 1'b0; 
 endmodule

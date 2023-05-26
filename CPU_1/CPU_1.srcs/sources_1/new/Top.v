@@ -15,7 +15,14 @@ module Top(
     output [7:0] seg_en,
     output [7:0] ledout,// from leds
     output tx
-    //,output[31:0] instruction
+//    ,output[31:0] instruction,
+//    output [31:0]addr_resultt,
+//    output [31:0]alu_resultt,
+//    output [31:0]write_dataa,
+//    output ioww,
+//    output jmpp,
+//    output [5:0]oop,
+//    output [31:0]rao
     );
    
    assign ledsmall={start_pg,smallsw};
@@ -69,7 +76,14 @@ module Top(
     
     wire[31:0] Instruction_o;//要注意rst的什么电平有效 高电平high-effective
     wire[31:0] rom_adr_o;
-    //assign instruction=Instruction_o;
+//    assign instruction=Instruction_o;
+//    assign addr_resultt=Addr_Result;
+//    assign write_dataa=write_data;
+//    assign ioww=IOWrite;
+//    assign oop=Instruction_o[31:26];
+//    assign rao=rom_adr_o;
+//    assign alu_resultt=ALU_Result;
+//    assign jmpp=Jmp;
     
     programrom pgr(.rom_clk_i(cpu_clk), // ROM clock
                    .rom_adr_i(rom_adr_o[15:2]), // From IFetch
@@ -136,11 +150,13 @@ module Top(
             .Jr(Jr));
         
 
-    MemOrIO mio(.mRead(MemRead),    //from controller
+
+    MemOrIO mio(.rst(rst),
+                .mRead(MemRead),    //from controller
                 .mWrite(MemWrite),
                 .ioRead(IORead),
                 .ioWrite(IOWrite),
-                .addr_in(Addr_Result),   //from ALU
+                .addr_in(ALU_Result),   //from ALU
                 .m_rdata(m_rdata),      //data read from Data-Memory
                 .io_rdata(ior_data),    //read from IO,8 bits
                 .r_rdata(Read_data_2),      // data read from Decoder(register file)

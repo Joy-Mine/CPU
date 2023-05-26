@@ -68,25 +68,20 @@ module IFetc32(branch_base_addr, Addr_result, Read_data_1,// Insturction_o,
     if(reset ==1'b1) begin
         PC <= 32'h0000_0000;
         link_addr<=32'h0000_0000;
-    end
+        end
     else begin
         if(Jmp == 1) begin
             PC <= {PC[31:28], Insturction_i[25:0], 2'b0};
-        end
+            end
         else if(Jal == 1)begin
             link_addr <= PC+4;
             PC <= {PC[31:28], Insturction_i[25:0], 2'b0};
-        end
-        else PC <= Next_PC;
+            end
+        else begin PC <= Next_PC; link_addr<=link_addr;
+            end
         end
     end
-    always @(posedge clock) begin
-        if(reset ==1'b1)
-            link_addr=32'h0000_0000;
-        else if(Jal == 1)
-            link_addr = PC+4;
-        else link_addr=link_addr;
-    end
+
      
     assign rom_adr_o=PC;
     assign branch_base_addr=PC+4;

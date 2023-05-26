@@ -54,7 +54,7 @@ module Decoder(read_data_1,read_data_2,Instruction,mem_data,ALU_result,
 
     assign zero_immediate={16'b00000000_00000000,immediate};
 
-    always @(posedge clock ) begin
+    always @(*) begin
         if(immediate[15]==1'b1) begin
             sign_immediate={16'b11111111_11111111,immediate};
             branch_immediate={14'b11111111_111111,immediate,2'b0};
@@ -65,7 +65,7 @@ module Decoder(read_data_1,read_data_2,Instruction,mem_data,ALU_result,
         end 
     end
     always @* begin
-        if(opcode==6'b001100||opcode==6'b001101||opcode==6'b001011||opcode==6'b001110) 
+        if(opcode==6'b001001||opcode==6'b001100||opcode==6'b001100||opcode==6'b001101||opcode==6'b001011||opcode==6'b001110) 
         //sltiu andi ori XORI
             Sign_extend=zero_immediate;
         else Sign_extend=sign_immediate;

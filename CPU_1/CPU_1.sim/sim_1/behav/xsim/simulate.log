@@ -1,30 +1,9 @@
 Vivado Simulator 2017.4
 Time resolution is 1 ps
-@@@@@@@@@@1@@@@@@@@@@
-0 0 0 0 0 0 0 0          0          0          0
-@@@@@@@@@@1@@@@@@@@@@
-@@@@@@@@@@2@@@@@@@@@@
-0 0 1 0 0 0 0 1         20          0 1006829567         24
-@@@@@@@@@@2@@@@@@@@@@
-@@@@@@@@@@3@@@@@@@@@@
-0 0 0 1 0 0 0 0         32          0 1006829567         36
-@@@@@@@@@@3@@@@@@@@@@
-@@@@@@@@@@4@@@@@@@@@@
-0 0 0 0 0 1 0 0          0          0 1006829567         36
-@@@@@@@@@@4@@@@@@@@@@
-@@@@@@@@@@5@@@@@@@@@@
-0 0 0 0 1 0 0 0          0          0 1006829567
-@@@@@@@@@@5@@@@@@@@@@
-@@@@@@@@@@6@@@@@@@@@@
-0 0 0 0 0 0 1 0          0         44 1006829567
-@@@@@@@@@@6@@@@@@@@@@
-@@@@@@@@@@7@@@@@@@@@@
-0 0 1 0 0 0 0 0          0          0 1006829567         52
-@@@@@@@@@@7@@@@@@@@@@
-@@@@@@@@@@8@@@@@@@@@@
-0 0 0 1 0 0 0 1          0          0 1006829567         56
-@@@@@@@@@@8@@@@@@@@@@
-@@@@@@@@@@9@@@@@@@@@@
-0 0 1 0 0 0 0 1          0          0 1006829567          4
-@@@@@@@@@@9@@@@@@@@@@
-$finish called at time : 130 ns : File "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/ifetc32_tb.v" Line 33
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module testTop.tt.pgr.instmem.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module testTop.tt.dm.ram.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+$finish called at time : 23600 ns : File "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/testTop.v" Line 125
