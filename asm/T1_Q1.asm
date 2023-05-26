@@ -31,13 +31,7 @@ li $v0 1
 li $a0 1
 syscall
 
-addi	$v0, $0, 10		# System call 10 - Exit
-syscall					# execute
-
 exit2:
 li $v0 1
 li $a0 0
 syscall
-
-addi	$v0, $0, 10		# System call 10 - Exit
-syscall					# execute
