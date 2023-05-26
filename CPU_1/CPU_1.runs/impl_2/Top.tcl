@@ -75,9 +75,9 @@ set rc [catch {
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   add_files -quiet C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/synth_2/Top.dcp
+  read_ip -quiet C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/prgrom_1/prgrom.xci
   read_ip -quiet C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/uart_bmpg_0_1/uart_bmpg_0.xci
   read_ip -quiet C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/RAM_1/RAM.xci
-  read_ip -quiet C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/prgrom_1/prgrom.xci
   read_ip -quiet C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/cpuclk_2/cpuclk.xci
   read_xdc C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/constrs_1/new/c.xdc
   link_design -top Top -part xc7a35tcsg324-1

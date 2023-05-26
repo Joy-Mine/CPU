@@ -20,9 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module Decoder(read_data_1,read_data_2,Instruction,mem_data,ALU_result,
-                 Jal,RegWrite,MemtoReg,RegDst,Sign_extend,clock,reset,opcplus4);
-    output[31:0] read_data_1;               // 输出的第一操作数
-    output[31:0] read_data_2;               // 输出的第二操作数
+                 Jal,RegWrite,MemtoReg,RegDst,Sign_extend,clock,reset,opcplus4
+                 //,value,value2
+                 );
+                 //output [31:0]value;output[31:0] value2;
+    output  [31:0] read_data_1;               // 输出的第一操作数
+    output  [31:0] read_data_2;               // 输出的第二操作数
     input[31:0]  Instruction;               // 取指单元来的指令
     input[31:0]  mem_data;   				//  从DATA RAM or I/O port取出的数据--r_wdata from memorIO
     input[31:0]  ALU_result;   				// 从执行单元来的运算的结果
@@ -41,6 +44,10 @@ module Decoder(read_data_1,read_data_2,Instruction,mem_data,ALU_result,
     wire [4:0] rt,rd,rs;
     reg [31:0]write_data;
     reg [4:0]write_addr;
+
+//assign value = register[1];
+//assign value2 = register[28];
+
 
     wire [31:0]zero_immediate;
     reg [31:0]sign_immediate, branch_immediate;
@@ -77,12 +84,12 @@ module Decoder(read_data_1,read_data_2,Instruction,mem_data,ALU_result,
     assign read_data_2 = register[rt];
 
     integer i;
-    always @(posedge clock ) begin
+    always @(negedge clock ) begin //我改的
         if(reset==1'b1) begin
             for(i=0;i<32;i=i+1) register[i]=32'h00000000;
         end
         else begin
-                if(RegWrite==1'b1&&write_addr!=6'b000000) 
+                if(RegWrite==1'b1&&write_addr!=5'b00000) 
                     register[write_addr]=write_data;
         end
     end

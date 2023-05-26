@@ -33,7 +33,7 @@ module segtube(
     reg[3:0] sw;
     reg [16:0] count_250hz;
     reg pos=1'b0;     //500hz 
-    reg [2:0] wz_out;   //decide which seg should light up
+    reg [2:0] wz_out=0;   //decide which seg should light up
     reg [7:0] wz;     //the boolean of which should light
     //assign seg_en=( write_data==32'h00000000)? 8'b00000000: wz;
     assign seg_en=wz;
@@ -66,6 +66,7 @@ module segtube(
             3'd2: wz<=8'b00000100;
             3'd1: wz<=8'b00000010;
             3'd0: wz<=8'b00000001;
+            default:wz<=8'b00000000;
         endcase
     end
     

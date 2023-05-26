@@ -45,13 +45,13 @@ read_verilog -library xil_defaultlib {
   C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/segtube.v
   C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/Top.v
 }
+read_ip -quiet C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/prgrom_1/prgrom.xci
+set_property used_in_implementation false [get_files -all c:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/prgrom_1/prgrom_ooc.xdc]
+
 read_ip -quiet C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/uart_bmpg_0_1/uart_bmpg_0.xci
 
 read_ip -quiet C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/RAM_1/RAM.xci
 set_property used_in_implementation false [get_files -all c:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/RAM_1/RAM_ooc.xdc]
-
-read_ip -quiet C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/prgrom_1/prgrom.xci
-set_property used_in_implementation false [get_files -all c:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/prgrom_1/prgrom_ooc.xdc]
 
 read_ip -quiet C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/cpuclk_2/cpuclk.xci
 set_property used_in_implementation false [get_files -all c:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/cpuclk_2/cpuclk_board.xdc]
@@ -69,6 +69,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/constrs_1/new/c.xdc
 set_property used_in_implementation false [get_files C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/constrs_1/new/c.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 
 synth_design -top Top -part xc7a35tcsg324-1
 

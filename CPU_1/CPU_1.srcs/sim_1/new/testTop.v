@@ -25,9 +25,8 @@ module testTop(
     );
     
     reg clk = 1'b0, rst = 1'b1,but = 1'b0,rx = 1'b0,start_pg = 1'b0;
-    wire tx,iowrite,jmp;
-    wire [5:0]oop;
-    wire[31:0] wdd,add,instruction,urao,all;
+    wire cpuclk,tx,ioread,iow;
+    wire[31:0] wdd,instruction,all,urrwdata,register_value,value2;
     //IORead;
    //reg [2:0] sw = 3'b0;
 //    wire[3:0]state;
@@ -49,10 +48,11 @@ module testTop(
 //    ,io_rdata,IORead,switchValue1,state,disp_dat
   //  );
     wire[3:0] ledsmall;
-    reg [7:0] sw=8'b0;
+    reg [7:0] sw=8'b0000_1111;
+  
     //wire[31:0] instruction;
     Top tt(rst,clk,sw,choose,start_pg,rx,ledsmall, seg,seg1,an,lights,tx
-    ,instruction,add,all,wdd,iowrite,jmp,oop,urao
+    ,instruction,all,wdd,register_value,value2,ioread,iow,urrwdata,cpuclk
     );
     
     
@@ -65,63 +65,63 @@ module testTop(
     initial begin
         #300
         rst = 1'b0;
-        #3000
+        #5000
         rst = 1'b1;
-        #100
+        #10
         rst = 1'b0;
-        #100
+        #10
         rst = 1'b1;
-        sw = 8'b0000_0001;
-        but = 1'b1;
-        #1000
-        but = 1'b0;
-        #1000
-        sw =  8'b0000_0011;
-        but = 1'b1;
-        #1000
-        but = 1'b0;
-        #1000
-        sw = 8'b0000_0100;
-        but = 1'b1;
-        #100
-        but = 1'b0;
-        #1000
-        sw =  8'b0000_1011;
-        but = 1'b1;
-        #1000
-        but = 1'b0;
-        #1000
-        sw =  8'b0000_1111;
-        but = 1'b1;
-        #1000
-        sw =  8'b0001_0011;
-        but = 1'b1;
-        #1000
-        sw = 8'b0101_0011;
-        #1000
-        sw = 8'b0101_0111;;
-        but = 1'b1;
-        #1000
-        but = 1'b0;
-        #1000
-        sw = 8'b0000_0010;
-
-        but = 1'b1;
-        #1000
         sw = 8'b0000_0011;
-        but = 1'b1;
-        #1000
-                sw = 8'b0000_0011;
-                but = 1'b1;
-        #1000
-                        sw = 8'b0000_0011;
-                        but = 1'b1;
-        #1000
-                                sw = 8'b0000_0011;
-                                but = 1'b1;
-        #1000
-                                sw = 8'b0000_0011;
-                                but = 1'b1;                                
+//        but = 1'b1;
+        #4000
+//        but = 1'b0;
+//        #1000
+//        sw =  8'b0000_0011;
+//        but = 1'b1;
+//        #1000
+//        but = 1'b0;
+//        #1000
+//        sw = 8'b0000_0100;
+//        but = 1'b1;
+//        #100
+//        but = 1'b0;
+//        #1000
+//        sw =  8'b0000_1011;
+//        but = 1'b1;
+//        #1000
+//        but = 1'b0;
+//        #1000
+//        sw =  8'b0000_1111;
+//        but = 1'b1;
+//        #1000
+//        sw =  8'b0001_0011;
+//        but = 1'b1;
+//        #1000
+//        sw = 8'b0101_0011;
+//        #1000
+//        sw = 8'b0101_0111;;
+//        but = 1'b1;
+//        #1000
+//        but = 1'b0;
+//        #1000
+//        sw = 8'b0000_0010;
+
+//        but = 1'b1;
+//        #1000
+//        sw = 8'b0000_0011;
+//        but = 1'b1;
+//        #1000
+//                sw = 8'b0000_0011;
+//                but = 1'b1;
+//        #1000
+//                        sw = 8'b0000_0011;
+//                        but = 1'b1;
+//        #1000
+//                                sw = 8'b0000_0011;
+//                                but = 1'b1;
+//        #1000
+//                                sw = 8'b0000_0011;
+//                                but = 1'b1;                                
         #3000 $finish();
     end
 endmodule
