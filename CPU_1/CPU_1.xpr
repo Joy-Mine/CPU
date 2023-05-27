@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="35" Path="C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.xpr">
+<Project Version="7" Minor="35" Path="C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="88ed1ee7fb4d40ec8810edab0fb988a6"/>

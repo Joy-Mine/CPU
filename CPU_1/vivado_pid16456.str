@@ -1,0 +1,134 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 16456
+License: Customer
+
+Current time: 	Sun May 28 02:30:36 CST 2023
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1280x720
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 23 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	D:/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	gmcc
+User home directory: C:/Users/gmcc
+User working directory: C:/Users/gmcc/Desktop/cpu1/CPU_1
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: D:/Vivado
+HDI_APPROOT: D:/Vivado/2017.4
+RDI_DATADIR: D:/Vivado/2017.4/data
+RDI_BINDIR: D:/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/gmcc/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/gmcc/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/gmcc/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	D:/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/gmcc/Desktop/cpu1/CPU_1/vivado.log
+Vivado journal file location: 	C:/Users/gmcc/Desktop/cpu1/CPU_1/vivado.jou
+Engine tmp dir: 	C:/Users/gmcc/Desktop/cpu1/CPU_1/.Xil/Vivado-16456-LAPTOP-7GOEKSIJ
+
+GUI allocated memory:	199 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 472 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\gmcc\Desktop\cpu1\CPU_1\CPU_1.xpr. Version: Vivado v2017.4 
+// bs (cj):  Open Project : addNotify
+// [GUI Memory]: 42 MB (+41785kb) [00:00:12]
+// [Engine Memory]: 464 MB (+335370kb) [00:00:12]
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 65 MB (+21290kb) [00:00:17]
+// [Engine Memory]: 574 MB (+90413kb) [00:00:17]
+// [GUI Memory]: 69 MB (+1627kb) [00:00:21]
+// [Engine Memory]: 604 MB (+2021kb) [00:00:21]
+// Tcl Message: open_project C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/SEU_CSE_507_user_uart_bmpg_1.3'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2017.4/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 604 MB. GUI used memory: 42 MB. Current time: 5/28/23 2:30:43 AM CST
+// Tcl Message: open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:09 . Memory (MB): peak = 798.625 ; gain = 101.840 
+// Project name: CPU_1; location: C:/Users/gmcc/Desktop/cpu1/CPU_1; part: xc7a35tcsg324-1
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (Top.v) elapsed time: 0.2s
+// Elapsed time: 20 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top (Top.v)]", 1, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top (Top.v), cclk : cpuclk (cpuclk.xci)]", 2, false, false, false, false, false, true); // B (D, cj) - Double Click
+// [GUI Memory]: 74 MB (+783kb) [00:00:45]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top (Top.v), ude : Decoder (Decoder.v)]", 12, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top (Top.v), ude : Decoder (Decoder.v)]", 12, false, false, false, false, false, true); // B (D, cj) - Double Click
+// [GUI Memory]: 80 MB (+2744kb) [00:00:47]
+// Elapsed time: 10 seconds
+selectCodeEditor("Decoder.v", 318, 290); // cd (w, cj)
+selectCodeEditor("Decoder.v", 310, 229); // cd (w, cj)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Decoder.v", 258, 203); // cd (w, cj)
+// [GUI Memory]: 84 MB (+392kb) [00:01:08]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 5); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// x (cj): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // x (cj)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_2 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 6 seconds
+dismissDialog("Launch Runs"); // f (cj)
+// Tcl Message: launch_runs impl_2 -to_step write_bitstream -jobs 4 
+// bs (cj):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sun May 28 02:31:40 2023] Launched synth_2... Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/synth_2/runme.log [Sun May 28 02:31:40 2023] Launched impl_2... Run output will be captured here: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/impl_2/runme.log 
+// [Engine Memory]: 645 MB (+10376kb) [00:01:19]
+dismissDialog("Generate Bitstream"); // bs (cj)
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (cj): Bitstream Generation Completed: addNotify
+// [GUI Memory]: 89 MB (+277kb) [00:09:49]

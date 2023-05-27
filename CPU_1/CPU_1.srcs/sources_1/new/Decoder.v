@@ -85,11 +85,11 @@ module Decoder(read_data_1,read_data_2,Instruction,mem_data,ALU_result,
     integer i;
     always @(negedge clock ) begin
         if(reset==1'b1) begin
-            for(i=0;i<32;i=i+1) register[i]=32'h00000000;
+            for(i=0;i<32;i=i+1) register[i]<=32'h00000000;
         end
         else begin
                 if(RegWrite==1'b1&&write_addr!=5'b00000) 
-                    register[write_addr]=write_data;
+                    register[write_addr]<=write_data;
         end
     end
 
