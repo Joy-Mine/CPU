@@ -25,8 +25,9 @@ module testTop(
     );
     
     reg clk = 1'b0, rst = 1'b1,but = 1'b0,rx = 1'b0,start_pg = 1'b0;
-    wire cpuclk,tx,ioread,iow;
-    wire[31:0] wdd,instruction,all,urrwdata,register_value,value2;
+    wire cpuclk,regwrite,tx,jal,jr;
+    wire[31:0] instruction,register_value,all,linkaddr,rao;
+    //wire[31:0] wdd,instruction,all,urrwdata,register_value,value2;
     //IORead;
    //reg [2:0] sw = 3'b0;
 //    wire[3:0]state;
@@ -52,7 +53,7 @@ module testTop(
   
     //wire[31:0] instruction;
     Top tt(rst,clk,sw,choose,start_pg,rx,ledsmall, seg,seg1,an,lights,tx
-    ,instruction,all,wdd,register_value,value2,ioread,iow,urrwdata,cpuclk
+    ,instruction,jal,jr,regwrite,linkaddr,all,rao,register_value,cpuclk
     );
     
     
@@ -65,11 +66,11 @@ module testTop(
     initial begin
         #300
         rst = 1'b0;
-        #5000
+        #2000
         rst = 1'b1;
         #10
         rst = 1'b0;
-        #10
+        #1385
         rst = 1'b1;
         sw = 8'b0000_0011;
 //        but = 1'b1;

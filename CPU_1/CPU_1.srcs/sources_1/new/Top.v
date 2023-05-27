@@ -16,14 +16,19 @@ module Top(
     output [7:0] ledout,// from leds
     output tx
 //    ,output[31:0] instruction,
-//    output [31:0]alu_resultt,
-//    output [31:0]write_dataa,
-//    output [31:0]register_value,
-//    output [31:0] value2,
-//    output iorr,
-//    output ioww,
-//    output [31:0]rrwdata,
-//    output cpuclk
+//    output jal,
+//    output jr,
+//    output regwrite,
+//        output [31:0] linkaddr,
+//        output [31:0] alu_resultt,
+//        output [31:0] rao,
+//        output [31:0]register_value,
+//        output [31:0]write_dataa,
+//        output [31:0] value2,
+//        output iorr,
+//        output ioww,
+//        output [31:0]rrwdata,
+//        output cpuclk
     );
    
    assign ledsmall={start_pg,smallsw};
@@ -78,13 +83,18 @@ module Top(
     wire[31:0] Instruction_o;//要注意rst的什么电平有效 高电平high-effective
     wire[31:0] rom_adr_o;
     
+//    assign linkaddr=link_addr;
 //    assign instruction=Instruction_o;
-//    assign write_dataa=write_data;
-//    assign iorr=IORead;
-//    assign ioww=IOWrite;
-//    assign alu_resultt=ALU_Result;
-//    assign rrwdata=r_wdata;
-//    assign cpuclk=cpu_clk;
+//    assign jal=Jal;
+//    assign regwrite=RegWrite;
+//    assign rao=rom_adr_o;
+//        assign write_dataa=write_data;
+//        assign iorr=IORead;
+//        assign ioww=IOWrite;
+//        assign alu_resultt=ALU_Result;
+//        assign rrwdata=r_wdata;
+//        assign cpuclk=cpu_clk;
+//        assign jr=Jr;
     
     programrom pgr(.rom_clk_i(cpu_clk), // ROM clock
                    .rom_adr_i(rom_adr_o[15:2]), // From IFetch
@@ -219,8 +229,8 @@ module Top(
                 .clock(cpu_clk),
                 .reset(rst),
                 .opcplus4(link_addr)
-//                ,.value(register_value)
-//                ,.value2(value2)
+//                                ,.value(register_value)
+//                                ,.value2(value2)
                 );   // 来自取指单元，JAL中用
 
 

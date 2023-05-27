@@ -41,7 +41,7 @@ module ALU(Read_data_1,Read_data_2,Sign_extend,Function_opcode,Exe_opcode,ALUOp,
     assign ALU_ctl[1] = ((!Exe_code[2]) | (!ALUOp[1]));
     assign ALU_ctl[2] = (Exe_code[1] & ALUOp[1]) | ALUOp[0];
     
-    always @*/*(ALU_ctl or Ainput or Binput)*/
+    always @*
     begin
     case(ALU_ctl)
         3'b000:ALU_output_mux = Ainput & Binput;//and andi
@@ -64,8 +64,12 @@ module ALU(Read_data_1,Read_data_2,Sign_extend,Function_opcode,Exe_opcode,ALUOp,
             3'b010:Shift_Result = Binput >> Shamt; //srl srlv
             3'b100:Shift_Result = Binput << Ainput;  //sll sllv
             3'b110:Shift_Result = Binput >> Ainput; //srl srlv
-            3'b011:Shift_Result = $signed(Binput) >>> Shamt;
-            3'b111:Shift_Result = $signed(Binput) >>> Ainput;
+            3'b011:begin
+                    Shift_Result = $signed(Binput) >>> Shamt;
+            end
+            3'b111:begin
+                    Shift_Result = $signed(Binput) >>> Ainput;
+            end
             default:Shift_Result = Binput;
         endcase
     else

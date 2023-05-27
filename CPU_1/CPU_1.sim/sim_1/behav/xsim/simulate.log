@@ -6,4 +6,4 @@ Block Memory Generator module testTop.tt.pgr.instmem.inst.native_mem_module.blk_
  Block Memory Generator module loading initial data...
  Block Memory Generator data initialization complete.
 Block Memory Generator module testTop.tt.dm.ram.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-$finish called at time : 12320 ns : File "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/testTop.v" Line 125
+$finish called at time : 10695 ns : File "C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.srcs/sim_1/new/testTop.v" Line 126

@@ -3,6 +3,37 @@ Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
 Running: D:/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 88ed1ee7fb4d40ec8810edab0fb988a6 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testTop_behav xil_defaultlib.testTop xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-ERROR: [VRFC 10-29] Top expects 12 arguments [C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/testTop.v:54]
 WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2420]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=41,CLKIN...
+Compiling module xil_defaultlib.cpuclk_clk_wiz
+Compiling module xil_defaultlib.cpuclk
+Compiling module xil_defaultlib.uart_bmpg
+Compiling module xil_defaultlib.upg
+Compiling module xil_defaultlib.uart_bmpg_0
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.prgrom
+Compiling module xil_defaultlib.programrom
+Compiling module xil_defaultlib.IFetc32
+Compiling module xil_defaultlib.Controller
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.MemOrIO
+Compiling module xil_defaultlib.leds
+Compiling module xil_defaultlib.ioread
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.RAM
+Compiling module xil_defaultlib.dmemory32
+Compiling module xil_defaultlib.Decoder
+Compiling module xil_defaultlib.segtube
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.testTop
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testTop_behav

@@ -64,7 +64,7 @@ module IFetc32(branch_base_addr, Addr_result, Read_data_1,// Insturction_o,
         else Next_PC = PC+4; // PC+4
     end
 
-    always @(negedge clock) begin
+    always @(posedge clock) begin
     if(reset ==1'b1) begin
         PC <= 32'h0000_0000;
         link_addr<=32'h0000_0000;

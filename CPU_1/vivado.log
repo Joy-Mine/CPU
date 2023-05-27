@@ -2,93 +2,56 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Sat May 27 01:35:19 2023
-# Process ID: 9748
-# Current directory: C:/Users/gmcc/Desktop/cpu1/CPU_1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5064 C:\Users\gmcc\Desktop\cpu1\CPU_1\CPU_1.xpr
-# Log file: C:/Users/gmcc/Desktop/cpu1/CPU_1/vivado.log
-# Journal file: C:/Users/gmcc/Desktop/cpu1/CPU_1\vivado.jou
+# Start of session at: Sat May 27 21:08:31 2023
+# Process ID: 13420
+# Current directory: C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17120 C:\Users\gmcc\Desktop\CPU_1_sssw\CPU_1\CPU_1.xpr
+# Log file: C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/vivado.log
+# Journal file: C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1\vivado.jou
 #-----------------------------------------------------------
-start_gui
-open_project C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.xpr
+start_guioopen_project C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.xpr
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/SEU_CSE_507_user_uart_bmpg_1.3'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.srcs/sources_1/ip/SEU_CSE_507_user_uart_bmpg_1.3'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2017.4/data/ip'.
-open_project: Time (s): cpu = 00:00:27 ; elapsed = 00:00:16 . Memory (MB): peak = 781.555 ; gain = 37.398
-update_compile_order -fileset sources_1
-launch_simulation
-INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim'
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'D:/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-54] Inspecting design source files for 'testTop' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim/RAM.mif'
-INFO: [SIM-utils-43] Exported 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim/dmem32.coe'
-INFO: [SIM-utils-43] Exported 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim/prgrom.mif'
-INFO: [SIM-utils-43] Exported 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim/prgmip32.coe'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj testTop_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/RAM_1/sim/RAM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module RAM
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/prgrom_1/sim/prgrom.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module prgrom
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/uart_bmpg_0_1/uart_bmpg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_bmpg
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/uart_bmpg_0_1/upg.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module upg
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/uart_bmpg_0_1/sim/uart_bmpg_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_bmpg_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/cpuclk_2/cpuclk_clk_wiz.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/ip/cpuclk_2/cpuclk.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cpuclk
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/ALU.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/Controller.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Controller
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/Decoder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Decoder
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/IFetc32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module IFetc32
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/MemOrIO.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module MemOrIO
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/Top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Top
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/dmemory32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dmemory32
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/ioread.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ioread
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/leds.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module leds
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/programrom.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module programrom
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sources_1/new/segtube.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module segtube
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/testTop.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module testTop
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim'
-Vivado Simulator 2017.4
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: D:/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 88ed1ee7fb4d40ec8810edab0fb988a6 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testTop_behav xil_defaultlib.testTop xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-ERROR: [VRFC 10-29] Top expects 12 arguments [C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.srcs/sim_1/new/testTop.v:54]
-WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2420]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-99] Step results log file:'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.sim/sim_1/behav/xsim/elaborate.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 831.953 ; gain = 12.023
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+open_project: Time (s): cpu = 00:00:27 ; elapsed = 00:00:17 . Memory (MB): peak = 735.211 ; gain = 82.246
+update_compile_order -fileset sources_1exit
+INFO: [Common 17-206] Exiting Vivado at Sat May 27 21:11:41 2023...
+er url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 753.668 ; gain = 0.906
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+open_hw_target: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1321.211 ; gain = 567.543
+set_property PROGRAM.FILE {C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.runs/impl_2/Top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.runs/impl_2/Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
 exit
-INFO: [Common 17-206] Exiting Vivado at Sat May 27 02:33:55 2023...
+INFO: [Common 17-206] Exiting Vivado at Sat May 27 21:54:51 2023...
