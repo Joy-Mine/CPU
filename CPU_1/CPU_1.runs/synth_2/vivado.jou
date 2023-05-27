@@ -2,11 +2,11 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Sun May 28 02:31:46 2023
-# Process ID: 3860
-# Current directory: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/synth_2
+# Start of session at: Sun May 28 04:21:41 2023
+# Process ID: 24252
+# Current directory: D:/ProProject/CS202/CPU/CPU_1/CPU_1.runs/synth_2
 # Command line: vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
-# Log file: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/synth_2/Top.vds
-# Journal file: C:/Users/gmcc/Desktop/cpu1/CPU_1/CPU_1.runs/synth_2\vivado.jou
+# Log file: D:/ProProject/CS202/CPU/CPU_1/CPU_1.runs/synth_2/Top.vds
+# Journal file: D:/ProProject/CS202/CPU/CPU_1/CPU_1.runs/synth_2\vivado.jou
 #-----------------------------------------------------------
 source Top.tcl -notrace

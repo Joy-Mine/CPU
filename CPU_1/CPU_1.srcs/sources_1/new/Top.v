@@ -14,7 +14,8 @@ module Top(
     output [7:0] seg_out2,
     output [7:0] seg_en,
     output [7:0] ledout,// from leds
-    output tx
+    output tx,
+    output speakerT1
 //    ,output[31:0] instruction,
 //    output jal,
 //    output jr,
@@ -30,7 +31,10 @@ module Top(
 //        output [31:0]rrwdata,
 //        output cpuclk
     );
-   
+    
+    reg [1:0] song_en=2'b01;
+    song asong(.sys_clk(fpga_clk), .en(song_en), .speaker(speakerT1));
+
    assign ledsmall={start_pg,smallsw};
     
     wire cpu_clk;

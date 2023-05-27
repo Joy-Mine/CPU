@@ -1,0 +1,17 @@
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+// This empty module with port declaration file causes synthesis tools to infer a black box for IP.
+// Please paste the declaration into a Verilog source file or add the file as an additional source.
+(* X_CORE_INFO = "upg,Vivado 2017.4" *)
+module uart_bmpg_0(upg_clk_i, upg_rst_i, upg_clk_o, upg_wen_o, 
+  upg_adr_o, upg_dat_o, upg_done_o, upg_rx_i, upg_tx_o);
+  input upg_clk_i;
+  input upg_rst_i;
+  output upg_clk_o;
+  output upg_wen_o;
+  output [14:0]upg_adr_o;
+  output [31:0]upg_dat_o;
+  output upg_done_o;
+  input upg_rx_i;
+  output upg_tx_o;
+endmodule
