@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.srcs/constrs_1/new/c.xdc rfile:../../../CPU_1.srcs/constrs_1/new/c.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/ProProject/CS202/CPU/CPU_1/CPU_1.srcs/constrs_1/new/c.xdc rfile:../../../CPU_1.srcs/constrs_1/new/c.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {IOSTANDARD LVCMOS33 PACKAGE_PIN N5} [get_ports rx]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
