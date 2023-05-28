@@ -21,6 +21,7 @@
 
 module Decoder(read_data_1,read_data_2,Instruction,mem_data,ALU_result,
                  Jal,RegWrite,MemtoReg,RegDst,Sign_extend,clock,reset,opcplus4
+                 ,register1
                  //,value//,value2
                  );
                  //output [31:0]value;//output[31:0] value2;
@@ -36,6 +37,7 @@ module Decoder(read_data_1,read_data_2,Instruction,mem_data,ALU_result,
     output reg [31:0] Sign_extend;               // 扩展后的32位立即数
     input		 clock,reset;                // 时钟和复位
     input[31:0]  opcplus4;                 // 来自取指单元，JAL中用
+    output[31:0] register1;
     
     reg[31:0] register [0:31];
     wire[5:0] opcode;
@@ -50,6 +52,8 @@ module Decoder(read_data_1,read_data_2,Instruction,mem_data,ALU_result,
     
     wire [31:0]zero_immediate;
     reg [31:0]sign_immediate, branch_immediate;
+
+    assign register1=register[1];
 
     assign opcode=Instruction[31:26];
     assign Function_opcode=Instruction[5:0];

@@ -15,7 +15,12 @@ module Top(
     output [7:0] seg_en,
     output [7:0] ledout,// from leds
     output tx,
-    output speakerT1
+    output speakerT1,
+    output hsync,
+    output vsync,
+    output [3:0] red,
+    output [3:0] green,
+    output [3:0] blue
 //    ,output[31:0] instruction,
 //    output jal,
 //    output jr,
@@ -220,6 +225,7 @@ module Top(
                  .upg_dat_i(upg_dat_o),       // UPG write data
                  .upg_done_i(upg_done_o));    // 1 if programming is finished
 
+    wire[31:0] sample;
     Decoder ude(.read_data_1(Read_data_1),  //output
                 .read_data_2(Read_data_2),  //output
                 .Sign_extend(Sign_extend),  //output
@@ -233,10 +239,23 @@ module Top(
                 .clock(cpu_clk),
                 .reset(rst),
                 .opcplus4(link_addr)
+                ,.register1(sample)
 //                                ,.value(register_value)
 //                                ,.value2(value2)
                 );   // 来自取指单元，JAL中用
 
+    reg ok=1'b1;
+    vga_my(.clk(fpga_clk),
+            .debounced_power_on(ok),
+            .ok(ok),
+            .record(sample[26:0]),
+            .rst_n(fpga_rst),
+            .hsync(hsync),
+            .vsync(vsync),
+            .red(red),
+            .green(green),
+            .blue(blue)
+            );
 
     
     //mem_data  从DATA RAM or I/O port取出的数据
