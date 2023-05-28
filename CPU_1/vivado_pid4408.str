@@ -1,0 +1,95 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 4408
+License: Customer
+
+Current time: 	Sat May 27 17:38:23 CST 2023
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1280x720
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 21 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	D:/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	gmcc
+User home directory: C:/Users/gmcc
+User working directory: C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: D:/Vivado
+HDI_APPROOT: D:/Vivado/2017.4
+RDI_DATADIR: D:/Vivado/2017.4/data
+RDI_BINDIR: D:/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/gmcc/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/gmcc/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/gmcc/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	D:/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/vivado.log
+Vivado journal file location: 	C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/vivado.jou
+Engine tmp dir: 	C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/.Xil/Vivado-4408-LAPTOP-7GOEKSIJ
+
+GUI allocated memory:	143 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 483 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 42 MB (+41674kb) [00:00:31]
+// [Engine Memory]: 483 MB (+354896kb) [00:00:31]
+// bs (cj):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\gmcc\Desktop\CPU_1_sssw\CPU_1\CPU_1.xpr. Version: Vivado v2017.4 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 483 MB. GUI used memory: 32 MB. Current time: 5/27/23 5:38:25 PM CST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 53 MB (+8898kb) [00:00:44]
+// [Engine Memory]: 527 MB (+20866kb) [00:00:44]
+// [GUI Memory]: 61 MB (+6029kb) [00:00:49]
+// [Engine Memory]: 560 MB (+6460kb) [00:00:49]
+// [GUI Memory]: 68 MB (+4080kb) [00:00:51]
+// Tcl Message: open_project C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.srcs/sources_1/ip/SEU_CSE_507_user_uart_bmpg_1.3'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2017.4/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 573 MB. GUI used memory: 41 MB. Current time: 5/27/23 5:38:45 PM CST
+// Tcl Message: open_project: Time (s): cpu = 00:00:30 ; elapsed = 00:00:21 . Memory (MB): peak = 724.867 ; gain = 60.863 
+// [Engine Memory]: 589 MB (+1489kb) [00:00:55]
+// Project name: CPU_1; location: C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1; part: xc7a35tcsg324-1
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 6000 ms.
+// [GUI Memory]: 72 MB (+179kb) [00:12:19]

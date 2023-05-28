@@ -2,32 +2,24 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Sun May 28 04:13:53 2023
-# Process ID: 5576
-# Current directory: D:/ProProject/CS202/CPU/CPU_1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24172 D:\ProProject\CS202\CPU\CPU_1\CPU_1.xpr
-# Log file: D:/ProProject/CS202/CPU/CPU_1/vivado.log
-# Journal file: D:/ProProject/CS202/CPU/CPU_1\vivado.jou
+# Start of session at: Sat May 27 17:37:53 2023
+# Process ID: 11036
+# Current directory: C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2140 C:\Users\gmcc\Desktop\CPU_1_sssw\CPU_1\CPU_1.xpr
+# Log file: C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/vivado.log
+# Journal file: C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project D:/ProProject/CS202/CPU/CPU_1/CPU_1.xpr
+open_project C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.xpr
 update_compile_order -fileset sources_1
-add_files -norecurse D:/ProProject/CS202/CPU/CPU_1/CPU_1.srcs/sources_1/new/song.v
-update_compile_order -fileset sources_1
-add_files -norecurse D:/ProProject/CS202/CPU/CPU_1/CPU_1.srcs/sources_1/new/clk_self.v
-update_compile_order -fileset sources_1
-reset_run synth_2
-reset_run prgrom_synth_1
-launch_runs impl_2 -to_step write_bitstream -jobs 8
-wait_on_run impl_2
-synth_design -rtl -name rtl_1
-close_design
-open_run impl_2
-set_property IOSTANDARD LVCMOS33 [get_ports [list speakerT1]]
-set_property is_loc_fixed true [get_ports [list  speakerT1]]
-place_ports speakerT1 T1
-set_property target_constrs_file D:/ProProject/CS202/CPU/CPU_1/CPU_1.srcs/constrs_1/new/c.xdc [current_fileset -constrset]
-save_constraints -force
-reset_run impl_2
-launch_runs impl_2 -to_step write_bitstream -jobs 8
-wait_on_run impl_2
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.runs/impl_2/Top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.runs/impl_2/Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]

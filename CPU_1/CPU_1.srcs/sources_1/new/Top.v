@@ -31,7 +31,7 @@ module Top(
 //        output [31:0]rrwdata,
 //        output cpuclk
     );
-    
+   
     reg [1:0] song_en=2'b01;
     song asong(.sys_clk(fpga_clk), .en(song_en), .speaker(speakerT1));
 

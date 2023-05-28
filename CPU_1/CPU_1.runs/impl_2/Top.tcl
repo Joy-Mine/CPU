@@ -60,28 +60,27 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir D:/ProProject/CS202/CPU/CPU_1/CPU_1.cache/wt [current_project]
-  set_property parent.project_path D:/ProProject/CS202/CPU/CPU_1/CPU_1.xpr [current_project]
-  set_property ip_repo_paths D:/ProProject/CS202/CPU/CPU_1/CPU_1.srcs/sources_1/ip/SEU_CSE_507_user_uart_bmpg_1.3 [current_project]
-  set_property ip_output_repo D:/ProProject/CS202/CPU/CPU_1/CPU_1.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.cache/wt [current_project]
+  set_property parent.project_path C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.xpr [current_project]
+  set_property ip_repo_paths C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.srcs/sources_1/ip/SEU_CSE_507_user_uart_bmpg_1.3 [current_project]
+  set_property ip_output_repo C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet D:/ProProject/CS202/CPU/CPU_1/CPU_1.runs/synth_2/Top.dcp
-  read_ip -quiet D:/ProProject/CS202/CPU/CPU_1/CPU_1.srcs/sources_1/ip/uart_bmpg_0_1/uart_bmpg_0.xci
-  read_ip -quiet D:/ProProject/CS202/CPU/CPU_1/CPU_1.srcs/sources_1/ip/RAM_1/RAM.xci
-  read_ip -quiet D:/ProProject/CS202/CPU/CPU_1/CPU_1.srcs/sources_1/ip/prgrom_1/prgrom.xci
-  read_ip -quiet D:/ProProject/CS202/CPU/CPU_1/CPU_1.srcs/sources_1/ip/cpuclk_2/cpuclk.xci
-  read_xdc D:/ProProject/CS202/CPU/CPU_1/CPU_1.srcs/constrs_1/new/c.xdc
+  add_files -quiet C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.runs/synth_2/Top.dcp
+  read_ip -quiet C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.srcs/sources_1/ip/uart_bmpg_0_1/uart_bmpg_0.xci
+  read_ip -quiet C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.srcs/sources_1/ip/RAM_1/RAM.xci
+  read_ip -quiet C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.srcs/sources_1/ip/prgrom_1/prgrom.xci
+  read_ip -quiet C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.srcs/sources_1/ip/cpuclk_2/cpuclk.xci
+  read_xdc C:/Users/gmcc/Desktop/CPU_1_sssw/CPU_1/CPU_1.srcs/constrs_1/new/c.xdc
   link_design -top Top -part xc7a35tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]
